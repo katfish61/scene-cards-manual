@@ -81,19 +81,19 @@ split between the leading (left) and trailing (right) sides.
 
 ### Leading controls
 
-| Control | Icon | What it does |
-|---|---|---|
-| Script panel | `doc.text.magnifyingglass` | Toggles the left script-text sidebar. Filled when open. |
-| ⋯ overflow | `ellipsis.circle` | Opens the overflow menu (§15.2.1) |
+| Control | What it does |
+|---|---|
+| **Script panel** — page with magnifier | Toggles the left script-text sidebar. Icon fills when open. |
+| **⋯** — circle with three dots | Opens the overflow menu (§15.2.1) |
 
 ### Trailing controls
 
-| Control | Icon | What it does |
-|---|---|---|
-| Scenes mode | `film` | Switches to Scenes mode. Filled when active. |
-| Locations mode | `location` | Switches to Locations mode. Filled when active. |
-| Schedule mode | `calendar` | Switches to Schedule mode. Filled when active. |
-| Inspector | `sidebar.right` | Toggles the inspector sheet. Filled when open. |
+| Control | What it does |
+|---|---|
+| **Scenes** — film-reel icon | Switches to Scenes mode. Icon fills when active. |
+| **Locations** — map-pin icon | Switches to Locations mode. Icon fills when active. |
+| **Schedule** — calendar icon | Switches to Schedule mode. Icon fills when active. |
+| **Inspector** — right-sidebar icon | Toggles the inspector sheet. Icon fills when open. |
 
 ### Search
 
