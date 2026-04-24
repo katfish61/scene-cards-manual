@@ -83,17 +83,17 @@ split between the leading (left) and trailing (right) sides.
 
 | Control | What it does |
 |---|---|
-| **Script panel** — page with magnifier | Toggles the left script-text sidebar. Icon fills when open. |
-| **⋯** — circle with three dots | Opens the overflow menu (§15.2.1) |
+| 🔍 Script panel | Toggles the left script-text sidebar. Fills when open. |
+| ⋯ Overflow | Opens the overflow menu (§15.2.1) |
 
 ### Trailing controls
 
 | Control | What it does |
 |---|---|
-| **Scenes** — film-reel icon | Switches to Scenes mode. Icon fills when active. |
-| **Locations** — map-pin icon | Switches to Locations mode. Icon fills when active. |
-| **Schedule** — calendar icon | Switches to Schedule mode. Icon fills when active. |
-| **Inspector** — right-sidebar icon | Toggles the inspector sheet. Icon fills when open. |
+| 🎬 Scenes | Switches to Scenes mode. Fills when active. |
+| 📍 Locations | Switches to Locations mode. Fills when active. |
+| 📅 Schedule | Switches to Schedule mode. Fills when active. |
+| ▤ Inspector | Toggles the inspector sheet. Fills when open. |
 
 ### Search
 
@@ -128,16 +128,16 @@ Controls for attaching and viewing reference files (§8).
 
 | Control | Platform | What it does |
 |---|---|---|
-| Add Files and Folders… | 🍎 | Opens a file picker; copies files into the card's reference folder |
-| New Note… | 🍎 | Opens a floating text editor; saves a `.txt` note into the reference folder |
-| New Drawing… | 🍎 | Opens a drawing canvas; saves a PNG into the reference folder |
-| Add… | 📐 | Menu: Choose from Photos / Choose from Files / Link a Folder |
-| Camera | 📐 | Takes a photo and adds it directly to the carousel |
-| Pencil (draw) | 📐 | Opens PencilKit canvas; loads the current carousel image as a background layer |
-| ← → chevrons | 🍎 | Navigate between files in the carousel |
-| Open in App | 🍎 | Opens the current file in its default system app |
-| Share ⬆ | 📐 | Opens the share sheet for the current carousel file |
-| Trash 🗑 | Both | Removes the current file from the carousel (no undo — §8.5) |
+| 📁 Add Files and Folders… | 🍎 | Opens a file picker; copies files into the card's reference folder |
+| 📝 New Note… | 🍎 | Opens a floating text editor; saves a `.txt` note into the reference folder |
+| ✏️ New Drawing… | 🍎 | Opens a drawing canvas; saves a PNG into the reference folder |
+| ＋ Add… | 📐 | Menu: Choose from Photos / Choose from Files / Link a Folder |
+| 📷 Camera | 📐 | Takes a photo and adds it directly to the carousel |
+| ✏️ Draw | 📐 | Opens PencilKit canvas; loads the current carousel image as a background layer |
+| ‹ › Chevrons | 🍎 | Navigate between files in the carousel |
+| ↗ Open in App | 🍎 | Opens the current file in its default system app |
+| ⬆ Share | 📐 | Opens the share sheet for the current carousel file |
+| 🗑 Delete | Both | Removes the current file from the carousel (no undo — §8.5) |
 
 ### 15.3.2 Tile action buttons
 
@@ -145,12 +145,12 @@ Controls that act on the card itself, below the carousel.
 
 | Button | What it does |
 |---|---|
-| Import Image to Tile | Opens an image picker to set this card's hero still (§7) |
-| Mark / Unmark OMITTED | Toggles the OMITTED state on the card |
-| Insert Tile After | Adds a blank card immediately after this one |
-| Renumber From Here | Renumbers all cards from this one forward |
-| Close Gap | Removes this card from its slot without leaving a blank space |
-| Delete Tile | Permanently deletes the card and all its attached media |
+| 🖼 Import Image to Tile | Opens an image picker to set this card's hero still (§7) |
+| 👁 Mark / Unmark OMITTED | Toggles the OMITTED state on the card |
+| ＋ Insert Tile After | Adds a blank card immediately after this one |
+| 🔄 Renumber From Here | Renumbers all cards from this one forward |
+| ← Close Gap | Removes this card from its slot without leaving a blank space |
+| 🗑 Delete Tile | Permanently deletes the card and all its attached media |
 
 > ⚠ **Caution** — Delete Tile cannot be undone past the current
 > session. Close Gap can be undone with `⌘Z`.
