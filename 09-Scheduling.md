@@ -126,9 +126,9 @@ Small badges in the top-right corner of a card:
 
 | Badge | Meaning |
 |---|---|
-| Orange **hand** | Card has been manually assigned to this day (§9.5) |
-| Cyan **waveform** | Manual assignment AND sound report data exists for this day |
-| Coloured **dot** | Revision colour from the script (§5.5) |
+| 🖐 Orange hand | Card has been manually assigned to this day (§9.5) |
+| 〰 Cyan waveform | Manual assignment AND sound report data exists for this day |
+| ⬤ Coloured dot | Revision colour from the script (§5.5) |
 
 ### 9.4.3 Placeholder cards
 
@@ -207,13 +207,13 @@ Each day header can show up to one badge per report type. Badges are
 added when you attach a shoot report (§10); they give a quick visual
 status of what has been imported for each day.
 
-| Badge colour | Report type |
+| Badge | Report type |
 |---|---|
-| Teal | Sound |
-| Indigo | Camera |
-| Orange | Continuity |
-| Purple | Call Sheet |
-| Green | Essentials |
+| 🩵 Teal | Sound |
+| 🔵 Indigo | Camera |
+| 🟠 Orange | Continuity |
+| 🟣 Purple | Call Sheet |
+| 🟢 Green | Essentials |
 
 **Tap or click a badge** to open the attached file. On 📐 iPadOS a
 QuickLook preview opens; on 🍎 macOS the file opens in the system
