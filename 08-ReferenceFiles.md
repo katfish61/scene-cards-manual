@@ -84,9 +84,9 @@ Tap the **Add…** button in the References toolbar to reveal three options:
 
 | Option | What it does |
 |---|---|
-| **Choose from Photos** | Opens the Photos picker. Select up to 20 images or videos. |
-| **Choose from Files** | Opens the Files app. Navigate to any file and tap to attach it. |
-| **Link a Folder** | Picks a folder; copies all its files into the package (§8.2.5). |
+| 🖼 **Choose from Photos** | Opens the Photos picker. Select up to 20 images or videos. |
+| 📁 **Choose from Files** | Opens the Files app. Navigate to any file and tap to attach it. |
+| 📂 **Link a Folder** | Picks a folder; copies all its files into the package (§8.2.5). |
 
 > 🔒 **Permission required** — "Choose from Photos" requires Photos access
 > (Settings → Privacy → Photos). "Choose from Files" prompts the first time
@@ -170,14 +170,14 @@ position and total count. Dot indicators below the carousel show up to
 
 | File type | Carousel appearance |
 |---|---|
-| Image (`jpg`, `png`, `heic`, etc.) | Full-bleed preview; tap to open in the system viewer |
-| PDF | First-page preview with a red **PDF** badge; tap to open |
-| Video (`mp4`, `mov`, etc.) | Poster frame with a **VIDEO** badge; tap the play button to play inline |
-| Audio (`mp3`, `m4a`, `wav`, etc.) | Waveform icon with filename and format badge; **Play / Stop** button |
-| Note (`.txt`, `.md`) | Inline scrollable text; **NOTE** badge |
-| Document (`docx`, `xlsx`, `key`, etc.) | File icon and filename; tap to open in the system app |
-| Folder | Folder icon and name; single-click to reveal in Finder (🍎) or browse in Files (📐) |
-| Unknown | Generic file icon and filename |
+| 🖼 Image (`jpg`, `png`, `heic`, etc.) | Full-bleed preview; tap to open in the system viewer |
+| 📄 PDF | First-page preview with a red **PDF** badge; tap to open |
+| 🎬 Video (`mp4`, `mov`, etc.) | Poster frame with a **VIDEO** badge; tap the play button to play inline |
+| 🎵 Audio (`mp3`, `m4a`, `wav`, etc.) | Waveform icon with filename and format badge; **Play / Stop** button |
+| 📝 Note (`.txt`, `.md`) | Inline scrollable text; **NOTE** badge |
+| 📋 Document (`docx`, `xlsx`, `key`, etc.) | File icon and filename; tap to open in the system app |
+| 📁 Folder | Folder icon and name; single-click to reveal in Finder (🍎) or browse in Files (📐) |
+| ❓ Unknown | Generic file icon and filename |
 
 ### 8.4.3 Open a file in its native app
 
