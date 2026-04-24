@@ -1,3 +1,6 @@
 title: Scene Cards Manual
-description: User manual for Scene Cards
+description: The professional production planning tool
 theme: minima
+exclude:
+  - README.md
+  - index.md

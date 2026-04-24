@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene Cards — Operations Manual</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+      max-width: 560px;
+      width: 100%;
+      padding: 52px 48px 40px;
+      text-align: center;
+    }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 26px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 16px;
+      color: #6e6e73;
+      line-height: 1.5;
+      margin-bottom: 36px;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e5e5ea;
+      margin-bottom: 32px;
+    }
+
+    .chapter-list {
+      list-style: none;
+      text-align: left;
+    }
+
+    .chapter-list li {
+      border-bottom: 1px solid #f2f2f7;
+    }
+
+    .chapter-list li:last-child {
+      border-bottom: none;
+    }
+
+    .chapter-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 4px;
+      text-decoration: none;
+      color: #1d1d1f;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .chapter-list a:hover {
+      color: #0071e3;
+    }
+
+    .chapter-list a::after {
+      content: "›";
+      font-size: 20px;
+      color: #c7c7cc;
+      font-weight: 300;
+    }
+
+    .chapter-num {
+      font-size: 12px;
+      font-weight: 600;
+      color: #8e8e93;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-right: 12px;
+      min-width: 32px;
+    }
+
+    .chapter-title {
+      flex: 1;
+    }
+
+    footer {
+      margin-top: 36px;
+      font-size: 12px;
+      color: #8e8e93;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #8e8e93;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="icon.png" alt="Scene Cards" class="icon">
+    <h1>Scene Cards</h1>
+    <p class="tagline">The professional production planning tool that turns your script into a visual scene wall — on Mac and iPad.</p>
+    <hr class="divider">
+    <ul class="chapter-list">
+      <li>
+        <a href="01-Introduction.html">
+          <span class="chapter-num">Ch 1</span>
+          <span class="chapter-title">Introduction</span>
+        </a>
+      </li>
+      <li>
+        <a href="02-QuickStart.html">
+          <span class="chapter-num">Ch 2</span>
+          <span class="chapter-title">Quick Start</span>
+        </a>
+      </li>
+      <li>
+        <a href="03-Orientation.html">
+          <span class="chapter-num">Ch 3</span>
+          <span class="chapter-title">Orientation</span>
+        </a>
+      </li>
+      <li>
+        <a href="04-DocumentsAndFiles.html">
+          <span class="chapter-num">Ch 4</span>
+          <span class="chapter-title">Documents &amp; Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="05-BuildingTheWall.html">
+          <span class="chapter-num">Ch 5</span>
+          <span class="chapter-title">Building the Wall</span>
+        </a>
+      </li>
+      <li>
+        <a href="06-WorkingWithScenes.html">
+          <span class="chapter-num">Ch 6</span>
+          <span class="chapter-title">Working with Scenes</span>
+        </a>
+      </li>
+      <li>
+        <a href="07-StillsAndThumbnails.html">
+          <span class="chapter-num">Ch 7</span>
+          <span class="chapter-title">Stills &amp; Thumbnails</span>
+        </a>
+      </li>
+      <li>
+        <a href="08-ReferenceFiles.html">
+          <span class="chapter-num">Ch 8</span>
+          <span class="chapter-title">Reference Files</span>
+        </a>
+      </li>
+      <li>
+        <a href="09-Scheduling.html">
+          <span class="chapter-num">Ch 9</span>
+          <span class="chapter-title">Scheduling</span>
+        </a>
+      </li>
+      <li>
+        <a href="10-ShootReports.html">
+          <span class="chapter-num">Ch 10</span>
+          <span class="chapter-title">Shoot Reports</span>
+        </a>
+      </li>
+    </ul>
+    <footer>
+      &copy; 2026 Keith Tunney. All rights reserved.<br>
+      Scene Cards is a trademark of Keith Tunney.<br>
+      <a href="https://github.com/katfish61/Scene-Cards-Privacy-Policy">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use</a>
+    </footer>
+  </div>
+</body>
+</html>
