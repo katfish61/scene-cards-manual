@@ -20,9 +20,6 @@ the relevant chapter; this chapter is a lookup table.
 
 Items marked ★ require an active subscription or free trial (§1.7).
 
-> ⓘ **Note on icons** — Scene Cards uses Apple's SF Symbols, which
-> are not part of the Unicode standard and cannot be displayed in web
-> documents. This manual uses the nearest emoji as a visual guide.
 
 ---
 
