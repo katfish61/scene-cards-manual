@@ -27,8 +27,11 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 ## 2026.1 — April 2026
 
 ### New
+- **iPhone support** — Scene Cards now runs on iPhone (iOS 16.6 or
+  later). All import, scheduling, and reference features are available.
+  Wall defaults to 3 columns in portrait, 5 in landscape.
 - **iCloud sync** — documents stored in iCloud Drive now sync
-  automatically across Mac and iPad. See §14.1.
+  automatically across Mac, iPad, and iPhone. See §14.1.
 - **FDX import** — Final Draft `.fdx` files are now accepted by the
   script importer in addition to PDF. See §5.1 and Appendix A.
 
