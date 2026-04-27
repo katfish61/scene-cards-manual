@@ -35,7 +35,7 @@ your account → Subscriptions to renew.
 
 Notes and drawings must be written into the document package, which
 requires the document to have been saved at least once. Press `⌘S`
-(🍎) or use the Files app save dialog (📐), then try again.
+(🍎) or use the Files app save dialog (📐📱), then try again.
 
 **Changes aren't being saved to iCloud**
 
@@ -43,8 +43,8 @@ Give iCloud a moment — sync is not instant. If the document still
 hasn't appeared on the second device after a few minutes:
 - Confirm both devices are signed into the same Apple ID.
 - Check Settings → Apple ID → iCloud → iCloud Drive is enabled.
-- On 📐 iPadOS, check that Scene Cards is allowed iCloud access in
-  Settings → Scene Cards.
+- On 📐📱 iPadOS and iPhone, check that Scene Cards is allowed iCloud
+  access in Settings → Scene Cards.
 
 ---
 
@@ -58,7 +58,7 @@ than text-based, and Vision OCR could not extract scene headings. Try:
    app, not a scan.
 2. If it is a scan, allow a few extra seconds — OCR runs in the
    background and cards may appear after a short delay.
-3. If still empty, open the PDF in Preview (🍎) or Files (📐) and
+3. If still empty, open the PDF in Preview (🍎) or Files (📐📱) and
    confirm scene headings like `INT.` or `EXT.` are visible as
    selectable text, not images.
 
