@@ -14,7 +14,8 @@ location stills. You want a physical wall for the first production
 meeting.
 
 1. **Create a new document.** `⌘N` (🍎) or the New Document button
-   (📐). Save immediately (`⌘S`) so the package exists on disk.
+   (📐📱). Save immediately (`⌘S` on 🍎, or via the Files browser on
+   📐📱) so the package exists on disk.
 
 2. **Import the script.** `File → Import Script PDF or FDX…` (`⌘⇧I`).
    Select the PDF. Scene Cards creates one card per scene heading.
@@ -120,9 +121,9 @@ reports.
    in the package but not parsed.
 
 6. **Sync to iPad.** If iCloud Drive is enabled (§14.1), save the
-   document (`⌘S`) and the updated file will sync to iPadOS within a
-   few minutes. The on-set iPad will show the latest sound data without
-   any manual transfer.
+   document (`⌘S`) and the updated file will sync within a few minutes.
+   Any on-set iPad or iPhone will show the latest sound data without any
+   manual transfer.
 
 ---
 
