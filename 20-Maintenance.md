@@ -101,28 +101,28 @@ Deleted** folder in iCloud.com for 30 days.
 
 To check available iCloud storage:
 - **🍎 macOS** — System Settings → Apple ID → iCloud → Manage.
-- **📐 iPadOS** — Settings → Apple ID → iCloud → Manage Account Storage.
+- **📐📱 iPadOS and iPhone** — Settings → Apple ID → iCloud → Manage Account Storage.
 
 ### Manual Archive
 
 For a production archive at wrap, duplicate the document in Finder
-(`⌥`-drag on 🍎, or long-press → Duplicate on 📐), rename the copy
+(`⌥`-drag on 🍎, or long-press → Duplicate on 📐📱), rename the copy
 with a date stamp, and store it alongside your other deliverables.
 
 ---
 
 ## 20.3 App Updates
 
-Scene Cards is distributed through the Mac App Store and iPadOS App
-Store. There is no in-app update mechanism — updates arrive through
-the App Store app.
+Scene Cards is distributed through the Mac App Store, iPadOS App Store,
+and iOS App Store. There is no in-app update mechanism — updates arrive
+through the App Store app.
 
 To check for updates:
 - **🍎 macOS** — open the App Store → **Updates** tab.
-- **📐 iPadOS** — open the App Store → your account → **Updates**.
+- **📐📱 iPadOS and iPhone** — open the App Store → your account → **Updates**.
 
 Enable automatic updates in System Settings → App Store (🍎) or
-Settings → App Store (📐) to receive updates without prompting.
+Settings → App Store (📐📱) to receive updates without prompting.
 
 > ⓘ **Note** — Scene Cards opens older document formats automatically
 > with no conversion step required (§18.9). Updating the app is safe;
