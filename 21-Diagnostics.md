@@ -21,9 +21,9 @@ Always include the app version when reporting an issue.
 **🍎 macOS** — open **Scene Cards → About Scene Cards**. The panel shows
 the version in the form `2026.X` and a build number below it.
 
-**📐 iPadOS** — the version is not shown inside the app. Go to
-**Settings → Scene Cards**; the version and build number appear at the
-top of the settings page.
+**📐📱 iPadOS and iPhone** — the version is not shown inside the app.
+Go to **Settings → Scene Cards**; the version and build number appear
+at the top of the settings page.
 
 ---
 
@@ -47,11 +47,11 @@ Crash logs are also written to disk:
 To send a crash log to support, locate the most recent `.ips` file and
 attach it to your support message.
 
-### 📐 iPadOS
+### 📐📱 iPadOS and iPhone
 
-Crash reports on iPadOS are uploaded to Apple automatically if you have
-opted in to **Analytics & Improvements** in Settings → Privacy &
-Security → Analytics & Improvements.
+Crash reports are uploaded to Apple automatically if you have opted in
+to **Analytics & Improvements** in Settings → Privacy & Security →
+Analytics & Improvements.
 
 To share a crash report manually:
 
@@ -96,7 +96,7 @@ contact support at **[support contact — to be added]**.
 When writing in, include:
 
 - The app version and build number (§21.1).
-- macOS or iPadOS version.
+- macOS, iPadOS, or iOS version.
 - A description of what you were doing when the problem occurred.
 - Any crash log (§21.2) or Console output (§21.3) if relevant.
 - The document file if you are comfortable sharing it — right-click in
