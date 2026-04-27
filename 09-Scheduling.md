@@ -1,8 +1,7 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — Schedule mode empty state, a populated day section
-     with a full card and a placeholder, the selection bar, the
-     day-header report badges, the context menu on a card.
+  1. Screenshots still needed: a populated day section showing report
+     badges on the day header, the card context menu in Schedule mode.
   2. RESOLVED — iPadOS has exactly two one-liner import entry points:
      (a) the empty-state "Import One-Liner PDF" button, and
      (b) the "Re-import" button in the schedule top bar.
@@ -50,6 +49,8 @@ Without an imported one-liner, Schedule mode shows an empty state with
 a single **Import One-Liner PDF** button. Once a schedule is loaded,
 the full day-by-day view appears.
 
+![Schedule mode empty state on macOS, showing the Import One-Liner PDF button before any schedule has been loaded.](images/C9.1.jpg)
+
 ## 9.2 Importing a One-Liner
 
 The one-liner is the shoot schedule — a PDF strip board that lists
@@ -65,6 +66,8 @@ Scene Cards reads the PDF and builds the day structure automatically.
 Scene Cards parses the PDF, matches each scene number against the cards
 on your wall, and populates the schedule. A progress indicator appears
 while parsing runs.
+
+![Schedule mode after a one-liner import, showing shoot days with grouped scene cards, day headers, and the Attach Shoot Report control on the right.](images/C9.2.jpg)
 
 ### 9.2.2 Re-import
 

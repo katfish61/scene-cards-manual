@@ -25,7 +25,7 @@ The wall itself has three modes:
 | **Location** | Group scenes by location for scouting and scheduling                     |
 | **Schedule** | Arranged by shoot day once a one-liner is imported                       |
 
-Scene Cards runs on macOS and iPadOS. Your document is a single
+Scene Cards runs on macOS, iPadOS, and iPhone. Your document is a single
 `.scenecards` file that travels with you — iCloud Drive, AirDrop, or a USB
 stick all work.
 
@@ -70,8 +70,9 @@ student films, theatre, documentary — Scene Cards will still do the job.
 
 Scene Cards requires one of the following:
 
-- **macOS** Ventura 13.5 or later silicon or Intel
-- **iPadOS** 16.6
+- **macOS** Ventura 13.5 or later (Apple silicon or Intel)
+- **iPadOS** 16.6 or later
+- **iPhone** iOS 16.6 or later
 
 Recommended:
 
@@ -100,6 +101,16 @@ Recommended:
 3. Tap **Get**, authenticate, and wait for the download to complete.
 4. Launch Scene Cards from your Home Screen or App Library.
 
+### 1.5.3 📱 iPhone
+
+1. Open the App Store.
+2. Search for **Scene Cards**.
+3. Tap **Get**, authenticate, and wait for the download to complete.
+4. Launch Scene Cards from your Home Screen or App Library.
+
+> ⓘ **Note** — Scene Cards is a universal purchase. If you have already
+> bought or subscribed on iPad or Mac, the same subscription is active on
+> iPhone with no additional charge.
 
 ## 1.6 First Launch
 
@@ -123,12 +134,26 @@ modes. Tap **Continue** to proceed to the Files browser, where you can:
 > ✱ **Tip** — the Welcome screen only appears on first run. To revisit it
 > later, see §17 *Settings & Preferences*.
 
+### 1.6.3 📱 iPhone
+
+On first launch, iPhone shows the same document browser as iPadOS. Tap
+**Create Document** to start a new wall (3 cards wide in portrait by
+default) or open an existing `.scenecards` file.
+
+Because iPhone screens are narrower, Scene Cards uses a compact toolbar
+layout — the three wall-mode buttons are replaced by a single **mode
+button** that shows the current mode's icon. Tap it to open a menu and
+switch between Script, Locations and Schedule.
+
 ## 1.7 Activation and Subscription
 
-Scene Cards offers annual
-  subscriptions. A free trial of 7days is available. Manage your
-  subscription from the App Store account settings — not from inside Scene
-  Cards. See §17.5 for details on restoring purchases across devices.
+Scene Cards is an annual subscription. A 7-day free trial is available
+from the App Store — during the trial, all features are fully
+accessible with no restrictions. After the trial ends, the document
+opens in read-only mode until a subscription is active. Manage your
+subscription from the App Store account settings — not from inside
+Scene Cards. See §17.5 for details on restoring purchases across
+devices.
 
 ## 1.8 Conventions Used in This Manual
 
@@ -140,6 +165,7 @@ badge appears alongside the heading:
 
 - 🍎 macOS
 - 📐 iPadOS
+- 📱 iPhone
 
 **Callout boxes** — used for information that sits outside the main flow:
 

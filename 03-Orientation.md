@@ -1,7 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots for §3.1 (macOS window overview) and §3.2 (iPadOS window
-     overview). Save under Docs/Manual/assets/.
+  1. Screenshot for §3.2 (iPadOS window overview) still needed.
 -->
 
 # Chapter 3 — Orientation
@@ -25,6 +24,8 @@ Every Scene Cards document opens into a three-zone layout:
 | **Wall** (centre) | The grid of cards — the primary work surface | Same on both platforms |
 | **Inspector** (right) | Editable details of the selected card | Docked on macOS; sheet on iPadOS |
 | **Script panel** (left) | The raw script for the selected card | Docked on macOS; sheet on iPadOS |
+
+![The Scene Cards window on macOS, showing the script panel (left), wall (centre) and inspector (right) all open simultaneously.](images/C3_1.png)
 
 On **macOS**, the inspector and script panel dock to the right and left of
 the wall and can be open together. On **iPadOS**, both are sheets — opening
@@ -52,9 +53,10 @@ also available from the `View` menu as `⇧⌘1` / `⇧⌘2` / `⇧⌘3`.
 ### 3.2.1 Wall width
 
 - **🍎 macOS** — 8 cards wide by default.
-- **📐 iPadOS** — 6 cards wide by default. Pinch outward to compress
-  (more cards per row) or pinch inward to expand (fewer, larger cards).
-  The change sticks for this document.
+- **📐 iPadOS** — 6 cards wide by default. Pinch to change column count.
+- **📱 iPhone** — 3 cards wide in portrait, 5 in landscape by default.
+  Pinch to change column count. The count resets to the default when you
+  rotate the device; pinch again in the new orientation to adjust.
 
 ### 3.2.2 Card appearance
 
@@ -101,12 +103,12 @@ Left to right:
 > ✱ **Tip** — hover over any toolbar button to see a tooltip describing
 > what it does.
 
-### 3.3.2 📐 iPadOS toolbar
+### 3.3.2 📐📱 iPadOS and iPhone toolbar
 
 Left to right:
 
 ```
-[ ← Back ] [ Script panel ] [ ··· ]           [ 🔍 Search ]   [ Script | Loc | Sched ]   [ Inspector ]
+[ ← Back ] [ Script panel ] [ ··· ]    [ 🔍 Search ]   [ mode ]   [ Inspector ]
 ```
 
 - **Back** (`chevron.backward`) — returns to the Files browser. The
@@ -124,12 +126,16 @@ Left to right:
 - **Search** — starts as a magnifying-glass button; tap to expand into a
   full text field, tap the ✕ (or submit) to collapse. The icon turns blue
   while a query is active.
-- **Mode buttons** — identical to macOS.
+- **Mode button(s)**
+  - **📐 iPad** — three individual buttons, one per mode. The active mode
+    is tinted with the accent colour.
+  - **📱 iPhone** — a single button showing the current mode's icon. Tap
+    it to open a menu and select Script, Locations or Schedule.
 - **Inspector toggle** — opens the inspector as a sheet.
 
-> ⓘ **Note** — iPadOS has no menu bar, so all actions are reachable from
-> the toolbar or the overflow menu. (Schedule mode also attaches a context
-> menu to each card for day-assignment actions — see §9.)
+> ⓘ **Note** — neither iPadOS nor iPhone has a menu bar, so all actions
+> are reachable from the toolbar or the overflow menu. (Schedule mode also
+> attaches a context menu to each card for day-assignment actions — see §9.)
 
 ### 3.3.3 Searching
 
@@ -244,8 +250,10 @@ delete) apply to every card in the current selection.
   trackpad pinch is not currently mapped to column count on macOS.
 - **📐 iPadOS** — pinch the wall with two fingers. Pinch **outward** to
   pack more cards per row; pinch **inward** to make each card larger.
-  The column count animates live and is saved to the document when you
-  lift your fingers.
+  The column count animates live and persists until you rotate the device.
+- **📱 iPhone** — same pinch gesture. The column count persists until you
+  rotate; rotating resets to the orientation default (3 portrait, 5
+  landscape), after which you can pinch again to adjust.
 
 ### 3.6.3 Scrolling
 

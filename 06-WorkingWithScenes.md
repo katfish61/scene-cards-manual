@@ -1,7 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — inspector in single-select state, inspector in
-     multi-select state, the Shoot Data block expanded.
+  1. Screenshot of the Shoot Data block expanded still needed.
   2. Confirm the character colour assignment popover actually opens on
      tap on both platforms (confirmed in §6.5 below but not screenshotted). *confirmed*
   3. Cross-check §6.8 field list against any future report types added
@@ -31,6 +30,8 @@ Select one card and open the inspector:
 With no card selected, the inspector reads *"Select a tile to edit."*
 With more than one card selected, it switches to the **Multi-Select
 Panel** (§6.8).
+
+![The inspector open on iPadOS showing a selected card's location, synopsis, and a reference image in the carousel.](images/C6.jpg)
 
 Edits are committed as soon as a field loses focus — there is no Save
 button. Each commit is a single undo step (`⌘Z`).
@@ -162,6 +163,8 @@ Select two or more cards (§3.6.1) and the inspector switches to the
 - **Move Block After Scene** — type a target scene number and press
   **Move Block** to insert the whole selection, in its current order,
   immediately after that scene.
+
+![Three cards selected on iPadOS, showing the Multi-Select Panel with scene numbers listed and the Move Block After Scene field.](images/C6.9.jpg)
 
 Nothing else can be edited in multi-select — per-scene fields (location,
 synopsis, scene number) require a single selection, since they take

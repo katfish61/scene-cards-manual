@@ -3,12 +3,15 @@ TODO — still open for this chapter:
   1. Screenshots — the iPadOS navigation bar (annotated), the ⋯ overflow
      menu open, the inspector reference toolbar, the inspector tile
      action buttons.
-  2. Confirm which individual tile-editing actions (synopsis, location,
-     revision colour) are Pro-gated vs available in read-only mode.
-     Read-only blocks all editing at the document level; need to check
-     whether any editing survives in the trial-expired state.
-  3. Confirm the exact SF Symbol / visual appearance of each mode button
-     on iPadOS (film / location / calendar) for screenshot annotations.
+  2. RESOLVED — read-only mode (trial expired) does NOT disable inspector
+     text fields. Synopsis, location and scene number remain editable.
+     Only import and creation operations are gated behind requirePro():
+     script import, image import, shoot report import, session data import,
+     and drag-and-drop onto the wall/carousel. The ★ markers in this
+     chapter correctly reflect the gated operations. The chapter intro has
+     been updated to clarify the distinction.
+  3. RESOLVED — SF Symbols confirmed from code: Scenes = `film`,
+     Locations = `location.fill`, Schedule = `calendar`.
 -->
 
 # Chapter 15 — Toolbar and Menu Reference
@@ -19,6 +22,10 @@ and the inspector toolbar on all platforms. For step-by-step procedures
 see the relevant chapter; this chapter is a lookup table.
 
 Items marked ★ require an active subscription or free trial (§1.7).
+In read-only mode (trial expired), these import and creation operations
+are blocked and the paywall is shown instead. Editing existing card
+fields — synopsis, location, scene number — is not blocked by the
+subscription state.
 
 
 ---
@@ -27,6 +34,15 @@ Items marked ★ require an active subscription or free trial (§1.7).
 
 Scene Cards has no floating toolbar on macOS. All commands are in the
 menu bar.
+
+### Project
+
+| Item | Shortcut | What it does |
+|---|---|---|
+| New Project | `⌘⇧N` | Creates a new Scene Cards document |
+| Open Project… | `⌘⇧O` | Opens an existing document |
+| Save | `⌘S` | Saves the document |
+| Save As… | `⌘⇧S` | Saves a copy under a new name or location |
 
 ### File
 

@@ -1,7 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — the printed page layout (2×3 grid, card content),
-     the macOS print dialog, the iPadOS print sheet.
+  1. Screenshot still needed: the iPadOS print sheet.
   2. RESOLVED — omitted cards appear on the printed wall. The scene
      number field renders as e.g. "02 / 15A OMITTED". §11.1.2 updated.
 -->
@@ -30,6 +29,8 @@ Three routes reach the print dialog:
 Both platforms open the standard system print dialog — macOS shows the
 native print panel; iPadOS shows the print sheet. From there, choose a
 printer, set the number of copies, and print.
+
+![The macOS print dialog showing the scene wall print preview — cards laid out in a 2-column grid, 9 pages total, with print options on the right.](images/C11.jpg)
 
 ### 11.1.2 What each card shows
 

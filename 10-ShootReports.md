@@ -1,8 +1,8 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — the day-header import menu, a sound report badge,
-     the inspector Shoot Data section expanded for a card with sound entries,
-     the macOS "Import Sound Reports from Folder" open panel.
+  1. Screenshots still needed: the day-header import menu, a sound report
+     badge on the day header, the macOS "Import Sound Reports from Folder"
+     open panel.
   2. RESOLVED — when detectShootDay returns nil the file is added to an
      `unmatched` array and listed by name in the summary alert at the end
      of the import. It is never silently dropped. §10.1.4 is accurate.
@@ -142,6 +142,8 @@ badge, but does not attempt to parse the content. Any PDF, folder or
 supported file type can be attached.
 
 ## 10.3 Per-Scene Data in the Inspector
+
+![Schedule mode showing a selected card's Shoot Data panel expanded, listing Sound · Day 11 · 4 takes with individual slate entries, timecodes and track notes.](images/C10.jpg)
 
 For sound reports, the extracted data appears directly on each matching
 card. To view it, open the card's inspector (§6.1) and scroll to the

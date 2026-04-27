@@ -1,12 +1,7 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — the Files app showing a .scenecards document in
-     the iCloud Drive / Scene Cards folder, an AirDrop send in progress.
-  2. RESOLVED — iCloud Documents sync was added in commit a746bab:
-     entitlements now include icloud-container-identifiers and
-     icloud-services (CloudDocuments); NSUbiquitousContainers added
-     to Info.plist with container iCloud.com.keithtunney.scenecards.
-     §14.3 updated with full iCloud Drive section.
+  1. Screenshots — the Files app showing a .scenecards document,
+     an AirDrop send in progress. Save under Docs/Manual/assets/.
 -->
 
 # Chapter 14 — Collaborating
@@ -68,6 +63,11 @@ a collaborator by any means that transfers a file.
 2. Long-press the file and tap **Share**.
 3. Choose the recipient in the AirDrop sheet.
 
+**📱 iPhone**
+1. Open the Files app and locate the document.
+2. Long-press the file and tap **Share**.
+3. Choose the recipient in the AirDrop sheet.
+
 **🍎 macOS**
 1. In Finder, right-click the `.scenecards` file.
 2. Choose **Share → AirDrop** and select the recipient.
@@ -90,6 +90,13 @@ productions with many reference files the package can be several
 hundred megabytes — check the recipient's attachment limit first, or
 use a cloud or AirDrop link instead.
 
+### 14.2.4 📐📱 iPadOS and iPhone — Files app
+
+On iPadOS and iPhone the document lives wherever you saved it — the
+app's local storage or any Files-accessible location. From the Files
+app you can copy, move or share the package the same way as any other
+file.
+
 ## 14.3 The Async Merge Workflow
 
 When two people have worked on separate copies of the same document,
@@ -109,10 +116,14 @@ A typical two-person workflow:
 5. The result is Editor A's document with Editor B's additions merged
    in, overwriting only the categories chosen.
 
-> ✱ **Tip** — Import Session Data is one-directional: you pull from a
-> source into your current document. If both parties have made changes
-> you want to keep, run the import in both directions, or agree that
-> one document is the authoritative copy before work starts.
+See §12 for the full details on what each category transfers and how
+conflicts are resolved.
+
+> ✱ **Tip** — Import Session Data is one-directional: you pull from
+> a source into your current document. If both parties have made
+> changes you want to keep, you may need to run the import twice —
+> once in each direction — or agree that one document is the
+> authoritative copy.
 
 ## 14.4 What Isn't Supported
 
@@ -125,10 +136,12 @@ not supported in the current version. Open the document fresh on the
 second device after iCloud has synced.
 
 **Automatic conflict resolution** — if the same document is edited on
-two devices simultaneously and both save, iCloud handles the conflict
-at the file level (keeping one version and renaming the other). Scene
-Cards has no built-in conflict UI — use Import Session Data to
-reconcile diverged copies manually.
+two devices simultaneously and saved independently (including via
+iCloud Drive), the file system handles the conflict (usually keeping
+one version and creating a duplicate). Scene Cards has no built-in
+conflict UI — use Import Session Data (§12) to reconcile diverged
+copies manually. To avoid conflicts, agree on a hand-off process:
+one editor finishes and saves, then the other opens the updated file.
 
 ## 14.5 Where to Go Next
 

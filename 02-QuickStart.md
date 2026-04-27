@@ -51,6 +51,15 @@ cover every episode — see §13 *Multi-Episode Productions*.
 > ⓘ **Note** — iPadOS auto-saves continuously. There is no manual Save
 > command; closing the document commits the latest state.
 
+### 2.1.3 📱 iPhone
+
+1. Launch Scene Cards. The Files browser appears.
+2. Tap **Create Document** in the Files browser. A new document is created
+   with an empty wall — 3 cards wide in portrait by default.
+3. Rename from the Files app at any time.
+
+> ⓘ **Note** — iPhone auto-saves continuously, the same as iPadOS.
+
 ## 2.2 Import a Script PDF
 
 A script import walks the document top-to-bottom, finds every scene heading
@@ -72,7 +81,7 @@ Scene Cards accepts:
 4. When parsing completes, the wall populates with one card per scene, in
    script order.
 
-### 2.2.2 📐 iPadOS
+### 2.2.2 📐📱 iPadOS and iPhone
 
 1. Tap the **⋯** overflow menu in the top-right of the toolbar.
 2. Choose **Import Script PDF or FDX…**.
@@ -80,7 +89,7 @@ Scene Cards accepts:
 4. Tap **Open**. The wall fills as parsing completes.
 
 > 🔒 **Permission required** — the first time you pick a file outside the
-> app's own folder, iPadOS asks whether Scene Cards may read it. Tap
+> app's own folder, the system asks whether Scene Cards may read it. Tap
 > **Allow**.
 
 ### What gets imported
@@ -115,8 +124,8 @@ itself is opened in one of two ways:
 
 - **🍎 macOS** — **double-click** the card, or click it once to select and
   then click the **Inspector** button at the top-right of the toolbar.
-- **📐 iPadOS** — **double-tap** the card. The Inspector slides up as a
-  sheet.
+- **📐 iPadOS / 📱 iPhone** — **double-tap** the card. The Inspector slides
+  up as a sheet.
 
 ### 2.3.2 Fields on the Inspector
 
@@ -145,8 +154,8 @@ Sound-report entries, when present, appear below the toolbar as a
 
 - **🍎 macOS** — click the **Inspector** button at the top-right of the
   toolbar to toggle the panel closed.
-- **📐 iPadOS** — tap the **Inspector** button at the top-right of the
-  toolbar, or swipe the sheet down.
+- **📐 iPadOS / 📱 iPhone** — tap the **Inspector** button at the
+  top-right of the toolbar, or swipe the sheet down.
 
 > ✱ **Tip** — edits are committed as soon as a field loses focus. You do
 > not need to "save" an individual card.
@@ -161,9 +170,10 @@ Stills live on the card itself and double as the thumbnail on the wall.
   any card. The image is copied into the document and becomes the card's
   thumbnail. Supported formats: **JPEG, PNG, HEIC/HEIF, TIFF, GIF, WebP,
   BMP** and most common **RAW** formats (CR2, NEF, ARW).
-- **📐 iPadOS** — use the Inspector route in §2.4.2. Drag-and-drop from
-  Photos onto a card is technically supported but fiddly on iPad; the
-  Inspector is faster and more reliable for a single still.
+- **📐 iPadOS / 📱 iPhone** — use the Inspector route in §2.4.2.
+  Drag-and-drop from Photos onto a card is technically supported but
+  fiddly on touch devices; the Inspector is faster and more reliable
+  for a single still.
 
 ### 2.4.2 Use the Inspector
 
@@ -178,8 +188,8 @@ If you already have a folder of on-set or scout photos named by scene
 number, Scene Cards can match and assign them in one go.
 
 - **🍎 macOS** — `File → Batch Import Images (Folder)…` and pick the folder.
-- **📐 iPadOS** — **⋯** overflow → **Import Images from Files…**, then
-  navigate to the folder.
+- **📐 iPadOS / 📱 iPhone** — **⋯** overflow → **Import Images from
+  Files…**, then navigate to the folder.
 
 Filenames that start with a scene number are matched onto the wall —
 `5.jpg`, `5A.jpg`, `005_rehearsal.jpg` all land on scene 5 (or 5A). The
@@ -204,11 +214,11 @@ in a multi-episode document, prefix the filename with `Ep{NN}_Scene_`
 - **Reopen** — it appears in `File → Open Recent` and in the macOS Stage
   Manager / Recents view.
 
-### 2.5.2 📐 iPadOS
+### 2.5.2 📐📱 iPadOS and iPhone
 
-- **Close** — tap the back chevron in the top-left of the toolbar (its
-  label follows the folder you opened from, typically *Files* or
-  *Recents*). The document commits and returns you to the Files browser.
+- **Close** — tap the back chevron (or back button on iPhone) in the
+  top-left of the toolbar. The document commits and returns you to the
+  Files browser.
 - **Reopen** — tap the document in the Files browser.
 
 ## 2.6 Next Steps

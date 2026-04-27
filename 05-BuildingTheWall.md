@@ -1,12 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots for §5.1 merge summary sheet, §5.4 renumber-from-here,
-     §5.3 drag-to-reorder.
-  2. Confirm the revision-colour palette order shown in the inspector — the
-     list in §5.7 is pulled from code but the UI may reorder.
-  3. Confirm the "close gap" behaviour on iPadOS — macOS has a context-
-     menu route (via inspector toolbar); iPadOS equivalent not yet
-     documented.
+  1. Screenshots for §5.4 renumber-from-here, §5.3 drag-to-reorder.
 -->
 
 # Chapter 5 — Building the Wall
@@ -54,6 +48,8 @@ Cards are matched on **episode + scene number + scene suffix**:
 
 A summary sheet shows **Added / Updated / Unchanged / Removed** counts
 before the merge commits.
+
+![The script re-import summary sheet, showing 37 scenes updated, 1 new scene added, 12 unchanged and 0 removed.](images/C5.1.png)
 
 > ⚠ **Caution — Re-importing a revised script**
 >

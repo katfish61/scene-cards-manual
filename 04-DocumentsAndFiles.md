@@ -27,8 +27,9 @@ The bundle is a **package**:
 
 - On **macOS**, the Finder shows it as a single file with a Scene Cards
   icon. Right-click and choose **Show Package Contents** to see inside.
-- On **iPadOS**, the Files app treats it as a single file. There is no
-  supported way to peek inside on iPad — edit it through Scene Cards.
+- On **iPadOS** and **iPhone**, the Files app treats it as a single
+  file. There is no supported way to peek inside on iPad or iPhone —
+  edit it through Scene Cards.
 
 Inside the package:
 
@@ -55,11 +56,15 @@ Short version — see §2.1 for the full walkthrough.
 
 - **🍎 macOS** — `File → New` (`⌘N`). Save to a named location with
   `File → Save…` (`⌘S`).
-- **📐 iPadOS** — the **+** button at the top of the Files browser.
+- **📐 iPadOS** — tap the **+** button at the top of the Files browser.
   iPadOS auto-saves from the first edit.
+- **📱 iPhone** — tap **Create Document** in the Files browser. iPhone
+  auto-saves from the first edit.
 
-A brand-new document ships with an empty wall **8 cards wide on macOS**
-and **6 cards wide on iPadOS**. You can change the width later (§17).
+A brand-new document ships with an empty wall — **8 cards wide** on
+macOS, **6 cards wide** on iPadOS, and **3 cards wide** on iPhone
+(portrait default). You can adjust the column count later by pinching
+the wall (§17).
 
 ## 4.3 Opening an Existing Document
 
@@ -71,11 +76,11 @@ and **6 cards wide on iPadOS**. You can change the width later (§17).
 - **Double-click** a `.scenecards` file in Finder.
 - **Drag** a `.scenecards` file onto the Scene Cards icon in the Dock.
 
-### 4.3.2 📐 iPadOS
+### 4.3.2 📐📱 iPadOS and iPhone
 
 - Tap a `.scenecards` document in the **Files browser** that appears on
   launch.
-- Tap a document inside the iPadOS **Files app** — Scene Cards opens
+- Tap a document inside the **Files app** — Scene Cards opens
   automatically.
 - From another app, share a `.scenecards` document with Scene Cards via
   the standard share sheet.
@@ -98,15 +103,17 @@ Scene Cards follows the standard macOS document model.
 - **Save As…** — `File → Save As…` (`⇧⌘S`) forks a copy to a new name
   and switches to the copy.
 
-### 4.4.2 📐 iPadOS
+### 4.4.2 📐📱 iPadOS and iPhone
 
 - **Auto-save** is continuous. There is no manual Save command.
-- Closing the document with the back chevron commits the latest state.
+- Closing the document with the back chevron (or the back button on
+  iPhone) commits the latest state.
 
 > ⚠ **Caution** — Scene Cards writes the full package on each save. On
-> older iPads with slow storage, a very large document (many gigabytes of
-> stills) may take a few seconds to commit when you close it. Wait for the
-> Files browser to reappear before removing power or force-quitting.
+> older devices with slow storage, a very large document (many gigabytes
+> of stills) may take a few seconds to commit when you close it. Wait
+> for the Files browser to reappear before removing power or
+> force-quitting.
 
 ### 4.4.3 What gets saved
 
@@ -129,6 +136,7 @@ every time you change a brief.
   name, or rename the file in Finder.
 - **📐 iPadOS** — tap and hold the title in the toolbar, or rename from
   the Files app.
+- **📱 iPhone** — rename from the Files app.
 
 Renaming is safe — Scene Cards tracks attachments by their location inside
 the package, not by the package's outer filename.
@@ -138,6 +146,8 @@ the package, not by the package's outer filename.
 - **🍎 macOS** — `File → Duplicate` (`⇧⌘S` before naming a copy) forks a
   working copy in the same folder.
 - **📐 iPadOS** — in the Files app, long-press the document and choose
+  **Duplicate**.
+- **📱 iPhone** — in the Files app, long-press the document and choose
   **Duplicate**.
 
 Duplicating a document duplicates everything inside — stills, references,
@@ -165,9 +175,9 @@ ones.
 
 - On **macOS**, save the document into `~/Library/Mobile
   Documents/com~apple~CloudDocs/` (or any visible iCloud Drive folder).
-- On **iPadOS**, create or save the document under **iCloud Drive** in
-  the Files browser.
-- Both devices must be signed into the same Apple ID.
+- On **iPadOS** or **iPhone**, create or save the document under
+  **iCloud Drive** in the Files browser.
+- All devices must be signed into the same Apple ID.
 
 > ⚠ **Caution** — a single Scene Cards document can easily exceed typical
 > iCloud download sizes on a slow connection. On set, prefer working
@@ -176,7 +186,8 @@ ones.
 ### 4.6.2 AirDrop
 
 AirDrop the `.scenecards` document from Finder (macOS) or the Files app
-(iPadOS). The receiving device opens it directly in Scene Cards.
+(iPadOS / iPhone). The receiving device opens it directly in Scene
+Cards.
 
 ### 4.6.3 USB, SMB, Dropbox, Google Drive
 
@@ -206,6 +217,8 @@ This section is for the curious and for advanced recovery. Day-to-day
 work does not require touching these files.
 
 Open a document with **Show Package Contents** on macOS. You should see:
+
+![Finder showing a .scenecards file with the right-click context menu open and "Show Package Contents" highlighted.](images/C4.8.jpg)
 
 ```
 MyProduction.scenecards/

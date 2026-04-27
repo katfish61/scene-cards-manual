@@ -20,21 +20,21 @@ Docs/Manual/
 ├── 08-ReferenceFiles.md           ← drafted
 ├── 09-Scheduling.md               ← drafted
 ├── 10-ShootReports.md             ← drafted
-├── 11-PrintingAndExport.md        (TBD)
-├── 12-ImportSessionData.md        (TBD)
-├── 13-MultiEpisode.md             (TBD)
-├── 14-Collaborating.md            (TBD)
-├── 15-ToolbarAndMenuReference.md  (TBD)
-├── 16-KeyboardShortcuts.md        (TBD)
-├── 17-SettingsAndPreferences.md   (TBD)
-├── 18-FileFormatSpec.md           (TBD)
-├── 19-Troubleshooting.md          (TBD)
-├── 20-Maintenance.md              (TBD)
-├── 21-Diagnostics.md              (TBD)
-├── Appendix-A-SupportedFileFormats.md  (TBD)
-├── Appendix-B-Glossary.md         (TBD)
-├── Appendix-C-SampleWorkflows.md  (TBD)
-├── Appendix-D-Changelog.md        (TBD)
+├── 11-PrintingAndExport.md        ← drafted
+├── 12-ImportSessionData.md        ← drafted
+├── 13-MultiEpisode.md             ← drafted
+├── 14-Collaborating.md            ← drafted
+├── 15-ToolbarAndMenuReference.md  ← drafted
+├── 16-KeyboardShortcuts.md        ← drafted
+├── 17-SettingsAndPreferences.md   ← drafted
+├── 18-FileFormatSpec.md           ← drafted
+├── 19-Troubleshooting.md          ← drafted
+├── 20-Maintenance.md              ← drafted
+├── 21-Diagnostics.md              ← drafted
+├── Appendix-A-SupportedFileFormats.md  ← drafted
+├── Appendix-B-Glossary.md         ← drafted
+├── Appendix-C-SampleWorkflows.md  ← drafted
+├── Appendix-D-Changelog.md        ← drafted
 └── assets/                        (screenshots, diagrams)
 ```
 
@@ -68,10 +68,10 @@ Prefix headings with the relevant badge(s) when behaviour differs by platform:
 
 - 🍎 macOS
 - 📐 iPadOS
+- 📱 iPhone
 
-Scene Cards does not ship on iPhone — do not introduce a 📱 badge or iOS
-references. Omit badges entirely when the procedure is identical on macOS
-and iPadOS.
+Use `📐📱` when behaviour is identical on iPadOS and iPhone. Omit badges
+entirely when the procedure is identical across all three platforms.
 
 ### Callouts
 
@@ -95,6 +95,16 @@ Modifier keys use Apple symbols: ⌘ ⌥ ⌃ ⇧. Combinations have no separator
 ### Menu paths
 
 `File → New`, `Edit → Undo`, `View → Show Inspector`.
+
+### Screenshots
+
+Screenshots live in `Docs/Manual/images/`. Naming convention:
+
+- `C{chapter}_{section}.png` — one image for a section, e.g. `C3_1.png` for §3.1
+- `C{chapter}_{section}a.png`, `…b.png` — multiple images in the same section
+- Sub-sections: `C9_4_1.png` for §9.4.1
+
+Reference in markdown as `![Alt text](images/C3_1.png)`.
 
 ### Placeholder filenames
 
@@ -129,11 +139,16 @@ first mention; after that use the section number.
 
 Canonical answers that now apply across the whole manual. Do not re-ask.
 
-- **Platforms:** macOS and iPadOS only. No iPhone / iOS.
-- **Minimum OS:** macOS 13.5 (Ventura); iPadOS 16.6.
-- **Monetisation:** annual subscription, 7-day free trial.
-- **App Store status:** live on Mac App Store and iPadOS App Store.
-- **Default wall width:** 8 cards on macOS, 6 cards on iPadOS.
+- **Platforms:** macOS, iPadOS, and iPhone.
+- **Minimum OS:** macOS 13.5 (Ventura); iPadOS 16.6; iOS 16.6.
+- **Monetisation:** annual subscription with 7-day free trial. No free
+  tier — the trial gives full access to everything; after expiry the
+  document opens read-only. Never write "free version" or "free tier".
+- **iCloud sync:** implemented — iCloud Documents capability added
+  (container iCloud.com.keithtunney.scenecards, CloudDocuments service).
+  File-level sync via iCloud Drive; not real-time multiplayer.
+- **App Store status:** live on Mac App Store, iPadOS App Store, and iOS App Store.
+- **Default wall width:** 8 cards on macOS, 6 cards on iPadOS, 3 cards on iPhone (portrait).
 - **User-facing term:** *card*. *Tile* is internal only.
 
 ## Open Questions

@@ -1,8 +1,7 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — a card on the wall with a still, the inspector
-     "Import Image" button, the macOS batch-folder Open panel, the
-     iPadOS PHPicker grid mid-selection.
+  1. Screenshots still needed: a card on the wall with a still, the
+     macOS batch-folder Open panel, the iPadOS PHPicker grid mid-selection.
   2. Confirm whether iPadOS PHPicker permits multi-select of non-scene-
      numbered photos (for manual single-tile attach via ⋯ overflow
      → Import Images from Files…); §7.3.2 currently describes it as
@@ -72,6 +71,8 @@ to spin up a placeholder card around a reference photo.
 2. Tap or click the **Import Image** button (`photo` icon) in the
    inspector's toolbar strip (§6.7).
 3. Choose a file from the picker.
+
+![The inspector toolbar strip on iPadOS with the Import Image button highlighted, ready to attach a still to the selected card.](images/C7.jpg)
 
 On **📐 iPadOS** the picker opens into Files by default. Use the
 **Photos** tab on the side to pull from the Camera Roll instead.

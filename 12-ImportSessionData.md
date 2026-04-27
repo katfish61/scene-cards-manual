@@ -1,7 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — the import panel showing matched/unmatched sections,
-     the shoot reports day+type filter chips, the result banner.
+  1. Screenshot still needed: the result banner after a completed import.
   2. RESOLVED — basic card metadata (brief, description, comments,
      location, revision colour, omitted status) transfers automatically
      for every matched card. There is no checkbox to suppress it.
@@ -127,6 +126,8 @@ are left as they are.
 > exist in the destination but not in the source will be lost.
 
 ### 12.3.5 Shoot reports
+
+![The Import Session Data panel showing the Shoot Reports section with day and report-type filters, and the New Scenes section listing unmatched source cards.](images/C12.jpg)
 
 Transfers report attachment records and the per-card sound data for
 matched cards.

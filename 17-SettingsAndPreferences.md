@@ -1,9 +1,10 @@
 <!--
 TODO — still open for this chapter:
   1. Screenshots — the macOS Settings window (General tab, Printing tab).
-  2. Confirm whether macOS has an in-app "Manage Subscription" route,
-     or whether users must go to the App Store app directly. No in-app
-     link was found for macOS — only iPadOS has the ⋯ menu entry.
+  2. RESOLVED — macOS has no in-app "Manage Subscription" route.
+     The button only exists in the iOS ⋯ overflow menu (UIApplication
+     itms-apps deep-link). macOS users must go via App Store → account
+     icon → Subscriptions. §17.3 is accurate as written.
 -->
 
 # Chapter 17 — Settings and Preferences

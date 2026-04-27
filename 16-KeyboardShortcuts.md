@@ -1,9 +1,11 @@
 <!--
 TODO — still open for this chapter:
-  1. Confirm whether ⌘⇧N and ⌘⇧O (New / Open Project) come from
-     ProjectCommands.swift or are standard SwiftUI DocumentGroup
-     shortcuts — check whether they appear in the File menu or are
-     system-level only.
+  1. RESOLVED — ⌘⇧N and ⌘⇧O come from ProjectCommands.swift and appear
+     in a custom "Project" menu in the macOS menu bar (not File). Both
+     added to the chapter below. "Import Sound Reports from Folder" has
+     no keyboard shortcut assigned — correctly absent. ⌘⇧S for Save As
+     is registered in both ProjectCommands and SceneCardsCommands;
+     harmless duplicate, no action needed.
 -->
 
 # Chapter 16 — Keyboard Shortcuts
@@ -21,6 +23,13 @@ custom shortcuts on 📐 iPadOS — use the navigation bar buttons and
 | `⌘⇧1` | Switch to Scenes mode |
 | `⌘⇧2` | Switch to Locations mode |
 | `⌘⇧3` | Switch to Schedule mode |
+
+## Project menu
+
+| Shortcut | Action |
+|---|---|
+| `⌘⇧N` | New Project |
+| `⌘⇧O` | Open Project… |
 
 ## File
 
