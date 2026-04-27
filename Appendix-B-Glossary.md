@@ -19,7 +19,7 @@ this manual.
 **Carousel**
 The horizontal scrolling row of thumbnails at the top of the inspector
 that shows the reference files attached to a card. Navigate with the
-chevron buttons (🍎) or by swiping (📐).
+chevron buttons (🍎) or by swiping (📐📱).
 
 **Close Gap**
 An action that removes a card from its slot and shifts every subsequent
@@ -47,6 +47,13 @@ The primary image displayed on a card face — a production still,
 location photograph, storyboard frame, or any image you assign to
 represent a scene. Stored in `Media/thumbnails/`. See §7.
 
+**iPhone**
+Scene Cards runs on iPhone (iOS 16.6 or later) as well as macOS and
+iPadOS. On iPhone the wall defaults to 3 cards wide in portrait and 5
+in landscape. The toolbar is compact — mode buttons are condensed into
+a single picker button on narrow screens. All import, scheduling, and
+reference features available on iPadOS are available on iPhone.
+
 **Import Session Data**
 A macOS-only feature that merges selected data (stills, references,
 shoot reports, etc.) from one Scene Cards document into another. Used
@@ -55,8 +62,8 @@ members. See §12.
 
 **Inspector**
 The panel that shows and edits the fields of a single selected card.
-Opens as a right-hand sidebar on 🍎 macOS or a bottom sheet on 📐
-iPadOS. See §6.
+Opens as a right-hand sidebar on 🍎 macOS or a bottom sheet on 📐📱
+iPadOS and iPhone. See §6.
 
 **Location mode**
 One of three wall views. Cards are grouped into columns by their
@@ -123,8 +130,8 @@ with `⌘⇧3` or the 📅 button. See §9.
 **Script Panel**
 A sidebar that displays the raw script text extracted from the PDF for
 the currently selected scene. Also the interface for assigning character
-colours. Toggled with the 🔍 button on 📐 iPadOS, or the left sidebar
-control on 🍎 macOS. See §3.5 and §6.9.
+colours. Toggled with the 🔍 button on 📐📱 iPadOS and iPhone, or the
+left sidebar control on 🍎 macOS. See §3.5 and §6.9.
 
 **Security-scoped bookmark**
 A macOS mechanism that allows Scene Cards to re-open a file or folder
@@ -191,8 +198,9 @@ OCR when a PDF cannot be read as selectable text. See *OCR*.
 
 **Wall**
 The main working area — a grid of cards representing the scenes of a
-production. The default width is 8 columns on 🍎 macOS and 6 on 📐
-iPadOS; width is adjustable by pinching on iPadOS. See §3.1.
+production. The default width is 8 columns on 🍎 macOS, 6 on 📐 iPadOS,
+and 3 on 📱 iPhone (portrait); width is adjustable by pinching on
+iPadOS and iPhone. See §3.1.
 
 **Zaxcom Nomad**
 A brand of professional audio recorder. Scene Cards parses sound reports
