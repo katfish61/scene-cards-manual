@@ -14,9 +14,9 @@ TODO — still open for this chapter:
 # Chapter 15 — Toolbar and Menu Reference
 
 This chapter is a quick-reference listing of every control in Scene
-Cards — the menu bar on macOS, the navigation bar on iPadOS, and the
-inspector toolbar on both platforms. For step-by-step procedures see
-the relevant chapter; this chapter is a lookup table.
+Cards — the menu bar on macOS, the navigation bar on iPadOS and iPhone,
+and the inspector toolbar on all platforms. For step-by-step procedures
+see the relevant chapter; this chapter is a lookup table.
 
 Items marked ★ require an active subscription or free trial (§1.7).
 
@@ -75,10 +75,14 @@ menu bar.
 
 ---
 
-## 15.2 📐 iPadOS — Navigation Bar
+## 15.2 📐📱 iPadOS and iPhone — Navigation Bar
 
 The navigation bar runs across the top of the screen. Controls are
 split between the leading (left) and trailing (right) sides.
+
+> ⓘ **Note** — on iPhone in portrait the mode buttons (🎬 📍 📅) are
+> condensed into a single button showing the current mode's icon. Tap
+> it to open a picker and switch modes.
 
 ### Leading controls
 
@@ -102,7 +106,7 @@ Tap the search bar (displayed below the navigation bar) to filter
 cards in real time by scene number, location, description or synopsis.
 See §9.7 for Schedule mode search behaviour.
 
-### 15.2.1 ⋯ Overflow menu
+### 15.2.1 📐📱 ⋯ Overflow menu
 
 | Item | What it does |
 |---|---|
@@ -120,8 +124,8 @@ See §9.7 for Schedule mode search behaviour.
 ## 15.3 Inspector
 
 The inspector opens as a right-hand sidebar (🍎 macOS) or a bottom
-sheet (📐 iPadOS). It has two sections of controls: the **References
-toolbar** at the top and the **Tile actions** at the bottom.
+sheet (📐📱 iPadOS and iPhone). It has two sections of controls: the
+**References toolbar** at the top and the **Tile actions** at the bottom.
 
 ### 15.3.1 References toolbar
 
@@ -132,12 +136,12 @@ Controls for attaching and viewing reference files (§8).
 | 📁 Add Files and Folders… | 🍎 | Opens a file picker; copies files into the card's reference folder |
 | 📝 New Note… | 🍎 | Opens a floating text editor; saves a `.txt` note into the reference folder |
 | ✏️ New Drawing… | 🍎 | Opens a drawing canvas; saves a PNG into the reference folder |
-| ＋ Add… | 📐 | Menu: Choose from Photos / Choose from Files / Link a Folder |
-| 📷 Camera | 📐 | Takes a photo and adds it directly to the carousel |
-| ✏️ Draw | 📐 | Opens PencilKit canvas; loads the current carousel image as a background layer |
+| ＋ Add… | 📐📱 | Menu: Choose from Photos / Choose from Files / Link a Folder |
+| 📷 Camera | 📐📱 | Takes a photo and adds it directly to the carousel |
+| ✏️ Draw | 📐📱 | Opens PencilKit canvas; loads the current carousel image as a background layer |
 | ‹ › Chevrons | 🍎 | Navigate between files in the carousel |
 | ↗ Open in App | 🍎 | Opens the current file in its default system app |
-| ⬆ Share | 📐 | Opens the share sheet for the current carousel file |
+| ⬆ Share | 📐📱 | Opens the share sheet for the current carousel file |
 | 🗑 Delete | Both | Removes the current file from the carousel (no undo — §8.5) |
 
 ### 15.3.2 Tile action buttons
