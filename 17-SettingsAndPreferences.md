@@ -9,9 +9,9 @@ TODO — still open for this chapter:
 # Chapter 17 — Settings and Preferences
 
 Scene Cards has a small set of app-wide preferences. On 🍎 macOS they
-live in the Settings window; on 📐 iPadOS there is no separate settings
-panel — the only in-app option is subscription management in the ⋯
-overflow menu.
+live in the Settings window; on 📐📱 iPadOS and iPhone there is no
+separate settings panel — the only in-app option is subscription
+management in the ⋯ overflow menu.
 
 ## 17.1 🍎 macOS — Settings Window
 
@@ -38,16 +38,16 @@ travel with the `.scenecards` file and apply only to that production.
 
 | Preference | Where to change it |
 |---|---|
-| Wall width (columns) | 📐 Pinch on the wall to adjust (1–10 columns) |
+| Wall width (columns) | 📐📱 Pinch on the wall to adjust (1–10 columns) |
 | Character colours | Inspector → a card with character dialogue → colour picker |
 | Excluded characters | Inspector → character list → exclude toggle |
 
 ## 17.3 Subscription Management
 
-**📐 iPadOS** — tap **⋯ → Manage Subscription…** to open the App Store
-subscriptions page, where you can renew, cancel or change your plan.
-If the trial has expired, **⋯ → Try Scene Cards Pro Free for 7 Days…**
-restarts the paywall flow.
+**📐📱 iPadOS and iPhone** — tap **⋯ → Manage Subscription…** to open
+the App Store subscriptions page, where you can renew, cancel or change
+your plan. If the trial has expired, **⋯ → Try Scene Cards Pro Free for
+7 Days…** restarts the paywall flow.
 
 **🍎 macOS** — manage your subscription through the App Store app:
 open App Store → click your account icon → Subscriptions.
