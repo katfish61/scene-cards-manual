@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scene Cards</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #111;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  .gallery {
+    position: relative;
+    width: 100vmin;
+    max-width: 700px;
+    aspect-ratio: 1;
+  }
+
+  .slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  .slide.active { display: block; }
+
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    display: block;
+  }
+
+  /* Prev / Next arrows */
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.12);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 20px;
+    transition: background 0.15s;
+    z-index: 10;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .arrow:hover { background: rgba(255,255,255,0.25); }
+  .arrow.prev { left: -60px; }
+  .arrow.next { right: -60px; }
+
+  /* Dots */
+  .dots {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .dot.active { background: #4dc8e4; }
+
+  /* App Store link */
+  .cta {
+    margin-top: 20px;
+  }
+  .cta a {
+    color: #4dc8e4;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .cta a:hover { text-decoration: underline; }
+
+  /* On small screens collapse arrows inside */
+  @media (max-width: 600px) {
+    .arrow.prev { left: 4px; }
+    .arrow.next { right: 4px; }
+    .arrow { background: rgba(0,0,0,0.45); }
+  }
+</style>
+</head>
+<body>
+
+<div class="gallery" id="gallery">
+  <button class="arrow prev" onclick="move(-1)">&#8249;</button>
+
+  <div class="slide" data-index="0"><img src="slide_1.png" alt="Scene Cards — overview"></div>
+  <div class="slide" data-index="1"><img src="slide_2.png" alt="Scene Cards — reference files"></div>
+  <div class="slide" data-index="2"><img src="slide_3.png" alt="Scene Cards — scheduling"></div>
+  <div class="slide" data-index="3"><img src="slide_4.png" alt="Scene Cards — free to try"></div>
+
+  <button class="arrow next" onclick="move(1)">&#8250;</button>
+</div>
+
+<div class="dots" id="dots">
+  <div class="dot" onclick="goTo(0)"></div>
+  <div class="dot" onclick="goTo(1)"></div>
+  <div class="dot" onclick="goTo(2)"></div>
+  <div class="dot" onclick="goTo(3)"></div>
+</div>
+
+<div class="cta">
+  <a href="https://apps.apple.com/app/scene-cards/id6760650076" target="_blank">Download on the App Store — Free to try</a>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.dot');
+  let current  = 0;
+
+  // Read #1, #2, #3, #4 from URL hash
+  const hash = parseInt(window.location.hash.replace('#',''), 10);
+  if (hash >= 1 && hash <= slides.length) current = hash - 1;
+
+  function show(n) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+    window.location.hash = current + 1;
+  }
+
+  function move(dir) { show(current + dir); }
+  function goTo(n)   { show(n); }
+
+  // Keyboard
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') move(1);
+    if (e.key === 'ArrowLeft')  move(-1);
+  });
+
+  // Touch swipe
+  let tx = 0;
+  document.addEventListener('touchstart', e => tx = e.touches[0].clientX);
+  document.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - tx;
+    if (Math.abs(dx) > 40) move(dx < 0 ? 1 : -1);
+  });
+
+  // Init
+  show(current);
+</script>
+</body>
+</html>
