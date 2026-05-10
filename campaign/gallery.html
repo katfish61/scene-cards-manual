@@ -20,9 +20,9 @@
 
   .gallery {
     position: relative;
-    width: 100vmin;
-    max-width: 700px;
-    aspect-ratio: 1;
+    width: 95vw;
+    max-width: 1200px;
+    aspect-ratio: 16 / 10;
   }
 
   .slide {
@@ -105,10 +105,9 @@
 <div class="gallery" id="gallery">
   <button class="arrow prev" onclick="move(-1)">&#8249;</button>
 
-  <div class="slide" data-index="0"><img src="slide_1.png" alt="Scene Cards — overview"></div>
-  <div class="slide" data-index="1"><img src="slide_2.png" alt="Scene Cards — reference files"></div>
-  <div class="slide" data-index="2"><img src="slide_3.png" alt="Scene Cards — scheduling"></div>
-  <div class="slide" data-index="3"><img src="slide_4.png" alt="Scene Cards — free to try"></div>
+  <div class="slide" data-index="0"><img src="sc1-wall.png" alt="Scene Cards — wall view"></div>
+  <div class="slide" data-index="1"><img src="sc3-inspector-wall.png" alt="Scene Cards — references"></div>
+  <div class="slide" data-index="2"><img src="sc3-schedule.png" alt="Scene Cards — schedule"></div>
 
   <button class="arrow next" onclick="move(1)">&#8250;</button>
 </div>
@@ -117,7 +116,6 @@
   <div class="dot" onclick="goTo(0)"></div>
   <div class="dot" onclick="goTo(1)"></div>
   <div class="dot" onclick="goTo(2)"></div>
-  <div class="dot" onclick="goTo(3)"></div>
 </div>
 
 <div class="cta">
