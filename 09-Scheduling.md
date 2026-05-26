@@ -4,7 +4,7 @@ TODO — still open for this chapter:
      badges on the day header, the card context menu in Schedule mode.
   2. RESOLVED — iPadOS has exactly two one-liner import entry points:
      (a) the empty-state "Import One-Liner PDF" button, and
-     (b) the "Re-import" button in the schedule top bar.
+     (b) the "Import New Schedule" button in the schedule top bar.
      The IOSNavToolbar overflow (⋯) menu has NO one-liner option —
      only script import, images, photos, shoot reports, and print.
      §9.2.1 and §9.2.2 are accurate as written.
@@ -63,22 +63,43 @@ Scene Cards reads the PDF and builds the day structure automatically.
 2. Tap or click **Import One-Liner PDF** in the centre of the screen.
 3. Select the PDF from the file picker and click **Open**.
 
-Scene Cards parses the PDF, matches each scene number against the cards
-on your wall, and populates the schedule. A progress indicator appears
-while parsing runs.
+Scene Cards scans the first few pages of the PDF and auto-detects the
+scene number format — dot (`2.14`), dash (`2-14`), slash (`2/14`), or
+film (bare numbers like `14`, `103A`). In most cases the detection is
+confident and parsing begins immediately.
+
+If the format is ambiguous — for example, the PDF contains a similar
+number of dot-separated and slash-separated patterns — a **Scene Number
+Format** picker appears. Each option shows the number of matching
+patterns found in the PDF (e.g. "8 found"), so you can make an informed
+choice without going back to open the file. Choose the separator that
+your schedule uses between episode and scene number, or select
+**Auto-detect** to let Scene Cards make a best guess.
+
+Scene Cards then parses the full PDF, matches each scene number against
+the cards on your wall, and populates the schedule. A progress indicator
+appears while parsing runs.
 
 ![Schedule mode after a one-liner import, showing shoot days with grouped scene cards, day headers, and the Attach Shoot Report control on the right.](images/C9.2.jpg)
 
-### 9.2.2 Re-import
+### 9.2.2 Importing a second schedule — Merge or Replace
 
-To update the schedule when a new one-liner is issued, click
-**Re-import** in the top bar. The existing schedule is replaced
-entirely. Manual day assignments you have made (§9.5) are preserved
-unless the affected scene no longer appears in the new PDF.
+When a schedule is already loaded and you click **Import New Schedule**
+in the top bar, a dialog asks how to handle the incoming schedule:
 
-> ⚠ **Caution** — re-importing replaces the full schedule. Any manual
-> "Remove from Schedule" edits you made to individual scenes are lost.
-> Manual day assignments (the orange-badge overrides) survive.
+| Option | What it does |
+|---|---|
+| **Merge** | Days with matching day numbers are updated from the new PDF. Days that exist only in the new PDF are added. Days that exist only in the current schedule are left unchanged. All attached shoot reports survive. |
+| **Replace** | The current schedule is discarded entirely and replaced with the new PDF. Manual day assignments are lost. |
+| **Cancel** | Nothing changes. |
+
+Use **Merge** when a revised strip board has been issued for some shoot
+days and you want to carry forward reports already attached to unchanged
+days. Use **Replace** when the entire schedule has been restructured.
+
+> ⓘ **Note** — manual day assignments (the orange-badge overrides, §9.5)
+> are stored by card, not by day. Merge preserves them; Replace removes
+> them along with the schedule.
 
 ### 9.2.3 OCR warning
 
@@ -96,18 +117,18 @@ Schedule mode showing:
 - **Source filename** — the name of the imported PDF.
 - **Day / scene / match counts** — e.g. `12 shoot days · 87 scenes · 84 matched`.
 - **OCR badge** — orange, when OCR was used (§9.2.3).
-- **Re-import** button — replaces the current schedule.
+- **Import New Schedule** button — imports another PDF, offering Merge or Replace (§9.2.2).
 
 ## 9.4 Reading the Day View
 
 ### 9.4.1 Day header
 
-Each shoot day opens with an indigo **DAY N** badge plus the date (if
-the one-liner carried one). To the right:
+Each shoot day opens with an indigo **DAY N** badge. The badge also
+shows the date and crew call when the one-liner carries them. To the right:
 
 | Element | Meaning |
 |---|---|
-| 🕐 Crew call | Start–end times from the one-liner |
+| 🟢 Cast badge | Sorted list of cast numbers for the day (green, when the one-liner includes cast columns) |
 | 🗒 Total pages | Page count for the day |
 | ⚠ N unmatched | Scenes in the one-liner with no matching card |
 | Report badges | Colour-coded icons for attached reports (§9.6) |
