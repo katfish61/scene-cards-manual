@@ -131,6 +131,8 @@ See §9.7 for Schedule mode search behaviour.
 | Import Images from Files… ★ | Opens the Files picker to import images |
 | Import from Photos… ★ | Opens the Photos picker to import images |
 | Import Shoot Reports… ★ | Opens a folder picker for shoot report import (§10) |
+| Import Session Data… ★ | Merges data from another Scene Cards document (§12) |
+| Share Document… | Opens the system share sheet for the current document (§4.6.2) |
 | Print… | Prints the scene wall (§11) |
 | Try Scene Cards Pro Free for 7 Days… | Opens the subscription paywall (shown when trial inactive) |
 | Manage Subscription… | Opens subscription management (shown when subscribed) |

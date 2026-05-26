@@ -183,11 +183,28 @@ ones.
 > iCloud download sizes on a slow connection. On set, prefer working
 > against a local copy and syncing only between proper networks.
 
-### 4.6.2 AirDrop
+### 4.6.2 AirDrop and In-App Sharing
 
-AirDrop the `.scenecards` document from Finder (macOS) or the Files app
-(iPadOS / iPhone). The receiving device opens it directly in Scene
-Cards.
+**From inside the app (📐📱 iPadOS / iPhone)** — tap **⋯ → Share
+Document…** to open the system share sheet for the current document.
+
+| Destination | What arrives |
+|---|---|
+| AirDrop | The `.scenecards` package intact — tap to open in Scene Cards |
+| Messages / Files | Same as AirDrop |
+| Mail | A `.zip` containing the package — recipient extracts it, then taps the `.scenecards` file to open |
+
+> ⓘ **Note** — Mail always wraps directory packages in a zip; this is
+> iOS / macOS behaviour, not Scene Cards. The zip is valid: extract it
+> and the document opens normally. AirDrop or a shared iCloud Drive
+> folder avoids the zip step entirely.
+
+**From Finder (🍎 macOS)** — drag the `.scenecards` file into a Mail
+message or AirDrop it from the Finder toolbar. AirDrop sends the package
+intact; Mail zips it as above.
+
+**Share Document… is only available once the document has been saved.**
+If the button is missing, save the document first (`⌘S`).
 
 ### 4.6.3 USB, SMB, Dropbox, Google Drive
 

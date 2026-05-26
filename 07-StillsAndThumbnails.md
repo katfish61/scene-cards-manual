@@ -7,10 +7,6 @@ TODO — still open for this chapter:
      → Import Images from Files…); §7.3.2 currently describes it as
      batch-keyed-by-filename. For a single-scene attach path the
      Inspector's photo button is canonical.
-  3. Decide whether to document the `Media/thumbnails/` extension
-     mismatch (TIFF stored, extension lookup only covers jpg/jpeg/png/
-     heic) — cards always render from the inline JPEG, so users won't
-     hit it, but a future "external thumbnail viewer" workflow would.
 -->
 
 # Chapter 7 — Stills and Thumbnails
@@ -211,11 +207,12 @@ In practice that covers:
 | Web | `webp` |
 | Camera RAW (where the OS has a codec) | `raw`, `cr2`, `nef`, `arw` |
 
-The file is read once, converted to an inline JPEG (quality 0.75) for
-fast wall rendering, and — if the document has been saved — a copy of
-the **original** is also tucked into the package (§7.7). The inline
-copy is what the wall, inspector and printing all draw from; the
-on-disk copy is a mirror for package-level tooling.
+The file is read once, scaled to a maximum of 800 px on the longest
+side, and stored as an inline JPEG (quality 0.7) for fast wall
+rendering. If the document has been saved, a copy of the original is
+also written into the package (§7.7). The inline copy is what the
+wall, inspector and printing all draw from; the on-disk copy is a
+mirror for package-level tooling and iCloud sync resilience.
 
 > ⓘ **Note** — RAW decoding depends on the host OS. macOS handles
 > most modern RAW variants out of the box; iPadOS is patchier,
@@ -254,10 +251,17 @@ re-import runs.
 A still travels inside the document package in two places:
 
 - **Inline** on the `Tile` record as `stillImageData` — re-encoded
-  JPEG at quality 0.75. This is what the wall renders.
+  JPEG, max 800 px longest side, quality 0.7. This is what the wall,
+  inspector and printing all render from. It is also the copy that
+  travels via iCloud immediately when the document syncs, before the
+  `Media/` folder has had a chance to download on a new device.
 - **On disk** at `Media/thumbnails/{SceneFolder}.{ext}`, preserving
   the original file extension. This is what external tooling browses
-  when someone opens the package with *Show Package Contents*.
+  when someone opens the package with *Show Package Contents* on macOS.
+
+Both copies are written for every import path — drag-and-drop,
+batch folder, inspector photo button, and Photos picker all produce
+the same result.
 
 `{SceneFolder}` follows the episode-aware convention used everywhere
 in the package (§4.8):

@@ -185,6 +185,12 @@ script PDF. It doubles as the interface for assigning colours to
 characters — open it with the 🔍 button on iPadOS, or via the left
 sidebar toggle on macOS.
 
+When a script title is detected on the title page of the imported PDF
+(a line that contains "Script" alongside an episode marker, revision
+colour, or date), it is shown in italics in the navigation bar above
+the script text — for example, *GKH4 Ep 1 Yellow Script - 29.9.21*.
+This is read-only; to change the title, re-import a revised draft.
+
 - Click (🍎) or tap (📐) a character name in the script panel to open
   a colour popover.
 - Pick a colour; the cue recolours across every scene that character

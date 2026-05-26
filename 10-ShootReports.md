@@ -2,50 +2,33 @@
 TODO — still open for this chapter:
   1. Screenshots still needed: the day-header import menu, a sound report
      badge on the day header, the macOS "Import Sound Reports from Folder"
-     open panel.
-  2. RESOLVED — when detectShootDay returns nil the file is added to an
-     `unmatched` array and listed by name in the summary alert at the end
-     of the import. It is never silently dropped. §10.1.4 is accurate.
-  3. Confirm whether iPadOS "Import Shoot Reports…" (⋯ overflow) is a
+     open panel; the inspector Reports section showing open buttons.
+  2. Confirm whether iPadOS "Import Shoot Reports…" (⋯ overflow) is a
      folder picker or a multi-file picker — looks like FolderPicker
      from the code, but worth checking against the live UI.
-  4. RESOLVED — camera and continuity parsers exist in the codebase
-     (parseCameraReport, parseContinuitySheet, plus data models and
-     inspector views) but are explicitly bypassed in the import switch
-     with comments "too many formats to parse reliably — attach only".
-     Both types are attach-only in the current build. §10.2 and §10.3
-     have been corrected accordingly.
-  5. Aaton Cantar and Zoom recorder formats are not mentioned in the
-     parser code at all. Sound Devices PDF/CSV and Zaxcom Nomad are the
-     only parsed formats. Add support TBD — update §10.2.1 when landed.
 -->
 
 # Chapter 10 — Shoot Reports
 
-Scene Cards can attach shoot reports to shoot days. For sound reports,
-it also parses the file and pulls per-take data directly onto each
-matching card — so you can see filename, take, duration, tracks and
-notes in the card's inspector without leaving the wall. After import,
-cards on that day gain a sound badge to show they have been confirmed
-by the sound report.
-
-The other four report types — Camera, Continuity, Call Sheet and
-Essentials — are stored inside the document and openable from the day
-badge, but are not parsed in the current version.
+Scene Cards can attach shoot reports to shoot days and store them inside
+the document package. After import, each report file is one tap away
+from the card inspector — click to open it in Preview or your default
+PDF viewer. Cards on that day gain a colour-coded badge in the schedule
+header.
 
 Five report types are supported:
 
 | Type | What Scene Cards does with it |
 |---|---|
-| **Sound** | Parses; extracts per-take entries onto each matching card |
-| **Camera** | Attaches the file to the day — no parsing |
-| **Continuity** | Attaches the file to the day — no parsing |
-| **Call Sheet** | Attaches the file to the day — no parsing |
-| **Essentials** | Attaches the file to the day — no parsing |
+| **Sound** | Stores the file; parses scene keys to schedule cards to the shoot day; opens the whole PDF from the inspector |
+| **Camera** | Stores the file; opens from the day badge |
+| **Continuity** | Stores the source PDF; also extracts per-scene pages into the reference carousel; opens from the inspector |
+| **Call Sheet** | Stores the file; opens from the day badge |
+| **Essentials** | Stores the file; opens from the day badge |
 
 This chapter covers importing reports (via the day header and via folder
-batch), the formats accepted for sound reports, the per-scene data shown
-in the inspector, removing a report, and where the files live on disk.
+batch), the formats accepted for sound reports, the inspector Reports
+section, removing a report, and where the files live on disk.
 
 ## 10.1 Attaching a Report to a Shoot Day
 
@@ -67,8 +50,7 @@ for that day and type. For **Sound**, use the folder-batch route
 (§10.1.2) to get automatic day detection across multiple days.
 
 After import, a colour-coded badge appears in the day header (§9.6).
-For sound reports, the per-scene data is also written onto the matching
-cards immediately.
+Sound reports also reschedule any matching cards to that shoot day.
 
 > 🔒 **Permission required** — on 📐 iPadOS, the file picker prompts the
 > first time you reach a location outside the app's sandbox.
@@ -81,10 +63,12 @@ in one step:
 1. Choose `File → Import Sound Reports from Folder…`.
 2. Select the folder containing the report PDFs.
 3. Click **Open**.
+4. Enter the shoot day number that corresponds to the earliest date in
+   the folder (e.g. `46` for shoot day 46).
 
 Scene Cards scans every PDF and CSV in the folder, auto-detects the
 shoot day for each file (§10.1.4), and imports them all. A summary
-alert reports how many entries were imported.
+alert reports how many days were imported.
 
 > ✱ **Tip** — name your Sound Devices exports to include the shoot day
 > (e.g. `Day_09_soundreport.pdf` or `Day9_22Y10M25_1.pdf`). The
@@ -105,7 +89,8 @@ Cards tries to identify its shoot day using four strategies in order:
 1. **Filename day pattern** — `Day_09`, `Day-9`, `day 9`, `D09` etc.
 2. **Filename date** — parsed and matched against the imported schedule.
    Sound Devices devices encode the date as `YYYYMMdd` (e.g.
-   `22Y10M25` = 25 Oct 2022).
+   `22Y10M25` = 25 Oct 2022). Aaton Cantar encodes it as `MM-DD-YY`
+   at the end of the filename.
 3. **PDF header keyword** — `Day: 9`, `Production Day 9` near the top
    of the first page.
 4. **PDF header date** — any recognisable date string matched against
@@ -119,56 +104,44 @@ manually via the day header (§10.1.1).
 
 ### 10.2.1 Sound reports
 
-| Format | What is parsed |
+Sound report files are stored in the document package and opened
+directly — Scene Cards reads the scene keys to schedule the matching
+cards to the correct shoot day but does not store individual take data.
+
+| Recorder | Detection |
 |---|---|
-| **Sound Devices PDF** | Filename, scene, take, duration, tracks, notes. Filename encodes episode and scene: e.g. `1329S142T01` = ep 13, sc 29, slate 142, take 1. |
-| **Sound Devices CSV** | Same fields as PDF; columns detected by header name (`File Name`, `Scene`, `Take`, `Length`, `Notes`, `Trk1`…). Accepts UTF-8, UTF-16 and Latin-1 encodings. |
-| **Zaxcom Nomad PDF** | Filename, scene, take, tracks, notes. Filename format: `{scene}T{take}`, e.g. `27T002`. |
+| **Sound Devices** (PDF or CSV) | Filename encodes episode and scene: e.g. `1329S142T01` = ep 13, sc 29. |
+| **Zaxcom Nomad** (PDF) | Filename format `{scene}T{take}`, e.g. `27T002`. |
+| **Aaton Cantar** (PDF) | `Slt` column contains the scene reference; date detected from `MM-DD-YY` filename suffix. |
 
 When the PDF is image-based (scanned), Scene Cards falls back to Vision
-OCR at 3× scale to extract the text. OCR results are used alongside any
-native PDF text — deduplication prevents double-counting.
-
-> ⓘ **Note** — the parser is tuned for Sound Devices and Zaxcom Nomad
-> formats. Reports from other recorders (Aaton Cantar, Zoom, etc.) are
-> not currently parsed — import them as attach-only via the day header
-> and they will be available to open from the day badge.
+OCR at 3× scale to extract the text.
 
 ### 10.2.2 Camera, Continuity, Call sheets and Essentials
 
-These types are **attach-only** in the current version — Scene Cards
-stores the file inside the package and makes it openable from the day
-badge, but does not attempt to parse the content. Any PDF, folder or
-supported file type can be attached.
+These types are **attach-only** — Scene Cards stores the file inside the
+package and makes it openable from the inspector or day badge. Any PDF,
+folder or supported file type can be attached.
 
-## 10.3 Per-Scene Data in the Inspector
+Continuity PDFs are a special case: Scene Cards also parses each page
+for its scene number and places those pages into the matching card's
+reference carousel (§6.4), so you can flip through the continuity sheets
+directly on the card. The matched cards are scheduled to the shoot day
+you specify at import. The full source PDF is archived in
+`Media/reports/` at the same time (§10.7).
 
-![Schedule mode showing a selected card's Shoot Data panel expanded, listing Sound · Day 11 · 4 takes with individual slate entries, timecodes and track notes.](images/C10.jpg)
+## 10.3 Opening Reports from the Inspector
 
-For sound reports, the extracted data appears directly on each matching
-card. To view it, open the card's inspector (§6.1) and scroll to the
-**Shoot Data** section.
+After import, a **Reports** section appears at the bottom of the card
+inspector for any card that has sound reports for its shoot day, or
+camera and continuity entries.
 
-The Shoot Data section is only shown when at least one sound entry
-exists for that card — cards without any imported sound data show nothing.
+Each sound report appears as a row showing the report type, shoot day
+and filename. Click or tap the row to open the full PDF in your default
+viewer (Preview on macOS).
 
-### 10.3.1 Layout
-
-Sound entries are grouped by shoot day. Each group is collapsible. Tap
-or click the group header to expand or collapse it.
-
-### 10.3.2 Sound entries
-
-Each sound entry shows:
-
-| Field | Example |
-|---|---|
-| Filename | `1329S142T01` |
-| Reel / episode | `13` |
-| Take | `1` |
-| Duration | `00:00:57` |
-| Tracks | `Mix L  Mix R  Boom A  Boom B` |
-| Notes | `Good. Traffic noise on Boom B` |
+The Reports section is only shown when at least one report is associated
+with the card.
 
 ## 10.4 Removing a Report
 
@@ -180,39 +153,34 @@ Each sound entry shows:
 This deletes the attachment record from the document. The file inside
 the package (`Media/reports/…`) is **not** deleted.
 
-For sound reports, the per-scene entries stored on the cards for that
-day are also removed.
-
 ### 10.4.2 Re-import to update
 
-There is no in-place edit for report entries. To update a day's data
-after a re-export from the recorder, attach the new version via the day
-header — Scene Cards clears the old sound data for that day and applies
-the new import.
+There is no in-place edit. To update after a re-export from the
+recorder, attach the new version via the day header — Scene Cards clears
+the old attachment record and replaces it with the new file.
 
 ## 10.5 Scene Number Matching
 
-Imported sound entries are matched to cards using normalised scene keys:
+Sound scene keys are normalised before matching cards:
 
 - Leading zeros are stripped: `017` → `17`.
 - Episode prefixes are preserved for TV-style keys: `1-14A` stays
   `1-14A` and matches a card with episode 1, scene 14A.
 - Sound Devices filenames encode episode and scene in the leading
   digits: `1329S…` → ep 13, sc 29.
-
-Entries that don't match any card are stored against the report day
-but not displayed anywhere — they don't cause an error.
+- Setup letters (American slating: `7A`, `7B`) are matched both as-is
+  and against the bare scene number, so they find whichever convention
+  the cards use.
 
 ## 10.6 Transferring Reports Between Documents
 
 The **Import Session Data** workflow (§12) can copy shoot reports from
 one Scene Cards document into another. You choose which shoot days and
-which report types to bring across; both attachment records and
-per-scene entries transfer together.
+which report types to bring across; attachment records transfer together.
 
 ## 10.7 Where Report Files Live on Disk
 
-Report files are copied into the document package at:
+All report files are copied into the document package at import time:
 
 ```
 MyProduction.scenecards/
@@ -223,22 +191,25 @@ MyProduction.scenecards/
         │   │   └── Day01_SoundReport.pdf
         │   ├── camera/
         │   │   └── Camera_Day1.pdf
-        │   ├── continuity/
-        │   │   └── Continuity_Day1.pdf
         │   ├── callsheets/
         │   │   └── CallSheet_Day1.pdf
         │   └── essentials/
         │       └── Essentials_Day1.pdf
-        └── Day_02/              ← legacy form (no date; older documents)
-            └── sound/
-                └── Day02_Sound.pdf
+        ├── Day_02/              ← legacy form (no date; older documents)
+        │   └── sound/
+        │       └── Day02_Sound.pdf
+        └── Day_46_160521/       ← continuity source PDFs filed under the shoot day
+            └── continuity/
+                └── ContinuityLog.pdf
 ```
 
 The day folder uses the dated form `Day_NN_DDMMYY` when the schedule
 carries a date for that shoot day; otherwise it falls back to the bare
-`Day_NN` form. Files that already exist at the destination are not
-overwritten — re-importing a corrected report replaces the attachment
-record but does not delete the old file.
+`Day_NN` form.
+
+Files that already exist at the destination are not overwritten —
+re-importing a corrected report replaces the attachment record but does
+not delete the old file.
 
 > ⓘ **Note** — removing a badge from the day header deletes the
 > attachment record; it does not delete the file from `Media/reports/`.

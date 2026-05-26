@@ -209,10 +209,31 @@ assignment popover for that character.
 > card and the script updates; click nothing and the panel shows a brief
 > placeholder.
 
-### 3.5.1 When the script panel is useful
+### 3.5.1 Auto-scroll (teleprompter)
+
+The script panel has a built-in teleprompter so you can read through a
+scene hands-free during prep or on-set.
+
+| Control | What it does |
+|---|---|
+| **▶ / ⏸ button** | Start or pause auto-scroll |
+| **Tap anywhere on the script** | Toggle play / pause — same as a video player |
+| **Drag the script during play** | Pauses immediately; scroll to a new position, then tap or press ▶ to resume from there |
+| **Delay slider** | Countdown before scrolling begins (0–20 s) |
+| **Speed slider** | Scroll rate (0.3 × – 5.0 ×) |
+
+The countdown is displayed inside the play button (**12… 11… 1**) and
+the button turns orange while the scroller is active. Pressing ▶ again
+during the countdown cancels it.
+
+> ✱ **Tip** — set a 3–5 s delay and a comfortable speed before your first
+> read-through. Both settings persist across scenes for the session.
+
+### 3.5.2 When the script panel is useful
 
 - Reading a single scene in full while reviewing the card's still and
   references.
+- Hands-free scene read-through using auto-scroll during rehearsal or prep.
 - Quickly checking which characters appear in a scene before assigning
   colours.
 - Spot-checking a parser import — if a scene's text looks wrong, re-import

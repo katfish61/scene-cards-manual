@@ -8,7 +8,7 @@ TODO — still open for this chapter:
      On iPadOS, the FolderPicker calls importRefURLs() → copyReferenceImages(),
      which copies files into the package. iCloud/duplication is a non-issue
      because the files travel inside the package like any other import.
-     §8.2.5 has been updated to reflect this.
+     §8.2.6 has been updated to reflect this.
   3. RESOLVED — the "Save Document First" alert fires for New Note and
      New Drawing only (both openNoteEditor/openDrawingEditor guard on
      documentURL ?? store.projectRootURL != nil). Drop and Add Files
@@ -78,7 +78,27 @@ area. A green border appears while the drop is in flight.
 The panel accepts multiple selections. Files are copied into the package;
 folders are copied as a single unit.
 
-### 8.2.3 📐 iPadOS — Add… menu
+### 8.2.3 🍎 macOS — Take Photo or Video
+
+Click the **camera** button (🎥) in the References toolbar to open the
+built-in camera sheet. A live preview fills the panel; choose **Photo**
+or **Video** with the segmented control at the top.
+
+- **Photo** — click the shutter button to grab a still frame. The JPEG
+  is saved into the document package and added to the carousel immediately.
+- **Video** — click the record button to start recording. A red **REC**
+  indicator appears. Click again to stop; the `.mov` clip is saved into
+  the package and added to the carousel.
+
+Click **Cancel** at any time to dismiss the sheet without saving anything.
+
+> 🔒 **Permission required** — the first time you open the camera sheet,
+> macOS asks for camera (and microphone, for video) access. Grant access
+> in **System Settings → Privacy & Security → Camera / Microphone**. If
+> access is denied the preview shows a "Camera access denied" message with
+> a link to System Settings.
+
+### 8.2.4 📐 iPadOS — Add… menu
 
 Tap the **Add…** button in the References toolbar to reveal three options:
 
@@ -86,22 +106,23 @@ Tap the **Add…** button in the References toolbar to reveal three options:
 |---|---|
 | 🖼 **Choose from Photos** | Opens the Photos picker. Select up to 20 images or videos. |
 | 📁 **Choose from Files** | Opens the Files app. Navigate to any file and tap to attach it. |
-| 📂 **Link a Folder** | Picks a folder; copies all its files into the package (§8.2.5). |
+| 📂 **Link a Folder** | Picks a folder; copies all its files into the package (§8.2.6). |
 
 > 🔒 **Permission required** — "Choose from Photos" requires Photos access
 > (Settings → Privacy → Photos). "Choose from Files" prompts the first time
 > you reach a location outside the app's sandbox.
 
-### 8.2.4 📐 iPadOS — Camera
+### 8.2.5 📐 iPadOS — Camera
 
 Tap the **camera** button in the References toolbar to shoot directly from
-the device camera. The photo is saved into the document package as a JPEG
-and added to the carousel immediately.
+the device camera. Both **photo** and **video** are supported — use the
+mode controls in the picker to switch. Photos are saved as JPEG; videos
+are saved in their native format. Both are added to the carousel immediately.
 
 > ⓘ **Note** — the camera button only appears on devices that have a camera
 > available. iPads with a rear camera show it; simulator builds do not.
 
-### 8.2.5 Link a Folder (iPadOS)
+### 8.2.6 Link a Folder (iPadOS)
 
 **Link a Folder** opens a folder picker. Every file inside the chosen
 folder is copied into the document package, exactly as if you had
@@ -142,8 +163,13 @@ A drawing is a PencilKit sketch saved as a PNG into the card's reference
 folder.
 
 **🍎 macOS** — click **New Drawing…** in the References toolbar. A
-floating drawing panel opens. Sketch with the mouse or a connected
-graphics tablet. Click **Save** when done.
+floating drawing panel opens. If an image or drawing file is currently
+showing in the carousel, it loads automatically as a background layer —
+the panel title changes to **Draw on Image** to indicate this. Sketch
+with the mouse or a connected graphics tablet over the photo, or on a
+blank canvas if the carousel is showing a non-image file (PDF, video,
+note, etc.). Click **Save** when done. The result is saved as a PNG
+with the background photo and your annotations composited together.
 
 **📐 iPadOS** — tap the **pencil tip** button in the References toolbar.
 If an image is currently showing in the carousel, it loads as a
@@ -163,8 +189,13 @@ tile inside the References section of the inspector.
 - **📐 iPadOS** — swipe left or right across the carousel.
 
 The **N / N** counter in the header (e.g. `2 / 5`) shows the current
-position and total count. Dot indicators below the carousel show up to
-12 positions; an ellipsis (`…`) appears when there are more.
+position and total count. A scrollable thumbnail strip below the
+carousel shows a small preview of each file when there are multiple
+files — images and video frames display as photo thumbnails, PDF tiles
+show the cover page, and audio, note, document, and folder files show a
+file-type icon. Tap or click any thumbnail to jump directly to that
+file. The strip scrolls automatically to keep the active thumbnail
+centred. Works on both macOS and iOS.
 
 ### 8.4.2 What each tile type shows
 
@@ -192,7 +223,10 @@ position and total count. Dot indicators below the carousel show up to
 For **folder** tiles:
 - **🍎 macOS** — single-click to open in Finder (background). Double-click
   to open and bring Finder forward.
-- **📐 iPadOS** — tap to browse the folder in Files.
+- **📱 iPhone / 📐 iPadOS** — tap to browse the folder's contents
+  in-app. The folder viewer lists all files; tap any file to preview
+  it, or tap the share button (⬆) to send a file via the share sheet.
+  Tap **Done** to close the viewer and return to the inspector.
 
 ### 8.4.4 Share or export (iPadOS)
 

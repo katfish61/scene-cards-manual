@@ -6,10 +6,9 @@ TODO — still open for this chapter:
      for every matched card. There is no checkbox to suppress it.
      performImport() always applies these fields unconditionally.
      §12.3 updated to document this as always-on behaviour.
-  3. RESOLVED — Import Session Data is macOS-only. It does not appear
-     in the iPadOS ⋯ overflow menu. The command is registered via
-     SceneCardsCommands (macOS menu bar only); the notification listener
-     in ContentView has no iOS entry point. §12.1 updated with 🍎 badge.
+  3. RESOLVED — Import Session Data is now available on all platforms.
+     macOS: File → Import Session Data… (⌘⌃I). iOS: ⋯ overflow menu
+     → Import Session Data…. §12.1 updated accordingly.
 -->
 
 # Chapter 12 — Import Session Data
@@ -34,15 +33,23 @@ Typical uses:
 > ⓘ **Note** — Import Session Data requires an active subscription or
 > a free trial. It is not available after the trial has expired.
 
-## 12.1 🍎 macOS — Opening the Import Panel
+## 12.1 Opening the Import Panel
 
-Import Session Data is a macOS feature. It is not available on iPadOS
-in the current version.
+Import Session Data is available on all platforms.
+
+### 🍎 macOS
 
 1. Open the document you want to import **into** (the destination).
 2. Choose `File → Import Session Data…` (`⌘⌃I`).
 3. In the file picker, select the Scene Cards document to import
    **from** (the source). Click **Open**.
+
+### 📱 iPhone / 📐 iPadOS
+
+1. Open the destination document.
+2. Tap **⋯** (overflow) in the toolbar → **Import Session Data…**.
+3. In the document picker, navigate to the source Scene Cards file
+   and tap it to select.
 
 The import panel opens, headed with the source document name. It
 analyses the source and groups content into sections based on what is
