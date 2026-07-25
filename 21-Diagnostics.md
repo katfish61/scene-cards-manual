@@ -1,7 +1,6 @@
 <!--
 TODO — still open for this chapter:
-  1. Add the official support contact URL / email once established.
-  2. Screenshots — the macOS About panel, the macOS Crash Reporter
+  1. Screenshots — the macOS About panel, the macOS Crash Reporter
      dialog, Console.app filtered to Scene Cards.
 -->
 
@@ -88,10 +87,8 @@ which OCR path was taken for a one-liner.
 
 ## 21.4 Contacting Support
 
-<!-- TODO: replace the placeholder below with the live support URL -->
-
 If you can't resolve an issue using the troubleshooting steps in §19,
-contact support at **[support contact — to be added]**.
+contact support at **[scenecards67@gmail.com](mailto:scenecards67@gmail.com)**.
 
 When writing in, include:
 
