@@ -41,7 +41,7 @@ off.
 > ⚠ **Caution** — iCloud sync is file-level, not real-time. If you
 > open the same document on two devices at the same time and both save,
 > iCloud may keep one version and create a duplicate of the other.
-> Work on one device at a time, or use Import Session Data (§12) to
+> Work on one device at a time, or use Import Project Data (§12) to
 > reconcile diverged copies.
 
 ### 14.1.3 Downloading a document on a new device
@@ -100,7 +100,7 @@ file.
 ## 14.3 The Async Merge Workflow
 
 When two people have worked on separate copies of the same document,
-use **Import Session Data** (§12) to bring one person's work into the
+use **Import Project Data** (§12) to bring one person's work into the
 other's. You choose exactly what to merge — thumbnails, reference
 files, shoot reports, schedule data — and leave the rest untouched.
 
@@ -111,7 +111,7 @@ A typical two-person workflow:
 2. Editor B works on their copy — adding references, importing reports,
    adjusting the schedule.
 3. Editor B shares their updated document back to Editor A.
-4. Editor A opens `File → Import Session Data…` (🍎 macOS, §12),
+4. Editor A opens `File → Import Project Data…` (🍎 macOS, §12),
    selects Editor B's document, and picks what to bring across.
 5. The result is Editor A's document with Editor B's additions merged
    in, overwriting only the categories chosen.
@@ -119,7 +119,7 @@ A typical two-person workflow:
 See §12 for the full details on what each category transfers and how
 conflicts are resolved.
 
-> ✱ **Tip** — Import Session Data is one-directional: you pull from
+> ✱ **Tip** — Import Project Data is one-directional: you pull from
 > a source into your current document. If both parties have made
 > changes you want to keep, you may need to run the import twice —
 > once in each direction — or agree that one document is the
@@ -139,13 +139,13 @@ second device after iCloud has synced.
 two devices simultaneously and saved independently (including via
 iCloud Drive), the file system handles the conflict (usually keeping
 one version and creating a duplicate). Scene Cards has no built-in
-conflict UI — use Import Session Data (§12) to reconcile diverged
+conflict UI — use Import Project Data (§12) to reconcile diverged
 copies manually. To avoid conflicts, agree on a hand-off process:
 one editor finishes and saves, then the other opens the updated file.
 
 ## 14.5 Where to Go Next
 
-- **Import Session Data** — the full merge workflow is in §12.
+- **Import Project Data** — the full merge workflow is in §12.
 - **Shoot reports** — importing reports from a day-file into the main
   document is a common collaboration use case; see §10.6.
 - **Document package layout** — understanding what's inside the

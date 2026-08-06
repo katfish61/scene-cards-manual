@@ -1,10 +1,3 @@
-<!--
-TODO — still open for this chapter:
-  1. Sample script — not currently shipped. Consider adding a short
-     "PaperEdit-Demo.pdf" under Docs/Manual/assets/ so readers have something
-     to try immediately.
--->
-
 # Chapter 2 — Quick Start
 
 This chapter gets a brand-new production into Scene Cards in about ten
@@ -13,11 +6,18 @@ script PDF, a still on one of the cards, and everything saved.
 
 If you already have Scene Cards open on a document, skip to §2.3.
 
+> ✱ **Tip** — if you just want to see what a finished wall looks like before
+> starting your own project, click **Explore Sample Wall** on the Welcome
+> screen. This opens a bundled sample document (*The Big Lebowski*) with 49
+> scene cards, stills, full script text, a 45-day shooting schedule and
+> character colour assignments. Browse Script, Location and Schedule modes
+> to get a feel for the app, then close the sample and start your own
+> document when you're ready.
+
 **Before you start**
 
 - Scene Cards installed and launched (Chapter 1).
-- A script in **PDF** or **Final Draft (`.fdx`)** format, or the sample
-  script shipped with the app.
+- A script in **PDF** or **Final Draft (`.fdx`)** format.
 - A still image (JPEG, PNG or HEIC) for at least one scene — a phone photo
   is fine.
 
@@ -134,13 +134,13 @@ From top to bottom:
 - **Scene Number** — three fields: **Episode / Scene / Suffix**. Editable
   if the parser got any of them wrong.
 - **Location** — the slugline (`INT. OFFICE`). Auto-uppercased.
-- **Synopsis** — free-form notes on the scene. Populated from the script's
+- **Action** — free-form notes on the scene. Populated from the script's
   first action line on import; edit to taste.
 - **References** — carousel of attached reference files (§8).
 - **Move Tile** — shortcut to reposition the card after another scene by
   number.
-- **Toolbar strip** — Import Image, Omit/Unomit, Insert After, Renumber
-  From Here, Close Gap, Delete.
+- **Toolbar strip** — Import Image, Remove Image, Omit/Unomit, Insert
+  After, Renumber From Here, Close Gap, Delete.
 
 Sound-report entries, when present, appear below the toolbar as a
 **Shoot Data** block. Day-level reports live in Schedule mode — see §10.

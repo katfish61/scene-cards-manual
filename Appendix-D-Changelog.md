@@ -24,6 +24,121 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 1.8.2 — August 2026
+
+### New
+- **Call sheets now parse and schedule** — previously attach-only, Call
+  Sheet import reads the planned scene list and reschedules matching
+  cards, the same way Sound and Continuity already did. The shoot day
+  is read straight off the call sheet's own page, so single-file
+  imports no longer need it entered manually. See §10.2.3.
+
+### Improved
+- **Continuity is now the authoritative schedule source.** Where a
+  call sheet's plan and a continuity log's record of what was actually
+  shot disagree, Continuity always wins. Importing either a Call Sheet
+  or a Continuity report now **replaces** that day's scene list rather
+  than adding to it — any card that isn't confirmed by the new import
+  moves to the Unmatched section (§9.4.4) instead of staying behind,
+  so schedule mode reflects what production actually did rather than
+  accumulating every plan that changed along the way. See §10.2.3.
+- Folder import (`File → Import Reports from Folder…`) auto-classifies
+  Call Sheet and Continuity files individually, alongside Sound and
+  Camera, instead of routing everything non-Sound/Camera through a
+  single generic pipeline. Call sheet files are grouped and scheduled
+  under each file's own detected shoot day, so a folder bundling more
+  than one day's call sheets no longer lumps them together. See §10.1.2.
+
+### Fixed
+- A card evicted from a day by a Call Sheet or Continuity re-import
+  could keep reappearing as a placeholder rather than moving cleanly
+  to Unmatched, because clearing its manual day assignment alone did
+  nothing when the card was also still matched by the schedule's own
+  scene list for that day. Eviction now overrides both.
+
+---
+
+## 1.7.0 — July 2026
+
+### New
+- **Edit heading and action in the script panel** — Edit mode shows pinned
+  **Scene Heading** and **Action** rows above the script body. Changes appear
+  immediately in the inspector, on tiles, and in print. Manually edited
+  headings survive script re-import (the merge summary reports how many were
+  kept); Location is never touched, so Locations-mode grouping is unaffected.
+  See §6.4.1.
+- **Full scene headings everywhere** — cards in all wall modes and the
+  printed wall now show the whole scene heading, never truncated. Print shows
+  the full script heading (previously the short location label); when a card
+  has a still, the image shrinks to make room rather than cutting the text.
+  See §11.1.2.
+- **Unified report folder import** (🍎) — `File → Import Reports from Folder…`
+  takes a whole day folder of mixed paperwork and auto-detects each file's
+  type: sound reports schedule the day's scenes, camera sheets and continuity
+  paperwork file into the reference carousels. The shoot day is pre-filled
+  from the folder name (sd3, SD48, Day_03). See §10.1.2.
+- **Import Sound Report Files** (🍎) — `File → Import Sound Report Files…`
+  imports individual sound report PDFs/CSVs with per-file day detection.
+  See §10.1.3.
+- **ZoeLog camera reports** — parsed into per-take entries (lens, stop,
+  filters, shutter, FPS, notes) and filed per-scene into the reference
+  carousels. See §10.2.2.
+- **Zaxcom slate-based sound reports** — takes named by slate number
+  (`1049T1`) are now resolved to scenes via production numbers in the Notes
+  column. See §10.2.1.
+- **Skip omitted scenes** — new print option, on by default, filters OMITTED
+  cards out of the printout. The print sheet also gains an episode filter for
+  multi-episode documents. See §11.1.3.
+- **Remove Image** — new inspector button removes a card's hero still.
+  See §6.6.
+
+### Improved
+- Cards show up to **four lines of action text** (was two), and the
+  inspector's **Synopsis** field is renamed **Action**. See §6.4.
+- Continuity logs that record "Shot on Day" now reschedule cards to the day
+  the paperwork claims, even when it differs from the day entered at import.
+  See §10.2.3.
+- Shoot-day prompts accept SD-prefixed entries (`SD01`, `sd034`).
+- Scene Number Format picker: select a format row, then click **Import**
+  (previously tapping a row imported immediately). See §9.2.1.
+- Move Tile panel: compact one-line layout with tappable matching-scene
+  chips as you type. See §6.5.
+- Continuity parser reads more real-world formats: colon-less `SCENE`
+  labels, multi-scene lists, `Scene(s)` blocks, and underscore filenames.
+- Phone-width walls widen to 8 columns when the document is opened on a Mac.
+- Re-imported continuity reference files no longer duplicate in the carousel.
+
+### Fixed
+- **📐📱 Script panel dismissal** — the script panel now has a ✕ close button
+  in its handle bar and can be swiped down to dismiss. Its height is clamped
+  to the wall area, so it can no longer grow over the toolbar and hide the
+  🔍 toggle — previously this could make the panel impossible to close,
+  especially in Split View or Stage Manager. See §3.5.
+- App no longer hangs when importing a single image to a card while the
+  document has unsaved changes (🍎).
+- Subscription falsely locking to read-only after an App Store update.
+- Script import: part-numbered scenes (`3pt 1/2`) and numbered character
+  names now import correctly.
+- Slash-format schedules: recovered missing scene-8 rows and misread tokens;
+  R/F world markers are matched and omitted scenes flagged.
+- Teleprompter no longer goes dead after toggling Edit mode in the script
+  panel.
+- Print rendering: uneven borders, black edge lines, and image gaps in both
+  layouts.
+- Selection border now consistent across all three wall modes.
+
+---
+
+## 2026.9 — June 2026
+
+### New
+- **Print layout picker** — when printing the wall, a dialog now lets you choose
+  between **6 per page** (A4, 2 × 3 grid) and **1 per page** (A6, one card per
+  sheet). The 1-per-page option is ideal for printing individual scene cards on
+  A6 index-card stock. Works on macOS and iOS. See §11.1.3.
+
+---
+
 ## 2026.8 — May 2026
 
 ### Fixed
@@ -166,7 +281,7 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 ## 2026.2 — April 2026
 
 ### New
-- **Import Session Data on iPhone and iPad** — the Import Session Data
+- **Import Project Data on iPhone and iPad** — the Import Project Data
   feature is now available on iOS via the **⋯** overflow menu. See §12.1.
 - **Share Document… on iPhone and iPad** — **⋯ → Share Document…** opens
   the system share sheet for the current `.scenecards` file. AirDrop,

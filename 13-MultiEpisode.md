@@ -83,9 +83,11 @@ cards are appended after them.
 > many cards were added, updated, removed and unchanged for the affected
 > episode.
 
-> ⚠ **Caution** — re-importing an episode replaces all metadata for
-> that episode's cards (synopsis, location, revision colour). Reference
-> files, thumbnails and sound report data are preserved. See §5.1.2.
+> ⚠ **Caution** — re-importing an episode replaces script-derived
+> metadata for that episode's cards (heading, location, revision
+> colour, script text). Action text, manually edited headings (§6.4.1),
+> reference files, thumbnails and sound report data are preserved.
+> See §5.1.2.
 
 ## 13.3 Editing Episode, Scene and Suffix
 
@@ -176,6 +178,6 @@ the `EpNN_Scene_N` form.
 - **Importing scripts** (including re-import and merge behaviour) —
   see §5.1.
 - **Scheduling across episodes** — see §9.
-- **Import Session Data across episodes** — matching uses the same
+- **Import Project Data across episodes** — matching uses the same
   episode-aware logic; see §12.4.
 - **Document package layout** — see §4.8.

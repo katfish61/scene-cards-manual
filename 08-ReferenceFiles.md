@@ -331,8 +331,9 @@ Files created by **New Drawing** are named `Drawing_YYYY-MM-DD_HH-mm-ss.png`.
 
 When you re-import a script (§5.1.2), reference files on cards that
 match by episode + scene number survive unchanged. The re-import only
-replaces metadata derived from the script (synopsis, location, revision
-colour, script text) — it does not touch the `Media/references/` folder.
+replaces metadata derived from the script (heading, location, revision
+colour, script text) — action text and manually edited headings are
+kept (§6.4.1), and it does not touch the `Media/references/` folder.
 
 A card that is *deleted* by the re-import (because its scene no longer
 exists in the new draft) loses its reference folder along with

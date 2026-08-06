@@ -2,8 +2,9 @@
 TODO — still open for this chapter:
   1. RESOLVED — ⌘⇧N and ⌘⇧O come from ProjectCommands.swift and appear
      in a custom "Project" menu in the macOS menu bar (not File). Both
-     added to the chapter below. "Import Sound Reports from Folder" has
-     no keyboard shortcut assigned — correctly absent. ⌘⇧S for Save As
+     added to the chapter below. "Import Reports from Folder" and
+     "Import Sound Report Files" have no keyboard shortcut assigned —
+     correctly absent. ⌘⇧S for Save As
      is registered in both ProjectCommands and SceneCardsCommands;
      harmless duplicate, no action needed.
 -->
@@ -46,7 +47,7 @@ custom shortcuts on 📐 iPadOS — use the navigation bar buttons and
 | `⌘⇧I` | Import Script PDF or FDX… |
 | `⌘⌥I` | Batch Import Images (Folder)… |
 | `⌘⌥⇧I` | Batch Import Images (Select Files)… |
-| `⌘⌃I` | Import Session Data… |
+| `⌘⌃I` | Import Project Data… |
 
 ## Edit
 

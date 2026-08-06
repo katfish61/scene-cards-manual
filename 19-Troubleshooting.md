@@ -140,15 +140,16 @@ first, then print.
 
 **Cards are very small on the printed page**
 
-The layout is fixed at 2 columns × 3 rows per A4 page (§11.1.3). If
-you have many cards, they will be small — this is expected. There is
-no option to change the grid size in the current version.
+The default layout is 2 columns × 3 rows per A4 page, so with many
+cards each one is small. Choose **1 per page** in the print options for
+index-card-sized output, or narrow the print to selected episodes
+(§11.1.3).
 
 ---
 
 ## Subscription and Trial
 
-**"Import Session Data" / import commands are greyed out**
+**"Import Project Data" / import commands are greyed out**
 
 These require an active subscription or trial. If your trial has
 expired, the read-only banner appears. Renew via the App Store.

@@ -72,9 +72,10 @@ If the format is ambiguous — for example, the PDF contains a similar
 number of dot-separated and slash-separated patterns — a **Scene Number
 Format** picker appears. Each option shows the number of matching
 patterns found in the PDF (e.g. "8 found"), so you can make an informed
-choice without going back to open the file. Choose the separator that
-your schedule uses between episode and scene number, or select
-**Auto-detect** to let Scene Cards make a best guess.
+choice without going back to open the file. Select the row for the
+separator your schedule uses between episode and scene number — or
+**Auto-detect** to let Scene Cards make a best guess — then click
+**Import**.
 
 Scene Cards then parses the full PDF, matches each scene number against
 the cards on your wall, and populates the schedule. A progress indicator
@@ -137,7 +138,7 @@ shows the date and crew call when the one-liner carries them. To the right:
 ### 9.4.2 Scene cards
 
 Cards that matched a schedule entry appear as full tiles — still image
-(if one has been attached), scene number, description and synopsis.
+(if one has been attached), scene number, heading and action.
 They behave the same as on the wall: tap to select, double-tap to open
 the inspector.
 
@@ -254,7 +255,7 @@ The search bar filters the day view in real time. Matching is across:
 - Scene number (e.g. `14`, `14b`, `1/14`, `01-14`)
 - Set description
 - One-liner text
-- Card description and synopsis
+- Card heading and action text
 
 Type `1/14` or `01-14` to find scene 14 in episode 1 specifically.
 Days that have no matching scenes are hidden while the search is active.

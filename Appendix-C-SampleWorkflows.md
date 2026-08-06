@@ -27,10 +27,10 @@ meeting.
    numbers are correct; use **Renumber From Here** if anything is off
    (§5.4.2).
 
-4. **Add synopses.** The first action line is pre-filled as a starting
-   synopsis. Replace it with a one-liner beat for each scene that needs
-   one (§6.4). This is optional but useful for the wall to be readable
-   at a glance.
+4. **Add action text.** The first action line is pre-filled as a
+   starting point. Replace it with a one-liner beat for each scene that
+   needs one (§6.4). This is optional but useful for the wall to be
+   readable at a glance.
 
 5. **Batch import stills.** `File → Batch Import Images (Folder)…`
    (`⌘⌥I`). Select the folder. Scene Cards matches images to cards by
@@ -160,10 +160,12 @@ draft — new scenes, omitted scenes, location changes.
    wall. Use **Move Tile** in the inspector (§6.5) to position each
    one after its correct predecessor.
 
-5. **Update synopses for changed scenes.** Synopses survive re-import
-   unchanged, which means a scene that was substantially rewritten will
-   still carry its old synopsis. Review the revised script text in the
-   Script Panel (§3.5) and update synopses where needed (§6.4).
+5. **Update action text for changed scenes.** Action text survives
+   re-import unchanged, which means a scene that was substantially
+   rewritten will still carry its old note. Review the revised script
+   text in the Script Panel (§3.5) and update the action text where
+   needed (§6.4) — you can do this directly in the panel's Edit mode
+   (§6.4.1).
 
 6. **Print an updated wall** for distribution (`⌘P`). The revision
    colour shows on the printed cards, so recipients can see at a glance

@@ -44,7 +44,7 @@ See §9.1 for the import procedure.
 
 ### Sound Reports
 
-Scene Cards parses sound reports from two recorder families. Reports
+Scene Cards parses sound reports from three recorder families. Reports
 from other recorders can be attached to a shoot day as unread files
 (§10.1).
 
@@ -53,6 +53,8 @@ from other recorders can be attached to a shoot day as unread files
 | Sound Devices | PDF | `.pdf` | Episode and scene encoded in filename: `{ep}{scene}S{slate}T{take}` e.g. `1329S142T01` |
 | Sound Devices | CSV | `.csv` | Scene column in the export table |
 | Zaxcom Nomad | PDF | `.pdf` | Scene and take encoded in filename: `{scene}T{take}` e.g. `27T002` |
+| Zaxcom (slate-based) | PDF | `.pdf` | Takes named by slate number (`1049T1`); scenes resolved from production numbers in the Notes column |
+| Aaton Cantar | PDF | `.pdf` | `Slt` column carries the scene reference; date from `MM-DD-YY` filename suffix |
 
 **Wild tracks** (Sound Devices): filename pattern `{ep}{scene}WTT{take}`,
 e.g. `447WTT01` = ep 4, scene 47.
@@ -64,16 +66,17 @@ See §10.2 for the import procedure and §10.5 for the matching logic.
 
 ### Camera and Continuity Reports
 
-Camera and continuity PDFs are accepted as **attach-only** files — they
-are stored in the document package (§18.8) and can be opened from the
-Schedule day header, but their contents are not parsed into card data.
+Camera and continuity PDFs are stored in the document package (§18.8)
+and can be opened from the Schedule day header. Several formats are
+also parsed into card data:
 
-| Type | Format | Extension |
-|---|---|---|
-| Camera report | PDF | `.pdf` |
-| Continuity sheet | PDF | `.pdf` |
+| Type | Format | Extension | Parsing |
+|---|---|---|---|
+| Camera report (ZoeLog) | PDF | `.pdf` | Per-take entries (lens, stop, filters, shutter, FPS, notes); per-scene pages filed into the reference carousel |
+| Camera report (other) | PDF | `.pdf` | Attach-only |
+| Continuity sheet | PDF | `.pdf` | Per-scene pages filed into the reference carousel; "Shot on Day" claims reschedule cards |
 
-See §10.3 for attaching these reports.
+See §10.2.2–§10.2.3 for details.
 
 ### Day-Level Documents
 
@@ -148,7 +151,8 @@ JSON, or XML. All structured data lives inside the `.scenecards` package.
 |---|---|
 | A script | PDF, FDX |
 | A one-liner strip board | PDF |
-| Sound reports | Sound Devices PDF, Sound Devices CSV, Zaxcom Nomad PDF |
-| Camera / continuity / call sheets | PDF (attach-only) |
+| Sound reports | Sound Devices PDF, Sound Devices CSV, Zaxcom PDF (Nomad and slate-based), Aaton Cantar PDF |
+| Camera / continuity / call sheets | PDF — ZoeLog camera and continuity sheets are parsed; others attach-only |
+| A day folder of mixed reports | PDF / CSV, types auto-detected (🍎 `File → Import Reports from Folder…`, §10.1.2) |
 | A still for a card | JPEG, PNG, HEIC, TIFF, and others (see §A.1) |
 | Any other production file | Drag to the reference carousel — any format accepted |

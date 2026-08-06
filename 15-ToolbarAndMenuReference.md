@@ -4,7 +4,7 @@ TODO — still open for this chapter:
      menu open, the inspector reference toolbar, the inspector tile
      action buttons.
   2. RESOLVED — read-only mode (trial expired) does NOT disable inspector
-     text fields. Synopsis, location and scene number remain editable.
+     text fields. Action, location and scene number remain editable.
      Only import and creation operations are gated behind requirePro():
      script import, image import, shoot report import, session data import,
      and drag-and-drop onto the wall/carousel. The ★ markers in this
@@ -24,7 +24,7 @@ see the relevant chapter; this chapter is a lookup table.
 Items marked ★ require an active subscription or free trial (§1.7).
 In read-only mode (trial expired), these import and creation operations
 are blocked and the paywall is shown instead. Editing existing card
-fields — synopsis, location, scene number — is not blocked by the
+fields — action, location, scene number — is not blocked by the
 subscription state.
 
 
@@ -55,8 +55,10 @@ menu bar.
 | Import Script PDF or FDX… ★ | `⌘⇧I` | Imports scenes from a Fountain / FDX / PDF script |
 | Batch Import Images (Folder)… ★ | `⌘⌥I` | Imports a folder of images, matched by scene number |
 | Batch Import Images (Select Files)… ★ | `⌘⌥⇧I` | Opens a file picker to import individual images |
-| Import Sound Reports from Folder… ★ | — | Batch-imports sound report PDFs across shoot days |
-| Import Session Data… ★ | `⌘⌃I` | Merges data from another Scene Cards document (§12) |
+| Import Reports from Folder… ★ | — | Imports a day folder of mixed reports; each file's type — sound, camera, continuity — is detected automatically (§10.1.2) |
+| Import Sound Report Files… ★ | — | Imports individual sound report PDFs/CSVs; shoot day detected per file (§10.1.3) |
+| Import Project Data… ★ | `⌘⌃I` | Merges data from another Scene Cards document (§12) |
+| Export Script Import Diagnostic… | — | Generates a diagnostic report for a script PDF, for troubleshooting import problems |
 | Print Wall Layout… | `⌘P` | Prints the scene wall as an A4 grid (§11) |
 
 ### Edit
@@ -104,7 +106,7 @@ split between the leading (left) and trailing (right) sides.
 
 | Control | What it does |
 |---|---|
-| 🔍 Script panel | Toggles the left script-text sidebar. Fills when open. |
+| 🔍 Script panel | Toggles the script panel at the bottom of the wall. Fills when open. |
 | ⋯ Overflow | Opens the overflow menu (§15.2.1) |
 
 ### Trailing controls
@@ -119,7 +121,7 @@ split between the leading (left) and trailing (right) sides.
 ### Search
 
 Tap the search bar (displayed below the navigation bar) to filter
-cards in real time by scene number, location, description or synopsis.
+cards in real time by scene number, location, heading or action text.
 See §9.7 for Schedule mode search behaviour.
 
 ### 15.2.1 📐📱 ⋯ Overflow menu
@@ -131,7 +133,7 @@ See §9.7 for Schedule mode search behaviour.
 | Import Images from Files… ★ | Opens the Files picker to import images |
 | Import from Photos… ★ | Opens the Photos picker to import images |
 | Import Shoot Reports… ★ | Opens a folder picker for shoot report import (§10) |
-| Import Session Data… ★ | Merges data from another Scene Cards document (§12) |
+| Import Project Data… ★ | Merges data from another Scene Cards document (§12) |
 | Share Document… | Opens the system share sheet for the current document (§4.6.2) |
 | Print… | Prints the scene wall (§11) |
 | Try Scene Cards Pro Free for 7 Days… | Opens the subscription paywall (shown when trial inactive) |
@@ -169,6 +171,7 @@ Controls that act on the card itself, below the carousel.
 | Button | What it does |
 |---|---|
 | 🖼 Import Image to Tile | Opens an image picker to set this card's hero still (§7) |
+| 🚫 Remove Image from Tile | Removes the card's hero still (shown only when the card has one) |
 | 👁 Mark / Unmark OMITTED | Toggles the OMITTED state on the card |
 | ＋ Insert Tile After | Adds a blank card immediately after this one |
 | 🔄 Renumber From Here | Renumbers all cards from this one forward |

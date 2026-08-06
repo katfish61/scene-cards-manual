@@ -31,7 +31,7 @@ With no card selected, the inspector reads *"Select a tile to edit."*
 With more than one card selected, it switches to the **Multi-Select
 Panel** (§6.8).
 
-![The inspector open on iPadOS showing a selected card's location, synopsis, and a reference image in the carousel.](images/C6.jpg)
+![The inspector open on iPadOS showing a selected card's location, action text, and a reference image in the carousel.](images/C6.jpg)
 
 Edits are committed as soon as a field loses focus — there is no Save
 button. Each commit is a single undo step (`⌘Z`).
@@ -77,32 +77,66 @@ The **Location** field holds the slugline — the text after `INT.` /
 > with the new draft's values (§5.1.2). Let the importer set them;
 > manual edits are erased on the next merge.
 
-## 6.4 Synopsis
+## 6.4 Action
 
-The **Synopsis** field is a free-form multi-line text editor. It shows
+The **Action** field is a free-form multi-line text editor. It shows
 on the wall as the card's secondary text and survives re-imports
 untouched (unlike the heading fields in §6.3).
 
-What goes in Synopsis is up to you — some productions put:
+What goes in Action is up to you — some productions put:
 
-- A two-line dramaturgical beat (the "what happens" of the scene).
+- A dramaturgical beat (the "what happens" of the scene).
 - The director's shot intent for that day.
 - A reminder about character intent or continuity.
 
 On a fresh import from a PDF, the first action line of each scene is
 pre-filled here as a starting point — edit or clear it as you like.
+Cards display up to four lines of action text; the field itself has no
+length limit.
 
-> ⓘ **Note** — the inspector calls this field **Synopsis**; in earlier
-> builds it was labelled **Comments**. Both terms refer to the same
-> underlying data (`tile.comments` in the file format — see §18).
+> ⓘ **Note** — the inspector calls this field **Action**; in earlier
+> builds it was labelled **Synopsis** and before that **Comments**. All
+> three terms refer to the same underlying data (`tile.comments` in the
+> file format — see §18).
+
+### 6.4.1 Editing the heading and action from the script panel
+
+The scene heading and action can also be edited without leaving the
+script panel. Tap **Edit** in the panel — two pinned rows appear above
+the script body:
+
+- **Scene Heading** — the card's full scene heading (e.g.
+  `INT. OFFICE — DAY`). This is the heading shown on the card in every
+  wall mode and on the printed wall.
+- **Action** — the same field as the inspector's Action editor.
+
+Changes commit when the field loses focus or you tap **Done**, and are
+reflected immediately in the inspector, on the wall tiles, and in print.
+Both rows are disabled for OMITTED scenes.
+
+Two rules keep this predictable:
+
+1. **Location is never touched.** The inspector's Location field (which
+   drives Locations-mode grouping) stays exactly as it was — editing the
+   heading cannot regroup the wall or detach location attachments. If
+   the location genuinely changed, update it in the inspector.
+2. **Manual headings survive re-import.** A heading edited here is
+   flagged, and a later script re-import keeps your version instead of
+   overwriting it with the draft's heading (the merge summary reports
+   how many were kept). The one exception: if the scene becomes OMITTED
+   in the new draft, the script wins. Action text survives re-import
+   regardless, as it always has.
 
 ## 6.5 Moving a Card to a Specific Scene
 
 The **Move Tile** panel sits beneath the references carousel. It
 repositions this card *after* another card, looked up by scene number.
 
-1. Type a scene number into the **After scene** field (e.g. `42B`).
-2. Press **Move**.
+1. Type a scene number into the **Move Tile After Scene** field
+   (e.g. `42B`).
+2. As you type, matching scenes appear as chips below the field — tap
+   a chip to move there directly, or press **Move** to use the typed
+   number.
 
 If the target is found, the card hops to the slot immediately after it
 and a green confirmation appears for a couple of seconds. If the scene
@@ -115,12 +149,13 @@ wall without dragging through hundreds of slots.
 
 ## 6.6 The Inspector Toolbar Strip
 
-Under the references carousel sits a strip of six icon buttons. All
+Under the references carousel sits a strip of icon buttons. All
 of them act on the currently selected card.
 
 | Icon | Action | Detail |
 |---|---|---|
 | 🖼 | Import Image | Opens the image picker to set a still on this card (§7.2). |
+| 🚫 | Remove Image | Removes the card's hero still. Only shown when the card has one. |
 | 👁 | Omit / Unomit | Toggles OMITTED. Clears any suffix when turning omit ON (§5.5). |
 | ＋ | Insert Tile After | Adds a blank card in the slot after this one (§5.2). |
 | 🔄 | Renumber From Here | Walks the wall from this card onward and re-issues scene numbers (§5.4.2). |
@@ -167,7 +202,7 @@ Select two or more cards (§3.6.1) and the inspector switches to the
 ![Three cards selected on iPadOS, showing the Multi-Select Panel with scene numbers listed and the Move Block After Scene field.](images/C6.9.jpg)
 
 Nothing else can be edited in multi-select — per-scene fields (location,
-synopsis, scene number) require a single selection, since they take
+action, scene number) require a single selection, since they take
 different values on every card.
 
 > ⓘ **Note** — the target scene must be *outside* the selection. Moving

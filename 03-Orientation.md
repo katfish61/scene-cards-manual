@@ -23,13 +23,13 @@ Every Scene Cards document opens into a three-zone layout:
 | **Toolbar** (top) | Mode switcher, search, script / inspector toggles | Inline on both platforms |
 | **Wall** (centre) | The grid of cards — the primary work surface | Same on both platforms |
 | **Inspector** (right) | Editable details of the selected card | Docked on macOS; sheet on iPadOS |
-| **Script panel** (left) | The raw script for the selected card | Docked on macOS; sheet on iPadOS |
+| **Script panel** (left) | The raw script for the selected card | Docked on macOS; bottom panel on iPadOS |
 
 ![The Scene Cards window on macOS, showing the script panel (left), wall (centre) and inspector (right) all open simultaneously.](images/C3_1.png)
 
 On **macOS**, the inspector and script panel dock to the right and left of
-the wall and can be open together. On **iPadOS**, both are sheets — opening
-one dismisses the other.
+the wall and can be open together. On **iPadOS**, the inspector opens as a
+sheet, and the script panel slides up from the bottom of the wall.
 
 > ⓘ **Note** — there is no window-level status bar. The wall's footer is
 > reserved for future use; today, the card count and import summaries appear
@@ -114,14 +114,15 @@ Left to right:
 - **Back** (`chevron.backward`) — returns to the Files browser. The
   document saves on the way out.
 - **Script panel toggle** (`doc.text.magnifyingglass`) — opens the script
-  panel as a sheet.
+  panel at the bottom of the wall. Tap it again, tap the panel's ✕, or
+  swipe the panel's handle down to close it.
 - **Overflow menu** (`···`) — houses actions that live in macOS menus:
   - Undo
   - Import Script PDF or FDX…
   - Open Project…
   - Import Images from Files…
   - Import from Photos…
-  - Import Sound Reports from Folder…
+  - Import Shoot Reports…
   - Print…
 - **Search** — starts as a magnifying-glass button; tap to expand into a
   full text field, tap the ✕ (or submit) to collapse. The icon turns blue
@@ -163,11 +164,11 @@ Fields, top to bottom:
 
 - **Scene Number** — three fields: **Episode / Scene / Suffix**.
 - **Location** — the slugline; auto-uppercased.
-- **Synopsis** — free-form notes on the scene.
+- **Action** — free-form notes on the scene.
 - **References** — carousel of attached reference files.
 - **Move Tile** — reposition this card after another scene by number.
-- **Toolbar strip** — Import Image, Omit/Unomit, Insert After, Renumber
-  From Here, Close Gap, Delete.
+- **Toolbar strip** — Import Image, Remove Image, Omit/Unomit, Insert
+  After, Renumber From Here, Close Gap, Delete.
 - **Shoot Data** — sound / camera / continuity entries, shown only when
   they exist.
 
@@ -189,9 +190,8 @@ A full walkthrough of each field lives in §6 *Working with Scenes*.
 ## 3.5 The Script Panel
 
 The script panel is the left-hand pane (macOS) or a sheet (iPadOS) that
-shows the **raw script text** for the currently selected card. It is read-
-only — Scene Cards is not a screenwriting tool — but it recognises and
-formats:
+shows the **raw script text** for the currently selected card. It
+recognises and formats:
 
 - Scene **headings** (sluglines)
 - **Character** cues
@@ -208,6 +208,20 @@ assignment popover for that character.
 > ✱ **Tip** — the script panel follows your wall selection. Click another
 > card and the script updates; click nothing and the panel shows a brief
 > placeholder.
+
+On 📐📱 **iPadOS and iPhone**, the panel slides up from the bottom of the
+wall. Drag the handle at its top edge to resize it — up to the full height
+of the wall area. To close it, do any of the following:
+
+- tap the **✕** at the right end of the handle bar,
+- swipe the handle down past the panel's minimum height, or
+- tap the 🔍 toolbar button again.
+
+The panel's **Edit** button switches to an editable view: the script
+text itself, plus pinned **Scene Heading** and **Action** rows that edit
+the card's fields directly (§6.4.1). Scene Cards is still not a
+screenwriting tool — for a proper revision, re-import the new draft —
+but quick corrections and card metadata edits happen right here.
 
 ### 3.5.1 Auto-scroll (teleprompter)
 

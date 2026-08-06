@@ -4,14 +4,20 @@ Terms used in this manual, in alphabetical order.
 
 ---
 
+**Action**
+A free-form text field on each card for a production note or scene
+description; pre-filled from the script's first action line on import.
+Not overwritten by script re-import. Labelled *Synopsis* in earlier
+versions and *Comments* in the underlying file format. See §6.4.
+
 **Batch import**
 An import operation that processes a folder of files in one step rather
 than picking files individually. Scene Cards supports batch import for
-images (§7.3) and sound reports (§10.2.3).
+images (§7.3) and shoot reports (§10.1.2).
 
 **Card**
 The user-facing term for a single scene in Scene Cards. A card occupies
-one slot on the wall and holds the scene number, location, synopsis,
+one slot on the wall and holds the scene number, location, action text,
 stills, reference files, and shoot data for that scene. Internally
 referred to as a *tile* in the codebase — that term is never used in
 this manual.
@@ -54,7 +60,7 @@ in landscape. The toolbar is compact — mode buttons are condensed into
 a single picker button on narrow screens. All import, scheduling, and
 reference features available on iPadOS are available on iPhone.
 
-**Import Session Data**
+**Import Project Data**
 A macOS-only feature that merges selected data (stills, references,
 shoot reports, etc.) from one Scene Cards document into another. Used
 to consolidate work done on separate devices or by separate crew
@@ -128,7 +134,8 @@ day headers showing the shoot date, crew call, and page count. Accessed
 with `⌘⇧3` or the 📅 button. See §9.
 
 **Script Panel**
-A sidebar that displays the raw script text extracted from the PDF for
+A sidebar (🍎 macOS) or resizable bottom panel (📐📱 iPadOS and iPhone)
+that displays the raw script text extracted from the PDF for
 the currently selected scene. Also the interface for assigning character
 colours. Toggled with the 🔍 button on 📐📱 iPadOS and iPhone, or the
 left sidebar control on 🍎 macOS. See §3.5 and §6.9.
@@ -175,10 +182,7 @@ inserted scene (`7A`, `7B`, `7AA`). Stored separately from the scene
 number integer; auto-uppercased on entry. See §6.2.
 
 **Synopsis**
-A free-form text field on each card for a production note or scene
-description. Not overwritten by script re-import (unlike the location
-and heading fields). Labelled *Comments* in the underlying file format.
-See §6.4.
+The earlier name for the *Action* field — see **Action**.
 
 **Tile**
 The internal / developer term for what this manual calls a *card*. Used

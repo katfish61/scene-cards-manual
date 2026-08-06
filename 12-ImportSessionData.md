@@ -6,14 +6,14 @@ TODO — still open for this chapter:
      for every matched card. There is no checkbox to suppress it.
      performImport() always applies these fields unconditionally.
      §12.3 updated to document this as always-on behaviour.
-  3. RESOLVED — Import Session Data is now available on all platforms.
-     macOS: File → Import Session Data… (⌘⌃I). iOS: ⋯ overflow menu
-     → Import Session Data…. §12.1 updated accordingly.
+  3. RESOLVED — Import Project Data is now available on all platforms.
+     macOS: File → Import Project Data… (⌘⌃I). iOS: ⋯ overflow menu
+     → Import Project Data…. §12.1 updated accordingly.
 -->
 
-# Chapter 12 — Import Session Data
+# Chapter 12 — Import Project Data
 
-**Import Session Data** copies content from one Scene Cards document
+**Import Project Data** copies content from one Scene Cards document
 into the document you are working on. You choose the source document,
 select which categories of data to bring across, and confirm — Scene
 Cards matches scenes by number, transfers the selected content, and
@@ -30,24 +30,24 @@ Typical uses:
 - Absorbing new scenes from a colleague's document that don't yet exist
   on your wall.
 
-> ⓘ **Note** — Import Session Data requires an active subscription or
+> ⓘ **Note** — Import Project Data requires an active subscription or
 > a free trial. It is not available after the trial has expired.
 
 ## 12.1 Opening the Import Panel
 
-Import Session Data is available on all platforms.
+Import Project Data is available on all platforms.
 
 ### 🍎 macOS
 
 1. Open the document you want to import **into** (the destination).
-2. Choose `File → Import Session Data…` (`⌘⌃I`).
+2. Choose `File → Import Project Data…` (`⌘⌃I`).
 3. In the file picker, select the Scene Cards document to import
    **from** (the source). Click **Open**.
 
 ### 📱 iPhone / 📐 iPadOS
 
 1. Open the destination document.
-2. Tap **⋯** (overflow) in the toolbar → **Import Session Data…**.
+2. Tap **⋯** (overflow) in the toolbar → **Import Project Data…**.
 3. In the document picker, navigate to the source Scene Cards file
    and tap it to select.
 
@@ -134,7 +134,7 @@ are left as they are.
 
 ### 12.3.5 Shoot reports
 
-![The Import Session Data panel showing the Shoot Reports section with day and report-type filters, and the New Scenes section listing unmatched source cards.](images/C12.jpg)
+![The Import Project Data panel showing the Shoot Reports section with day and report-type filters, and the New Scenes section listing unmatched source cards.](images/C12.jpg)
 
 Transfers report attachment records and the per-card sound data for
 matched cards.
@@ -199,7 +199,7 @@ available slots in the wall grid; existing cards are not reordered.
 
 ## 12.5 Undoing an Import
 
-Import Session Data is undo-able. Press `⌘Z` immediately after
+Import Project Data is undo-able. Press `⌘Z` immediately after
 importing to revert all changes made in that session. Each import
 category is wrapped in its own undo group, so a single `⌘Z` reverses
 the entire import in one step.

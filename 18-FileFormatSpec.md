@@ -89,9 +89,10 @@ Each entry in `tilesByID` is a Tile object.
 | `isOmitted` | boolean | True = card is marked OMITTED |
 | `brief` | string | One-line description |
 | `descriptionText` | string | Full scene description |
-| `comments` | string | Production notes |
+| `comments` | string | Action text (the inspector's **Action** field) |
 | `location` | string | e.g. `"INT. OFFICE"` |
 | `scriptText` | string | Raw scene text extracted from the script PDF |
+| `headingManuallyEdited` | boolean | True when the heading was edited by hand (§6.4.1) — re-import then keeps it. Absent in older documents (treated as false) |
 | `revisionColor` | string \| null | Revision colour name e.g. `"goldenrod"`, `"blue"` |
 | `updatedAt` | ISO 8601 string | Last edit timestamp |
 | `image` | object \| null | Reference to thumbnail file in `Media/thumbnails/` |

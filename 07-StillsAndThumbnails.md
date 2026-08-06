@@ -29,7 +29,7 @@ the script and the wall state respectively (§5.5, §5.7).
 One image per card, shown:
 
 - **On the wall** — as the card's thumbnail under the scene number and
-  synopsis overlay.
+  action overlay.
 - **In Schedule mode** — on each scheduled card and at the head of the
   day's strip.
 - **In the printed wall** — §11.
