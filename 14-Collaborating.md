@@ -1,152 +1,224 @@
 <!--
 TODO — still open for this chapter:
-  1. Screenshots — the Files app showing a .scenecards document,
-     an AirDrop send in progress. Save under Docs/Manual/assets/.
+  1. Screenshots — Cloud Walls sheet, Sync & Account sign-in screen,
+     invitation acceptance dialog. Save under Docs/Manual/assets/.
 -->
 
 # Chapter 14 — Collaborating
 
-Scene Cards is a document-based app — collaboration happens by passing
-the document file between people. There is no real-time multiplayer
-editing; instead, you share the `.scenecards` package, each person
-works on their copy, and changes are merged back using Import Session
-Data (§12). iCloud Drive keeps your document in sync across your own
-devices automatically. This chapter covers iCloud Drive, sharing a
-document with others, and the merge workflow.
+Scene Cards supports two collaboration modes:
 
-## 14.1 iCloud Drive
+- **Cloud Walls** — real-time sync via the internet. All platforms (macOS, iOS, Android) share one live wall. Anyone with access sees changes as they happen.
+- **Document hand-off** — pass the `.scenecards` file between people by AirDrop, iCloud Drive, cloud storage, or email. Changes are merged using Import Project Data (§12).
 
-Scene Cards stores documents in iCloud Drive so they are available on
-every Mac and iPad signed into the same Apple ID. Save once on one
-device — the file appears on the others automatically.
+This chapter covers Cloud Walls first, then the file-based workflow for offline or iCloud-only setups.
 
-> ⓘ **Note** — iCloud Drive sync requires an active subscription or
-> free trial. In read-only mode the document still opens from iCloud
-> Drive, but you cannot edit it until a subscription is active.
+---
 
-### 14.1.1 Where documents live in iCloud
+## 14.1 Cloud Walls — Real-time sync
 
-On both platforms, Scene Cards documents appear under
-**iCloud Drive → Scene Cards** in the Files app (📐 iPadOS) or in
-Finder's iCloud Drive section (🍎 macOS). You can create subfolders
-there to organise productions.
+Cloud Walls keeps one wall in sync across every device on your team — Mac, iPhone, iPad, and Android — in real time, over the internet.
 
-### 14.1.2 Keeping two devices in sync
+### 14.1.1 What you need
 
-When you edit a document on one device and save, iCloud uploads the
-changes. The updated file downloads to your other devices in the
-background. Open the document there and it picks up where you left
-off.
+- An internet connection on each device
+- A Scene Cards account (free — see §14.1.2)
+- The current version of Scene Cards on every device
 
-> ⚠ **Caution** — iCloud sync is file-level, not real-time. If you
-> open the same document on two devices at the same time and both save,
-> iCloud may keep one version and create a duplicate of the other.
-> Work on one device at a time, or use Import Project Data (§12) to
-> reconcile diverged copies.
+You do **not** need a Google or Gmail account. Scene Cards can sign you in with any email address.
 
-### 14.1.3 Downloading a document on a new device
+### 14.1.2 Signing in
 
-If a document shows a cloud icon (📐 iPadOS) or a download indicator
-(🍎 macOS) it has not yet downloaded to that device. Tap or double-click
-it to trigger the download before opening.
+Open the **"Sync & Account…"** sheet:
 
-## 14.2 Sharing a Document With Others
+- **macOS**: click the cloud icon (☁) in the toolbar → "Sync & Account…"
+- **iOS/iPadOS**: tap the cloud icon in the toolbar → "Sync & Account…"
+- **Android**: tap the cloud icon in the toolbar → "Sync & Account…"
 
-A `.scenecards` package is self-contained — every still, reference file
-and report is copied inside the bundle. You can hand the whole thing to
-a collaborator by any means that transfers a file.
+You'll see two sign-in options:
 
-### 14.2.1 AirDrop
+**Option A — Sign in with any email (no Google account needed)**
 
-**📐 iPadOS**
-1. Open the Files app and locate the document.
-2. Long-press the file and tap **Share**.
-3. Choose the recipient in the AirDrop sheet.
+1. Under "Sign in with any email", type your email address. Any email works — iCloud, Outlook, Yahoo, a work address, anything.
+2. Tap **"Send sign-in link"**.
+3. Open your email on the **same device** — you'll have a message from Scene Cards.
+4. Tap the link in the email. Scene Cards opens and you're signed in.
 
-**📱 iPhone**
-1. Open the Files app and locate the document.
-2. Long-press the file and tap **Share**.
-3. Choose the recipient in the AirDrop sheet.
+> ⓘ **Same device** — the magic link is designed to be tapped on the same phone, tablet, or Mac where Scene Cards is running. If you open the email on a different device first, Scene Cards will ask you to type your email address again to confirm — just enter the same address.
 
-**🍎 macOS**
-1. In Finder, right-click the `.scenecards` file.
-2. Choose **Share → AirDrop** and select the recipient.
+**Option B — Sign in with Google**
+
+Tap **"Sign in with Google"** and choose your account. Requires a Google/Gmail account.
+
+> ✱ **Android tip** — most Android phones already have a Google account configured for the Play Store, so "Sign in with Google" is usually the fastest option on Android.
+
+Once signed in, Scene Cards remembers you. You won't be asked again on the same device unless you sign out.
+
+### 14.1.3 Setting up a production (the owner does this)
+
+One person — whoever manages the wall — creates the **production** that the whole team shares. Do this immediately after signing in.
+
+1. In "Sync & Account…", tap **"Create Production"**.
+2. Give it a name (e.g. "Pilot 2026" or "Feature — Aug Shoot").
+3. Tap "Create". You're now the production owner.
+
+A production is a named workspace. All your Cloud Walls and team members sit inside it.
+
+### 14.1.4 Inviting crew
+
+The production owner invites everyone else by email.
+
+1. In "Sync & Account…", find the **"Invite by email"** field.
+2. Type a crew member's email address exactly as they'll use to sign in.
+3. Tap **"Invite"**. They receive an invitation email.
+4. Repeat for each person.
+
+> ⚠ **Use the same address** — when you invite someone, they must sign in with exactly that email address (or a Google account whose address matches). If they sign in with a different address, the invitation won't be automatically applied.
+
+### 14.1.5 Accepting an invitation (crew members)
+
+When a crew member signs in for the first time after being invited, Scene Cards finds the pending invitation automatically and shows an "Accept / Decline" prompt. They tap **"Accept"** and immediately have access to the production's walls.
+
+If the prompt doesn't appear, ask them to:
+1. Make sure they signed in with the exact email you invited.
+2. Pull down to refresh in "Sync & Account…" or close and reopen the sheet.
+
+### 14.1.6 Opening a shared wall
+
+After accepting the invitation, crew members tap **"Cloud Walls"** in the toolbar to see all walls in the production. Tap any wall to open it. Changes made by anyone on the team sync within seconds.
+
+### 14.1.7 Step-by-step: first-time setup for a mixed team
+
+Below is a complete worked example for a common scenario: one owner on macOS/iOS, two crew on iOS, one on Android, with a mix of Google and non-Google accounts.
+
+**Before you begin** — everyone downloads Scene Cards:
+- macOS and iOS: App Store
+- Android: Google Play
+
+**The owner (macOS + iOS, no Gmail):**
+
+1. Open Scene Cards on Mac.
+2. Click the cloud icon → "Sync & Account…".
+3. Under "Sign in with any email", type your email (iCloud, Outlook, etc.) → "Send sign-in link".
+4. Open your email, tap the link — you're signed in.
+5. Tap "Create Production" → name it → "Create".
+6. In the "Invite by email" field, invite each crew member one at a time.
+
+**Crew member A — iPhone, has Gmail:**
+
+1. Open Scene Cards on iPhone.
+2. Tap the cloud icon → "Sync & Account…".
+3. Tap "Sign in with Google" → select their Gmail account.
+4. Tap "Accept" on the invitation prompt.
+
+**Crew member B — iPhone, no Gmail:**
+
+1. Open Scene Cards on iPhone.
+2. Tap cloud icon → "Sync & Account…".
+3. Under "Sign in with any email", type their email → "Send sign-in link".
+4. Open their email app on the same iPhone — tap the link.
+5. Tap "Accept" on the invitation prompt.
+
+**Crew member C — Android:**
+
+1. Open Scene Cards on Android — it works immediately in local mode.
+2. Tap the account icon in the top bar.
+3. **Fastest:** tap "Sign in with Google" → select their Google account (Android phones nearly always have one for the Play Store).
+   **Or:** type their email → "Send sign-in link" → open email → tap link.
+4. Tap "Accept" on the invitation prompt.
+
+**Everyone is now connected.** Tap "Cloud Walls" on any device to open the shared wall.
+
+### 14.1.8 What syncs
+
+| Item | Syncs in real time |
+|------|-------------------|
+| Scene cards (brief, location, comments, revision colour, omit status) | Yes |
+| Still images and reference files | Yes (uploaded on add, downloaded on open) |
+| Shoot reports | Yes |
+| Episode titles and wall grid layout | Yes |
+| Local `.scenecards` file on disk | No — Cloud Walls is a separate copy |
+
+> ⓘ **Local vs. cloud** — a Cloud Wall lives in the cloud. Your local `.scenecards` documents (in iCloud Drive or on-device) are separate. You can work locally without a cloud account; signing in and creating a Cloud Wall doesn't move your local documents.
+
+### 14.1.9 Switching productions
+
+If you belong to more than one production (e.g. you worked on two shows), use "Sync & Account…" → "Switch" to change the active production. Only walls from the active production appear in Cloud Walls.
+
+### 14.1.10 Signing out
+
+"Sync & Account…" → "Sign Out". Your local walls are not affected. Cloud Walls become inaccessible until you sign in again.
+
+---
+
+## 14.2 iCloud Drive — your own devices
+
+iCloud Drive keeps your local `.scenecards` documents in sync across all your own Macs and iOS devices automatically — no account beyond your Apple ID required.
+
+### 14.2.1 Where documents live
+
+Documents appear under **iCloud Drive → Scene Cards** in the Files app (iOS/iPadOS) or in Finder's iCloud Drive section (macOS). Create subfolders there to organise productions.
+
+### 14.2.2 Keeping devices in sync
+
+Edit on one device and save — iCloud uploads the change. The updated file downloads to your other devices in the background. Open it there and it picks up where you left off.
+
+> ⚠ **One editor at a time** — iCloud sync is file-level, not real-time. If two devices edit the same document simultaneously and both save, iCloud may keep one version and create a duplicate. Work on one device at a time, or use Import Project Data (§12) to reconcile diverged copies. For multi-person collaboration, Cloud Walls (§14.1) is the better choice.
+
+### 14.2.3 Downloading a document on a new device
+
+If a document shows a cloud icon (iOS) or download indicator (macOS) it hasn't downloaded yet. Tap or double-click it to trigger the download before opening.
+
+---
+
+## 14.3 Document hand-off
+
+A `.scenecards` package is self-contained — every still, reference file and report lives inside the bundle. Hand it to anyone by any means that transfers a file.
+
+### 14.3.1 AirDrop
+
+**macOS:** Finder → right-click the `.scenecards` file → Share → AirDrop → select recipient.
+
+**iOS/iPadOS:** Files app → long-press the file → Share → AirDrop → select recipient.
 
 The recipient opens the file directly in Scene Cards once it arrives.
 
-### 14.2.2 Cloud storage (Dropbox, Google Drive, etc.)
+### 14.3.2 Cloud storage (Dropbox, Google Drive, etc.)
 
-Place the `.scenecards` file in any shared cloud folder accessible to
-both parties. Only one person should edit at a time — the last save
-wins if two people save simultaneously.
+Place the `.scenecards` file in a shared folder accessible to both parties. Agree on a hand-off process: one editor finishes and saves, then the other opens the updated file. The last save wins if two people save simultaneously.
 
-> ⚠ **Caution** — agree on a hand-off process: one editor finishes
-> and saves, then the other opens the updated file.
+### 14.3.3 Email and Messages
 
-### 14.2.3 Email and Messages
+Attach the `.scenecards` file to an email or message. Large productions with many reference files can be several hundred megabytes — use AirDrop or cloud storage for those.
 
-Attach the `.scenecards` file to an email or message. For large
-productions with many reference files the package can be several
-hundred megabytes — check the recipient's attachment limit first, or
-use a cloud or AirDrop link instead.
+### 14.3.4 Merging work from two copies
 
-### 14.2.4 📐📱 iPadOS and iPhone — Files app
-
-On iPadOS and iPhone the document lives wherever you saved it — the
-app's local storage or any Files-accessible location. From the Files
-app you can copy, move or share the package the same way as any other
-file.
-
-## 14.3 The Async Merge Workflow
-
-When two people have worked on separate copies of the same document,
-use **Import Project Data** (§12) to bring one person's work into the
-other's. You choose exactly what to merge — thumbnails, reference
-files, shoot reports, schedule data — and leave the rest untouched.
+When two people have worked on separate copies of the same document, use **Import Project Data** (§12) to bring one person's work into the other's. You choose exactly what to merge.
 
 A typical two-person workflow:
 
-1. Editor A creates the main document and shares it with Editor B
-   (AirDrop, cloud storage, or by both opening the same shared folder).
-2. Editor B works on their copy — adding references, importing reports,
-   adjusting the schedule.
-3. Editor B shares their updated document back to Editor A.
-4. Editor A opens `File → Import Project Data…` (🍎 macOS, §12),
-   selects Editor B's document, and picks what to bring across.
-5. The result is Editor A's document with Editor B's additions merged
-   in, overwriting only the categories chosen.
+1. Person A creates the main document and shares it with Person B.
+2. Person B adds references, reports, and schedule data on their copy.
+3. Person B shares their updated document back to Person A.
+4. Person A opens **File → Import Project Data…** (macOS, §12), selects Person B's document, and picks what to bring across.
 
-See §12 for the full details on what each category transfers and how
-conflicts are resolved.
+See §12 for the full details.
 
-> ✱ **Tip** — Import Project Data is one-directional: you pull from
-> a source into your current document. If both parties have made
-> changes you want to keep, you may need to run the import twice —
-> once in each direction — or agree that one document is the
-> authoritative copy.
+---
 
-## 14.4 What Isn't Supported
+## 14.4 What isn't supported
 
-**Real-time simultaneous editing** — iCloud Drive sync is file-level.
-There is no multiplayer editing where two people see each other's
-changes live.
+**Real-time simultaneous editing of local documents** — iCloud Drive sync is file-level. For real-time collaboration, use Cloud Walls (§14.1).
 
-**Apple Handoff** — picking up mid-session on a different device is
-not supported in the current version. Open the document fresh on the
-second device after iCloud has synced.
+**Apple Handoff** — picking up mid-session on a different device is not supported. Open the document fresh on the second device after iCloud has synced.
 
-**Automatic conflict resolution** — if the same document is edited on
-two devices simultaneously and saved independently (including via
-iCloud Drive), the file system handles the conflict (usually keeping
-one version and creating a duplicate). Scene Cards has no built-in
-conflict UI — use Import Project Data (§12) to reconcile diverged
-copies manually. To avoid conflicts, agree on a hand-off process:
-one editor finishes and saves, then the other opens the updated file.
+**Automatic conflict resolution for local documents** — if two devices edit the same `.scenecards` file simultaneously, the file system handles it (usually keeping one version and creating a duplicate). Use Import Project Data (§12) to reconcile manually.
 
-## 14.5 Where to Go Next
+---
 
-- **Import Project Data** — the full merge workflow is in §12.
-- **Shoot reports** — importing reports from a day-file into the main
-  document is a common collaboration use case; see §10.6.
-- **Document package layout** — understanding what's inside the
-  package helps when diagnosing sync issues; see §4.8.
+## 14.5 Where to go next
+
+- **Cloud Walls in depth** — once the wall is open, everything about building and editing it is the same as a local wall; start at §5.
+- **Import Project Data** — the full merge workflow for local documents is in §12.
+- **Shoot reports** — a common collaboration use case is importing a day-file into the main document; see §10.6.
+- **Document package layout** — understanding what's inside the package helps when diagnosing sync issues; see §4.8.

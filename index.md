@@ -21,7 +21,7 @@ Docs/Manual/
 ├── 09-Scheduling.md               ← drafted
 ├── 10-ShootReports.md             ← drafted
 ├── 11-PrintingAndExport.md        (TBD)
-├── 12-ImportSessionData.md        (TBD)
+├── 12-ImportProjectData.md        (TBD)
 ├── 13-MultiEpisode.md             (TBD)
 ├── 14-Collaborating.md            (TBD)
 ├── 15-ToolbarAndMenuReference.md  (TBD)

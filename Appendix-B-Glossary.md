@@ -173,7 +173,7 @@ See *One-liner*.
 
 **Subscription**
 Scene Cards is sold as an annual subscription through the App Store.
-A 7-day free trial gives full access to all features. After the trial
+A 14-day free trial gives full access to all features. After the trial
 ends without a subscription, documents open in read-only mode. See §1.7.
 
 **Suffix**

@@ -204,6 +204,24 @@ in a multi-episode document, prefix the filename with `Ep{NN}_Scene_`
 > `Media/thumbnails/`. They travel with the document and never need a
 > separate sync.
 
+### 2.4.4 Batch-assign a folder of reference files
+
+The same filename matching works for any file type — PDFs, location
+photos, sound reports, continuity sheets, anything — filed into each
+scene's **Reference** tab rather than replacing the thumbnail.
+
+- **🍎 macOS** — `File → Batch Import References (Folder)…` to pick a
+  folder, or `File → Batch Import References (Select Files)…` to hand-pick
+  individual files.
+- **📐📱 iPadOS / iPhone** — **⋯** overflow → **Import References from
+  Folder…** or **Import References by Name…**.
+
+Files are appended to whatever references already exist on each card —
+nothing is replaced. See §8.7 *Batch Import References by Filename* for
+the full matching rules and completion summary.
+
+> 🔒 Batch reference import requires a Scene Cards Pro subscription.
+
 ## 2.5 Save and Close
 
 ### 2.5.1 🍎 macOS
@@ -221,6 +239,15 @@ in a multi-episode document, prefix the filename with `Ep{NN}_Scene_`
   Files browser.
 - **Reopen** — tap the document in the Files browser.
 
+### 2.5.3 Share to cloud
+
+Saving to iCloud Drive keeps the document synced across your own devices.
+To share the wall with crew members — or to give an Android user access —
+use **Cloud Walls**. Sign in (any email address works, no Google account
+required), create a Production, and invite crew by email. The wall syncs
+live and snapshots can be imported by anyone on the production. See §14
+*Collaborating* for the full setup.
+
 ## 2.6 Next Steps
 
 You now have a working Scene Cards document with scenes and at least one
@@ -232,5 +259,8 @@ still. From here:
   storyboards and research.
 - **Build a schedule** — see §9 *Scheduling* for importing a one-liner and
   working in Schedule mode.
+- **Share with crew** — Scene Cards can sync the wall to cloud so crew
+  members on any platform (macOS, iPhone, iPad, or Android) see the same
+  cards in real time. See §14 *Collaborating*.
 - **Browse the interface** — see §3 *Orientation* for a guided tour of the
   toolbar, inspector and script panel.

@@ -48,7 +48,7 @@ travel with the `.scenecards` file and apply only to that production.
 **📐📱 iPadOS and iPhone** — tap **⋯ → Manage Subscription…** to open
 the App Store subscriptions page, where you can renew, cancel or change
 your plan. If the trial has expired, **⋯ → Try Scene Cards Pro Free for
-7 Days…** restarts the paywall flow.
+14 Days…** restarts the paywall flow.
 
 **🍎 macOS** — manage your subscription through the App Store app:
 open App Store → click your account icon → Subscriptions.

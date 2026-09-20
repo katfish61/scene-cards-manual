@@ -157,7 +157,7 @@ switch between Script, Locations and Schedule.
 
 ## 1.7 Activation and Subscription
 
-Scene Cards is an annual subscription. A 7-day free trial is available
+Scene Cards is an annual subscription. A 14-day free trial is available
 from the App Store — during the trial, all features are fully
 accessible with no restrictions. After the trial ends, the document
 opens in read-only mode until a subscription is active. Manage your

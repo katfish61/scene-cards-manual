@@ -55,9 +55,12 @@ menu bar.
 | Import Script PDF or FDX… ★ | `⌘⇧I` | Imports scenes from a Fountain / FDX / PDF script |
 | Batch Import Images (Folder)… ★ | `⌘⌥I` | Imports a folder of images, matched by scene number |
 | Batch Import Images (Select Files)… ★ | `⌘⌥⇧I` | Opens a file picker to import individual images |
+| Batch Import References (Folder)… ★ | — | Imports a folder of files into scenes' Reference tabs, matched by scene number (§8) |
+| Batch Import References (Select Files)… ★ | — | Opens a file picker to import individual files into scenes' Reference tabs (§8) |
 | Import Reports from Folder… ★ | — | Imports a day folder of mixed reports; each file's type — sound, camera, continuity — is detected automatically (§10.1.2) |
 | Import Sound Report Files… ★ | — | Imports individual sound report PDFs/CSVs; shoot day detected per file (§10.1.3) |
 | Import Project Data… ★ | `⌘⌃I` | Merges data from another Scene Cards document (§12) |
+| Repair Scene Cards Document… | — | Fixes a document that lost its `.scenecards` file ending and now appears as a plain folder (§19) |
 | Export Script Import Diagnostic… | — | Generates a diagnostic report for a script PDF, for troubleshooting import problems |
 | Print Wall Layout… | `⌘P` | Prints the scene wall as an A4 grid (§11) |
 
@@ -133,10 +136,13 @@ See §9.7 for Schedule mode search behaviour.
 | Import Images from Files… ★ | Opens the Files picker to import images |
 | Import from Photos… ★ | Opens the Photos picker to import images |
 | Import Shoot Reports… ★ | Opens a folder picker for shoot report import (§10) |
+| Import References by Name… ★ | Opens a file picker to import files into scenes' Reference tabs, matched by scene number (§8) |
+| Import References from Folder… ★ | Opens a folder picker to import files into scenes' Reference tabs, matched by scene number (§8) |
 | Import Project Data… ★ | Merges data from another Scene Cards document (§12) |
+| Repair Scene Cards Document… | Fixes a document that lost its `.scenecards` file ending and now appears as a plain folder (§19) |
 | Share Document… | Opens the system share sheet for the current document (§4.6.2) |
 | Print… | Prints the scene wall (§11) |
-| Try Scene Cards Pro Free for 7 Days… | Opens the subscription paywall (shown when trial inactive) |
+| Try Scene Cards Pro Free for 14 Days… | Opens the subscription paywall (shown when trial inactive) |
 | Manage Subscription… | Opens subscription management (shown when subscribed) |
 
 ---

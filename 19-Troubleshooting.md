@@ -24,11 +24,36 @@ If it still fails:
 4. If `payload.json` is missing or empty, check Time Machine or iCloud
    Drive's version history for an earlier copy.
 
+**The document shows as a plain folder in Finder or Files, not a document icon**
+
+Your `.scenecards` document has lost its file ending — most often from
+renaming it (especially selecting several documents at once and using
+Files' or Finder's batch rename) without realising it had one. Nothing
+is lost: the document's contents (`payload.json`, `Media`) are still
+there, just no longer recognised as a single document without that
+ending.
+
+1. 🍎 On macOS, use **File → Repair Scene Cards Document…**, select
+   the folder, then choose where to save the repaired copy when
+   prompted — it can't be written back in place, since the app only
+   has permission to touch what you explicitly select.
+2. 📐📱 On iPadOS and iPhone, use the **⋯ → Repair Scene Cards
+   Document…** overflow menu item, select the folder, then choose a
+   save location in the picker that appears.
+3. The repaired copy keeps the same name with `.scenecards` added
+   back on — it should now open normally. The original folder is only
+   removed once the repaired copy is confirmed good.
+
+If you'd rather fix it manually: in Finder or Files, rename the
+folder and add `.scenecards` to the end of its name (confirm "Keep"
+if asked about the file ending) — this works too, since the contents
+were never actually changed.
+
 **The document opens in read-only mode**
 
 Your trial has ended or your subscription has lapsed. The banner at
 the top of the wall shows **Read-only mode**. Tap or click
-**Try free for 7 days** in the banner, or go to the App Store →
+**Try free for 14 days** in the banner, or go to the App Store →
 your account → Subscriptions to renew.
 
 **"Save Document First" appears when creating a note or drawing**

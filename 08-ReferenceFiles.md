@@ -278,7 +278,75 @@ just don't get a rich preview.
 > `⋯ → Import Images from Files…`) only match image extensions. Reference
 > file import via the inspector accepts everything in the table above.
 
-## 8.7 Where Reference Files Live on Disk
+## 8.7 Batch Import References by Filename
+
+If you have a folder of files — location photos, sound reports, PDFs,
+continuity sheets, anything — that are already named with their scene
+numbers, you can file them all in one go rather than opening each card
+individually.
+
+### 8.7.1 Naming convention
+
+The rules are the same as for batch stills import (§7.x):
+
+| Filename | Matched to |
+|---|---|
+| `5.jpg` | Scene 5 |
+| `12B - set dressing.heic` | Scene 12B |
+| `Ep02_Scene_5_location.pdf` | Episode 2, Scene 5 |
+| `notes.txt` | *(no match — no leading scene number)* |
+
+Files that don't start with a recognisable scene number are skipped and
+listed in the completion summary. Any file type is accepted — there is
+no extension filter.
+
+### 8.7.2 Running a batch reference import
+
+**🍎 macOS**
+
+- **File → Batch Import References (Select Files)…** — opens a file
+  picker; select as many files as you like.
+- **File → Batch Import References (Folder)…** — opens a folder picker;
+  every file inside the folder (and any sub-folders) is matched.
+
+**📐📱 iPadOS / iPhone**
+
+- **⋯ → Import References by Name…** — opens the Files picker; select
+  individual files.
+- **⋯ → Import References from Folder…** — opens a folder picker.
+
+> 🔒 These options require a Scene Cards Pro subscription.
+
+### 8.7.3 Multi-episode projects
+
+If your document contains more than one episode, Scene Cards shows the
+**Episode Scope** picker before running the import — the same picker
+used for batch stills. Choose the episode you want to scope the import
+to, or choose **All Episodes** to let the filename's `EpNN_` prefix
+determine the target. Filenames without an episode prefix are matched
+against the earliest episode that has a scene with that number.
+
+### 8.7.4 Completion summary
+
+After the import finishes a summary shows how many scenes were updated
+and flags any issues:
+
+| Status | Meaning |
+|---|---|
+| *N scenes updated* | Files were successfully filed |
+| *Ambiguous* | The scene number exists in more than one episode; filed to the earliest match |
+| *Not found* | The parsed scene number doesn't exist on this wall |
+| *Skipped* | The filename doesn't start with a scene number |
+
+Files are **appended** to the existing references on each card — nothing
+is replaced or removed.
+
+> ⓘ If Scene Cards shows "This Looks Like a Scene Cards Document" when
+> you pick a folder, the folder is probably a `.scenecards` package that
+> lost its file extension. Use **File → Repair Scene Cards Document…**
+> (§19) instead of importing it as a reference folder.
+
+## 8.8 Where Reference Files Live on Disk
 
 Reference files are copied into the document package at:
 
@@ -327,7 +395,7 @@ same sequence prefix:
 Files created by **New Note** are named `Note_YYYY-MM-DD_HH-mm-ss.txt`.
 Files created by **New Drawing** are named `Drawing_YYYY-MM-DD_HH-mm-ss.png`.
 
-## 8.8 Reference Files and Scene Re-import
+## 8.9 Reference Files and Scene Re-import
 
 When you re-import a script (§5.1.2), reference files on cards that
 match by episode + scene number survive unchanged. The re-import only
@@ -340,7 +408,7 @@ exists in the new draft) loses its reference folder along with
 everything else. Mark a scene **OMITTED** (§5.5) before re-importing
 if there is any chance it returns and you want to keep its references.
 
-## 8.9 Where to Go Next
+## 8.10 Where to Go Next
 
 - **Import shoot reports** (sound, camera, continuity, call sheets) —
   see §10 *Shoot Reports*.
