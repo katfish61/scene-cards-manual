@@ -24,6 +24,21 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.0.4 — September 2026
+
+### New
+- **Batch Import References (Folder / Select Files)** — import a whole folder
+  or a selection of files straight into scenes' Reference tabs, matched by
+  scene number in the filename, on macOS, iOS, and Android. See §8.7.
+- **Repair Scene Cards Document…** — recovers a `.scenecards` document that
+  lost its file extension (commonly from iOS Files app batch-rename) and now
+  appears as a plain folder. See §19.
+
+### Improved
+- **Free trial is now 14 days** (was 7) on both the App Store and Google Play.
+
+---
+
 ## 1.8.2 — August 2026
 
 ### New
