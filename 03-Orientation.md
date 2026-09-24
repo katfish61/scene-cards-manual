@@ -66,8 +66,13 @@ sources:
    MEMBERS" page has been imported (§9.4.1), cast numbers 1-100
    (the main/speaking-cast band) are resolved to names and matched to
    their scenes automatically. This is what covers a silent character —
-   someone who's in scenes per the schedule but never speaks. Reading
-   that page is a best-effort parse, same as OCR schedule import, so
+   someone who's in scenes per the schedule but never speaks.
+   Matching cast numbers to individual scenes is done by reading the
+   schedule's cast column by position, which needs a PDF that carries real
+   text. A **scanned** schedule (one that's an image of a page, so the
+   scene table can only be read by OCR) won't fill this in, and Cast mode
+   falls back to dialogue-detected characters only. Reading the cast
+   page is a best-effort parse, same as OCR schedule import, so
    an occasional name can land on the wrong number — the Hide/Merge
    tools below fix it the same as a dialogue mis-detection would.
 3. **Manual add** — for anything the first two miss, add a character by

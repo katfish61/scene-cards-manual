@@ -143,7 +143,7 @@ Present in `payload.oneLinerSchedule` when a schedule has been imported.
 | `dayNight` | string | `"Day"`, `"Night"`, `"Eve"`, `"Dawn"` |
 | `pages` | string | e.g. `"1 2/8"` |
 | `storyDay` | string | e.g. `"SD4"` |
-| `castNumbers` | array of integers | Cast numbers from the strip board |
+| `castNumbers` | array of integers | Cast numbers for this scene, read from the schedule's cast column. Numbers 1-100 resolve through `castList` to feed Cast mode (§3.2). Empty for a scanned schedule, which has no text to position |
 | `isStandby` | boolean | True if listed under a STANDBY header |
 | `location` | string | Left-column location label |
 

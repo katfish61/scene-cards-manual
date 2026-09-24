@@ -117,6 +117,13 @@ that landed incorrectly.
 > what you expected makes the problem reproducible without needing the
 > schedule itself re-run. A long schedule takes a few minutes to export
 > because it re-runs OCR; the progress toast counts the pages.
+>
+> The same report also covers the cast side, so it's the thing to send if
+> a character is missing from Cast mode: it lists the cast list it read
+> from page 1, the cast numbers it found for each scene, and the scenes
+> where it found none — those last ones are worth checking against the
+> PDF, since a blank cast column is normal and looks the same in the
+> report as a column it failed to read.
 
 ## 9.3 The Schedule Top Bar
 
@@ -160,6 +167,16 @@ until you re-import that schedule PDF. Cast numbers in the 1-100 range
 (the main/speaking-cast band on a typical UK schedule) also feed **Cast
 mode** (§3.2) directly, so a character who's in scenes but never speaks
 can still get their own group there without being added by hand.
+
+> ⓘ **Note** — putting cast numbers against *individual scenes* (rather
+> than against the day as a whole) is done by reading the schedule's cast
+> column by its position on the page. That needs a PDF containing real
+> text. If your schedule is a **scan** — an image of a page, which Scene
+> Cards has to read with OCR — the day badge still names its cast, but
+> per-scene cast numbers aren't filled in and Cast mode falls back to
+> characters detected from dialogue. A schedule exported straight from
+> Movie Magic, Yamdu, Scenechronize or similar is normally real text; one
+> that's been printed and scanned, or photographed, is not.
 
 ### 9.4.2 Scene cards
 

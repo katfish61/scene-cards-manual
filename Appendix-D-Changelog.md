@@ -24,6 +24,38 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.0.5 — September 2026
+
+### New
+- **Cast mode** — a fourth wall mode (`⌘⇧4` / 🎭) that groups scene cards by
+  character, the way Locations mode groups them by location. On macOS, iOS,
+  and Android. See §3.2.
+- **Cast list import** — a one-liner schedule's "CAST MEMBERS" page is parsed
+  on import, so cast numbers show with names throughout: in Schedule mode's
+  green day badge, and as Cast-mode groups. See §9.4.1.
+- **Silent characters appear in Cast mode** — each scene's cast numbers are
+  read from the schedule's cast column, so a character who is in scenes but
+  never speaks gets their own group without being added by hand. Needs a
+  schedule PDF with a text layer; a scanned one still gives dialogue-detected
+  characters only. See §3.2.
+- **Add character to this scene…** — add a character the script's dialogue
+  doesn't name, from the Script Panel. See §6.9.
+- **Export Schedule Import Diagnostic…** — writes a report of what the parser
+  read from a schedule PDF, for troubleshooting an import that came out wrong.
+  See §9.2.3.
+
+### Improved
+- **Merge and hide characters in Cast mode** — fold "DUDE" and "THE DUDE" into
+  one group, or hide a name that was never a character. See §3.2.
+
+### Fixed
+- The script title in the macOS toolbar overlapped the search field, and
+  duplicated what the Script Panel already showed. The toolbar now shows the
+  document name.
+- The macOS toolbar read "Schedule" while Cast mode was active.
+
+---
+
 ## 2.0.4 — September 2026
 
 ### New
