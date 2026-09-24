@@ -110,6 +110,14 @@ Cards falls back to OCR to extract the scene numbers. An orange
 Unmatched section (§9.4.3) after import and manually assign any cards
 that landed incorrectly.
 
+> ✱ **Tip** — if a schedule imports badly (scenes missing, or scenes
+> appearing on the wrong day), 🍎 **File → Export Schedule Import
+> Diagnostic…** writes out exactly what the parser read from the PDF,
+> including the OCR text. Sending that file alongside a description of
+> what you expected makes the problem reproducible without needing the
+> schedule itself re-run. A long schedule takes a few minutes to export
+> because it re-runs OCR; the progress toast counts the pages.
+
 ## 9.3 The Schedule Top Bar
 
 When a schedule is loaded, a persistent bar appears at the top of

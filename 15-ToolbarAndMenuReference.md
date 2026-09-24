@@ -63,6 +63,7 @@ menu bar.
 | Import Project Data… ★ | `⌘⌃I` | Merges data from another Scene Cards document (§12) |
 | Repair Scene Cards Document… | — | Fixes a document that lost its `.scenecards` file ending and now appears as a plain folder (§19) |
 | Export Script Import Diagnostic… | — | Generates a diagnostic report for a script PDF, for troubleshooting import problems |
+| Export Schedule Import Diagnostic… | — | Same, for a one-liner / shooting schedule PDF. Includes the OCR text the parser actually reads, so scene-matching problems can be diagnosed from the file rather than reproduced (§9.2.3). Long schedules take a few minutes — the progress toast shows OCR page counts |
 | Print Wall Layout… | `⌘P` | Prints the scene wall as an A4 grid (§11) |
 
 ### Edit
