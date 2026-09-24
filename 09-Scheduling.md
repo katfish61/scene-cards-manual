@@ -129,11 +129,29 @@ shows the date and crew call when the one-liner carries them. To the right:
 
 | Element | Meaning |
 |---|---|
-| 🟢 Cast badge | Sorted list of cast numbers for the day (green, when the one-liner includes cast columns) |
+| 🟢 Cast badge | Sorted list of cast numbers for the day (green, when the one-liner includes cast columns). Tap it to see each number resolved to a name — see below |
 | 🗒 Total pages | Page count for the day |
 | ⚠ N unmatched | Scenes in the one-liner with no matching card |
 | Report badges | Colour-coded icons for attached reports (§9.6) |
 | ↓doc button | Opens the **Attach Report** menu for this day (§10) |
+
+**Cast numbers, named.** Every one-liner schedule's first page is a "CAST
+MEMBERS" list — a cast number next to each character's name. Scene Cards
+parses that page automatically on import and remembers it with the
+document, so tapping the cast badge on any day shows each number next to
+the name it resolves to, instead of just the bare numbers. This is a
+best-effort read of the page, the same way OCR schedule import is (§9.2.3)
+— most names come through correctly, but on a dense, multi-column cast
+list a few can end up attached to the wrong number. Worth a glance the
+first time you use it; a wrong name is easy to fix by re-importing a
+corrected schedule, or by using Cast mode's Merge/Hide tools (§3.2) if
+it's already been pulled into a Cast-mode group. If a schedule was
+imported before this existed, or its first page isn't a recognisable
+cast list, the badge still works — it just shows numbers with no names
+until you re-import that schedule PDF. Cast numbers in the 1-100 range
+(the main/speaking-cast band on a typical UK schedule) also feed **Cast
+mode** (§3.2) directly, so a character who's in scenes but never speaks
+can still get their own group there without being added by hand.
 
 ### 9.4.2 Scene cards
 

@@ -38,17 +38,58 @@ sheet, and the script panel slides up from the bottom of the wall.
 ## 3.2 The Wall
 
 The wall is the grid of cards that takes up the centre of the window. Each
-card represents one scene. The same cards are displayed in all three **wall
-modes**, only the ordering changes:
+card represents one scene. The same cards are displayed in all four **wall
+modes**, only the grouping changes:
 
 | Mode | Icon | Order | When you use it |
 |---|---|---|---|
 | **Script** | `film` | Ascending by episode + scene number | Breakdowns, story work, reading through, print scene wall |
 | **Location** | `location.fill` | Grouped by location slugline | Scouting, location scheduling, art department planning |
 | **Schedule** | `calendar` | Grouped by shoot day (requires a one-liner import) | Daily shoot prep, AD reordering, storing daily reports and essentials |
+| **Cast** | `person.2.fill` | Grouped by character | Seeing which scenes a given actor is needed for, at a glance |
 
-Switch modes from the toolbar (§3.3). On macOS the same three modes are
-also available from the `View` menu as `⇧⌘1` / `⇧⌘2` / `⇧⌘3`.
+Switch modes from the toolbar (§3.3). On macOS the same four modes are
+also available from the `View` menu as `⇧⌘1` / `⇧⌘2` / `⇧⌘3` / `⇧⌘4`.
+
+**Cast mode is different from the other three in one respect:** a scene's
+cast isn't hand-curated data — it's mostly derived, from up to three
+sources:
+
+1. **Dialogue cues** — every time you're in Cast mode, Scene Cards
+   re-scans each scene's script text for character cues (the same
+   all-caps speaker-name detection used to colour dialogue in the Script
+   Panel, §6.9). This is a best-effort reading of dialogue, not a full
+   cast list, so an occasional stage-direction word can be mistaken for a
+   character name (or vice versa) — and a character who never speaks
+   isn't picked up this way at all.
+2. **The schedule's cast list** — if a one-liner schedule with a "CAST
+   MEMBERS" page has been imported (§9.4.1), cast numbers 1-100
+   (the main/speaking-cast band) are resolved to names and matched to
+   their scenes automatically. This is what covers a silent character —
+   someone who's in scenes per the schedule but never speaks. Reading
+   that page is a best-effort parse, same as OCR schedule import, so
+   an occasional name can land on the wrong number — the Hide/Merge
+   tools below fix it the same as a dialogue mis-detection would.
+3. **Manual add** — for anything the first two miss, add a character by
+   hand from the Script Panel (§6.9, **Add character to this scene…**).
+   This is the one piece of Cast-mode data that's actually stored, scoped
+   to the scene you add it to.
+
+If a name is wrongly detected (from dialogue or from the cast list), open
+the header menu for the mistaken group and choose **Hide from Cast
+Mode** — this uses the same "excluded characters" list as the Script
+Panel, so hiding a name here also hides it there, and it stays hidden
+until you re-colour that name in the Script Panel's character list. A
+scene with more than one character appears once under each of them,
+which is expected — it isn't duplicated on the wall.
+
+Scripts are also often inconsistent about a character's own name — a
+script might cue the same person as both `DUDE` and `THE DUDE` in
+different scenes, which would otherwise split into two separate columns.
+Open the header menu on either one and choose **Merge Into…**, then pick
+the other name — every scene from both folds into a single group from
+then on (not just the one card you were looking at). **Un-merge** in the
+same menu reverses it. This mapping is saved with the document.
 
 ### 3.2.1 Wall width
 
@@ -85,7 +126,7 @@ a new scene with `File → Insert Tile After` (`⌥⌘N`).
 Left to right:
 
 ```
-[ Script panel ] | [ Mode label ]              [ Search ]  |  [ Script | Loc | Sched ]  |  [ Inspector ]
+[ Script panel ] | [ Mode label ]              [ Search ]  |  [ Script | Loc | Sched | Cast ]  |  [ Inspector ]
 ```
 
 - **Script panel toggle** (`doc.text.magnifyingglass`) — opens or closes
@@ -128,10 +169,10 @@ Left to right:
   full text field, tap the ✕ (or submit) to collapse. The icon turns blue
   while a query is active.
 - **Mode button(s)**
-  - **📐 iPad** — three individual buttons, one per mode. The active mode
+  - **📐 iPad** — four individual buttons, one per mode. The active mode
     is tinted with the accent colour.
   - **📱 iPhone** — a single button showing the current mode's icon. Tap
-    it to open a menu and select Script, Locations or Schedule.
+    it to open a menu and select Script, Locations, Schedule or Cast.
 - **Inspector toggle** — opens the inspector as a sheet.
 
 > ⓘ **Note** — neither iPadOS nor iPhone has a menu bar, so all actions

@@ -70,6 +70,8 @@ The core document state inside `wallState`.
 | `revision` | integer | Incremented on every edit; used for dirty detection |
 | `characterColours` | object | Map of character name → hex colour string e.g. `"#FF6B35"` |
 | `excludedCharacters` | array of strings | Character names hidden from report views |
+| `characterAliases` | object | Map of detected character name → canonical name it's merged into in Cast mode (§3.2), e.g. `"THE DUDE": "DUDE"` |
+| `castList` | object | Map of cast number (string key) → name, parsed from a schedule PDF's "CAST MEMBERS" page (§9). Numbers 1-100 also feed Cast mode |
 | `manualScheduleDay` | object | Map of tile UUID string → shoot day integer |
 | `reportAttachments` | array | See §18.7 |
 
@@ -101,6 +103,7 @@ Each entry in `tilesByID` is a Tile object.
 | `soundEntries` | array | See §18.7 |
 | `cameraEntries` | array | See §18.7 |
 | `continuityEntries` | array | See §18.7 |
+| `manualCharacters` | array of strings | Characters manually added to this scene from the Script Panel's Characters editor, supplementing (not replacing) names auto-detected from dialogue. Feeds Cast mode (§3.2) |
 
 All fields except `id`, `episode`, `sceneNumber`, `rows` and `cols`
 use `decodeIfPresent` with sensible defaults, so older documents open

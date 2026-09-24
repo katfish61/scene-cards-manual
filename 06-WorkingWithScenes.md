@@ -232,6 +232,15 @@ This is read-only; to change the title, re-import a revised draft.
   speaks in.
 - To clear a character's colour, reopen the popover and tap **Remove**.
 
+The character list here — and Cast mode's grouping — is built by scanning
+dialogue cues, so a character who's present in a scene but never speaks
+(or is only referred to by someone else) won't show up on its own. Use
+**Add character to this scene…** at the bottom of the Characters panel
+to add them by hand; this only affects the currently open scene, and the
+name gets a badge marked **added** so it's clear it wasn't detected from
+the script. Removing a manually-added name (✕) takes it out of just this
+scene — unlike removing a detected name, it doesn't exclude it document-wide.
+
 Two kinds of colour are in play:
 
 | Type | Persistence | Who sets it |
@@ -245,6 +254,10 @@ character; manual colours override them when you want something specific.
 > ✱ **Tip** — a character removed via **Remove** stays excluded: auto-
 > population will not re-add them. Reopen the popover and pick a colour
 > to bring them back into rotation.
+
+> ✱ **Tip** — this same exclusion list is shared with **Cast mode**
+> (§3.2), which groups the wall by character. Hiding a mis-detected
+> "character" from either place hides it in both.
 
 ---
 

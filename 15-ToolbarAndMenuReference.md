@@ -11,7 +11,8 @@ TODO — still open for this chapter:
      chapter correctly reflect the gated operations. The chapter intro has
      been updated to clarify the distinction.
   3. RESOLVED — SF Symbols confirmed from code: Scenes = `film`,
-     Locations = `location.fill`, Schedule = `calendar`.
+     Locations = `location.fill`, Schedule = `calendar`,
+     Cast = `person.2.fill`.
 -->
 
 # Chapter 15 — Toolbar and Menu Reference
@@ -85,6 +86,7 @@ menu bar.
 | Scenes | `⌘⇧1` | Switches to Scenes mode |
 | Locations | `⌘⇧2` | Switches to Locations mode |
 | Schedule | `⌘⇧3` | Switches to Schedule mode |
+| Cast | `⌘⇧4` | Switches to Cast mode — groups the wall by character (§3.2) |
 
 ### Help
 
@@ -101,7 +103,7 @@ menu bar.
 The navigation bar runs across the top of the screen. Controls are
 split between the leading (left) and trailing (right) sides.
 
-> ⓘ **Note** — on iPhone in portrait the mode buttons (🎬 📍 📅) are
+> ⓘ **Note** — on iPhone in portrait the mode buttons (🎬 📍 📅 🎭) are
 > condensed into a single button showing the current mode's icon. Tap
 > it to open a picker and switch modes.
 
@@ -119,6 +121,7 @@ split between the leading (left) and trailing (right) sides.
 | 🎬 Scenes | Switches to Scenes mode. Fills when active. |
 | 📍 Locations | Switches to Locations mode. Fills when active. |
 | 📅 Schedule | Switches to Schedule mode. Fills when active. |
+| 🎭 Cast | Switches to Cast mode — groups the wall by character. Fills when active. |
 | ▤ Inspector | Toggles the inspector sheet. Fills when open. |
 
 ### Search

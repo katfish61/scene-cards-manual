@@ -27,6 +27,14 @@ The horizontal scrolling row of thumbnails at the top of the inspector
 that shows the reference files attached to a card. Navigate with the
 chevron buttons (🍎) or by swiping (📐📱).
 
+**Cast mode**
+One of four wall views. Cards are grouped into columns by the
+characters detected in each scene's dialogue; a scene with more than
+one speaking character appears under each of them. Nothing is stored —
+the grouping is recomputed from the script text every time, using the
+same character-cue detection as the Script Panel (§6.9). Accessed with
+`⌘⇧4` or the 🎭 button. See §3.2.
+
 **Close Gap**
 An action that removes a card from its slot and shifts every subsequent
 card one position to the left, closing the empty space. The inverse of
@@ -72,7 +80,7 @@ Opens as a right-hand sidebar on 🍎 macOS or a bottom sheet on 📐📱
 iPadOS and iPhone. See §6.
 
 **Location mode**
-One of three wall views. Cards are grouped into columns by their
+One of four wall views. Cards are grouped into columns by their
 location string; empty groups are hidden. Accessed with `⌘⇧2` or the
 📍 button. See §3.2.
 
@@ -129,7 +137,7 @@ The default wall view. Cards appear in a continuous left-to-right,
 top-to-bottom grid. Accessed with `⌘⇧1` or the 🎬 button.
 
 **Schedule mode**
-One of three wall views. Cards are grouped by assigned shoot day, with
+One of four wall views. Cards are grouped by assigned shoot day, with
 day headers showing the shoot date, crew call, and page count. Accessed
 with `⌘⇧3` or the 📅 button. See §9.
 
