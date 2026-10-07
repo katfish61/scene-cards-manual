@@ -24,6 +24,52 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.1.0 — October 2026
+
+### New
+- **Crew see every wall in their production** — joining a production gives
+  access to all its walls; leaving or being removed takes it away at once.
+  See §14.1.6.
+- **Delete from Cloud** — the production owner (or a private wall's creator)
+  can delete a cloud wall for everyone. See §14.1.13.
+- **Delete Production** — the owner can delete a production with all its
+  walls, files, snapshots and crew; the confirmation lists every wall.
+  See §14.1.14.
+- **Remove from Crew / Leave Production** — on every platform. See §14.1.12.
+- **Restore a deleted wall** from a Mac, iPhone or iPad copy with Share Wall
+  to Cloud. See §14.1.16.
+- **Empty Wall box** — a new wall offers Import Script… and Open Cloud Wall….
+  See §2.1.4.
+- **Mac wall zoom** — View ▸ Zoom In / Zoom Out / Actual Size (`⌘=` `⌘-`
+  `⌘0`) and trackpad pinch. See §15.1.
+- **Manage Wall Access on the Mac** — in the cloud menu. See §15.5.
+- **Android** — one-tap New Wall; create productions and invite crew.
+
+### Improved
+- **Cloud Walls on iPhone and iPad** open the chosen wall straight away.
+- **Invitations** — several can wait for one person; a lost invitation can
+  still be accepted; the owner's crew list updates live.
+- **Removed or deleted while the app is open** — you're moved to another
+  production straight away, with a message.
+- **Two-row shoot-day header** on iPhone in Schedule mode, so long cast
+  lists no longer squash the bar.
+- **Sync & Account** reloads every time it opens; text boxes are clearly
+  visible on iOS.
+- **File previews** on iPhone and iPad have a Done button.
+
+### Fixed
+- Replacing a scene card's image now reaches every device (it could snap
+  back to the old image).
+- A call sheet imported on the Mac now uploads, including into a cloud wall
+  opened in a new window.
+- A deleted cloud wall can no longer come back when an old copy is edited.
+- Blank new documents no longer appear in Cloud Walls as empty "Untitled"
+  walls.
+- A cloud wall opened from Cloud Walls on the Mac was shown 3 cards wide
+  if it was last edited on an iPhone.
+
+---
+
 ## 2.0.5 — September 2026
 
 ### New

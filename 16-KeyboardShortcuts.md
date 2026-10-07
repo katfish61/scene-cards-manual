@@ -24,6 +24,17 @@ custom shortcuts on 📐 iPadOS — use the navigation bar buttons and
 | `⌘⇧1` | Switch to Scenes mode |
 | `⌘⇧2` | Switch to Locations mode |
 | `⌘⇧3` | Switch to Schedule mode |
+| `⌘⇧4` | Switch to Cast mode |
+
+## Wall zoom (macOS)
+
+| Shortcut | Action |
+|---|---|
+| `⌘=` | Zoom in — fewer, larger cards across |
+| `⌘-` | Zoom out — more, smaller cards across |
+| `⌘0` | Actual size — 8 cards across |
+
+Trackpad pinch does the same. See §15.1 (View).
 
 ## Project menu
 

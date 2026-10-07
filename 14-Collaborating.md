@@ -58,11 +58,12 @@ Once signed in, Scene Cards remembers you. You won't be asked again on the same 
 
 One person — whoever manages the wall — creates the **production** that the whole team shares. Do this immediately after signing in.
 
-1. In "Sync & Account…", tap **"Create Production"**.
-2. Give it a name (e.g. "Pilot 2026" or "Feature — Aug Shoot").
-3. Tap "Create". You're now the production owner.
+1. In "Sync & Account…", type a name in the **Production name** box (e.g. "Pilot 2026" or "Feature — Aug Shoot").
+2. Tap **"Create Production"**. You're now the production owner.
 
-A production is a named workspace. All your Cloud Walls and team members sit inside it.
+You can do this on Mac, iPhone, iPad or Android. If you already belong to a production, use **"Create New Production…"** at the bottom of the sheet.
+
+A production is a named workspace. All your Cloud Walls and team members sit inside it. **Every active crew member can see and edit every wall in the production** (§14.1.6).
 
 ### 14.1.4 Inviting crew
 
@@ -77,15 +78,29 @@ The production owner invites everyone else by email.
 
 ### 14.1.5 Accepting an invitation (crew members)
 
-When a crew member signs in for the first time after being invited, Scene Cards finds the pending invitation automatically and shows an "Accept / Decline" prompt. They tap **"Accept"** and immediately have access to the production's walls.
+When a crew member signs in after being invited, "Sync & Account…" shows the invitation with **Accept** and **Decline**. They tap **"Accept"** and immediately have access to **every wall in the production**.
 
-If the prompt doesn't appear, ask them to:
+- Invited to more than one production? The invitations appear one after another — accept or decline each.
+- The owner's crew list updates live: the new member switches from *pending* (with a **Resend** button) to active within a second or two.
+
+If the invitation doesn't appear, ask them to:
 1. Make sure they signed in with the exact email you invited.
-2. Pull down to refresh in "Sync & Account…" or close and reopen the sheet.
+2. Close and reopen "Sync & Account…" — it reloads every time it opens.
 
 ### 14.1.6 Opening a shared wall
 
-After accepting the invitation, crew members tap **"Cloud Walls"** in the toolbar to see all walls in the production. Tap any wall to open it. Changes made by anyone on the team sync within seconds.
+Every active crew member sees **every wall in the production** — there's no need to share walls one by one. Open **"Cloud Walls"** (cloud icon in the toolbar) and pick a wall. Changes made by anyone on the team sync within seconds.
+
+How the wall opens depends on what you're looking at:
+
+| You're on… | What happens |
+|---|---|
+| An **empty** wall | The cloud wall loads into it. |
+| A wall with content — **Mac** | The cloud wall opens in a new window, named after the wall. |
+| A wall with content — **iPhone / iPad** | The current wall closes and the cloud wall opens in its place. |
+| **Android** | Pick it from the wall list. Leaving an empty wall you made removes that empty wall. |
+
+> ✱ **New walls** — a brand-new wall shows an **Empty Wall** box with **Import Script…** and **Open Cloud Wall…**, so you can go straight to a cloud wall from it.
 
 ### 14.1.7 Step-by-step: first-time setup for a mixed team
 
@@ -134,7 +149,7 @@ Below is a complete worked example for a common scenario: one owner on macOS/iOS
 | Item | Syncs in real time |
 |------|-------------------|
 | Scene cards (brief, location, comments, revision colour, omit status) | Yes |
-| Still images and reference files | Yes (uploaded on add, downloaded on open) |
+| Still images and reference files | Yes (uploaded on add, downloaded on open; replacing a tile's image syncs too) |
 | Shoot reports | Yes |
 | Episode titles and wall grid layout | Yes |
 | Local `.scenecards` file on disk | No — Cloud Walls is a separate copy |
@@ -143,11 +158,62 @@ Below is a complete worked example for a common scenario: one owner on macOS/iOS
 
 ### 14.1.9 Switching productions
 
-If you belong to more than one production (e.g. you worked on two shows), use "Sync & Account…" → "Switch" to change the active production. Only walls from the active production appear in Cloud Walls.
+If you belong to more than one production (e.g. you worked on two shows), pick the production in the **Productions** list in "Sync & Account…". Cloud Walls shows every wall in the active production, plus any private walls you have.
 
 ### 14.1.10 Signing out
 
 "Sync & Account…" → "Sign Out". Your local walls are not affected. Cloud Walls become inaccessible until you sign in again.
+
+### 14.1.11 Wall access for private walls
+
+Production walls are open to the whole crew. **Manage Wall Access…** (cloud menu, on every platform) chooses who else can see a particular wall — useful for a wall that isn't in a production.
+
+### 14.1.12 Removing crew and leaving a production
+
+**Owner — remove someone:** "Sync & Account…" → **⋯** next to their name → **Remove from Crew**. For someone still pending, it's **Cancel Invitation**. They lose access to every wall in the production at once; any copies saved on their own Mac, iPhone or iPad are kept.
+
+**Crew — leave:** "Sync & Account…" → **Leave Production…**. You lose access to its walls; the owner can invite you back.
+
+Either way, the person's app shows *"“Production” is no longer available — it was deleted or you were removed."* and moves them to another production they belong to (or none).
+
+### 14.1.13 Deleting a cloud wall
+
+The **production owner** — or, for a private wall, the person who created it — can delete a wall for everyone:
+
+- **Mac:** Cloud Walls → right-click the wall → **Delete from Cloud…**
+- **iPhone / iPad:** Cloud Walls → swipe left on the wall (or long-press) → **Delete**
+- **Android:** wall list → bin icon next to the wall
+
+This removes the wall, its scenes and all its files from the cloud. It can't be undone in the cloud — but see §14.1.16.
+
+### 14.1.14 Deleting a production
+
+**Owner only.** "Sync & Account…" → **Delete Production…**. The sheet lists every wall that will go, the number of crew and shared snapshots, and asks you to type the production's name to confirm.
+
+It deletes all the production's walls and their files, shared snapshots, crew and pending invitations. If the app is closed part-way, it finishes the next time the owner opens it (*"Finishing deleting “…”"*).
+
+> ⚠ **Check the wall list** in the confirmation before typing the name — every wall listed is deleted for everyone.
+
+### 14.1.15 What other devices see
+
+When a wall is deleted, or someone loses access:
+
+| Device | What happens |
+|---|---|
+| **Mac / iPhone / iPad** with the wall open | An alert — *"…was deleted from the cloud by the production owner. Your copy on this device has been kept."* (or *"You no longer have access…"*). The wall stays on screen as a local copy, no longer syncing. |
+| **Android** with the wall open | A "Cloud Wall Unavailable" message, then it moves to another wall. Android keeps no local copy. |
+
+A deleted wall can't come back by accident — editing a disconnected copy never recreates it.
+
+### 14.1.16 Restoring a deleted wall
+
+A Mac, iPhone or iPad that had the wall open keeps a local copy. To put it back in the cloud, open that copy and choose **Share Wall to Cloud…** from the cloud menu. It becomes a new cloud wall in your current production; crew open it from Cloud Walls.
+
+- Scenes, schedule, cast and notes come back, plus any images, reference files and shoot reports **stored on that device**.
+- Files that were only ever added on *other* devices went with the deleted wall — add them again.
+- Share **one** copy only. Sharing a second device's copy would make a second wall; open the restored wall from Cloud Walls on the other devices instead.
+
+> ⚠ **Mac:** windows opened from Cloud Walls can reopen when the app relaunches and look just like a saved document. If one appears unexpectedly, close it with **Don't Save** rather than saving it over a real file.
 
 ---
 

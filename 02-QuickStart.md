@@ -43,8 +43,8 @@ cover every episode — see §13 *Multi-Episode Productions*.
 
 1. Launch Scene Cards. The Files browser appears (after the Welcome screen
    on first run — see §1.6.2).
-2. Tap the **+** button at the top centre of the Files browser. A new
-   document is created with an empty wall.
+2. Tap **Create Wall** on the launch screen (or **+** in the Files
+   browser). A new document is created with an empty wall.
 3. To rename, tap and hold the document's title in the toolbar and type a
    new name, or rename later from the Files app.
 
@@ -53,12 +53,24 @@ cover every episode — see §13 *Multi-Episode Productions*.
 
 ### 2.1.3 📱 iPhone
 
-1. Launch Scene Cards. The Files browser appears.
-2. Tap **Create Document** in the Files browser. A new document is created
-   with an empty wall — 3 cards wide in portrait by default.
+1. Launch Scene Cards. The launch screen appears.
+2. Tap **Create Wall**. A new document is created with an empty wall — 3
+   cards wide in portrait by default.
 3. Rename from the Files app at any time.
 
 > ⓘ **Note** — iPhone auto-saves continuously, the same as iPadOS.
+
+### 2.1.4 The Empty Wall box
+
+A brand-new wall shows an **Empty Wall** box with two buttons:
+
+- **Import Script…** — fills the wall from a script (§2.2).
+- **Open Cloud Wall…** — opens a wall your team already has in the cloud
+  (§14.1.6). It loads into this new document, so no spare empty document
+  is left behind.
+
+> ✱ **iPhone tip** — untouched empty "Untitled" documents are tidied away
+> automatically the next time you open a document.
 
 ## 2.2 Import a Script PDF
 

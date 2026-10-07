@@ -88,6 +88,11 @@ menu bar.
 | Locations | `⌘⇧2` | Switches to Locations mode |
 | Schedule | `⌘⇧3` | Switches to Schedule mode |
 | Cast | `⌘⇧4` | Switches to Cast mode — groups the wall by character (§3.2) |
+| Zoom In | `⌘=` | Fewer, larger cards across the wall |
+| Zoom Out | `⌘-` | More, smaller cards across the wall |
+| Actual Size | `⌘0` | Back to the standard 8 cards across |
+
+> ⓘ **Wall zoom** — you can also pinch on the trackpad. The setting belongs to this Mac (2 to 14 cards across, default 8) and applies to every wall and mode; it isn't saved in the wall, so opening a wall from an iPhone doesn't change it.
 
 ### Help
 
@@ -124,6 +129,7 @@ split between the leading (left) and trailing (right) sides.
 | 📅 Schedule | Switches to Schedule mode. Fills when active. |
 | 🎭 Cast | Switches to Cast mode — groups the wall by character. Fills when active. |
 | ▤ Inspector | Toggles the inspector sheet. Fills when open. |
+| ☁ Cloud | Opens the cloud menu (§15.5) |
 
 ### Search
 
@@ -137,6 +143,7 @@ See §9.7 for Schedule mode search behaviour.
 |---|---|
 | Undo | Undoes the last action |
 | Import Script PDF or FDX… ★ | Imports scenes from a script file |
+| Open Project… | Closes this wall and shows your documents (iPhone; on iPad use the ‹ button) |
 | Import Images from Files… ★ | Opens the Files picker to import images |
 | Import from Photos… ★ | Opens the Photos picker to import images |
 | Import Shoot Reports… ★ | Opens a folder picker for shoot report import (§10) |
@@ -190,6 +197,21 @@ Controls that act on the card itself, below the carousel.
 
 > ⚠ **Caution** — Delete Tile cannot be undone past the current
 > session. Close Gap can be undone with `⌘Z`.
+
+---
+
+## 15.5 Cloud menu (all Apple platforms)
+
+The ☁ cloud button at the right of the toolbar. Its icon shows a tick when the wall is connected to a Cloud Wall, and turns orange when a newer version is waiting.
+
+| Item | What it does |
+|---|---|
+| Pull Latest / Pull Updates | Reloads this wall from the cloud (shown for cloud walls) |
+| Share Wall to Cloud… | Puts this wall in the cloud (in your current production) and shares a snapshot for Import Project Data. Also reconnects a copy whose cloud wall was deleted (§14.1.16) |
+| Import Project Data from Cloud… | Merges a shared snapshot into this wall (§12) |
+| Manage Wall Access… | Chooses who can see this wall (§14.1.11). Production crew always see production walls |
+| Cloud Walls… | Lists the walls in your production; open one, or (owner) delete it (§14.1.6, §14.1.13) |
+| Sync & Account… | Sign in, productions, crew, invitations, Leave / Delete Production (§14.1) |
 
 ---
 

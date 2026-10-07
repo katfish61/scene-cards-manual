@@ -56,15 +56,17 @@ Short version — see §2.1 for the full walkthrough.
 
 - **🍎 macOS** — `File → New` (`⌘N`). Save to a named location with
   `File → Save…` (`⌘S`).
-- **📐 iPadOS** — tap the **+** button at the top of the Files browser.
-  iPadOS auto-saves from the first edit.
-- **📱 iPhone** — tap **Create Document** in the Files browser. iPhone
+- **📐 iPadOS** — tap **Create Wall** on the launch screen (or **+** in the
+  Files browser). iPadOS auto-saves from the first edit.
+- **📱 iPhone** — tap **Create Wall** on the launch screen. iPhone
   auto-saves from the first edit.
 
-A brand-new document ships with an empty wall — **8 cards wide** on
-macOS, **6 cards wide** on iPadOS, and **3 cards wide** on iPhone
-(portrait default). You can adjust the column count later by pinching
-the wall (§17).
+A brand-new document ships with an empty wall showing the **Empty Wall**
+box — **Import Script…** or **Open Cloud Wall…** (§2.1.4). The wall is
+**8 cards wide** on macOS, **6 cards wide** on iPadOS, and **3 cards wide**
+on iPhone (portrait default). Change it by pinching the wall, or on the Mac
+with **View ▸ Zoom In / Zoom Out** (`⌘=` / `⌘-`, §15.1). Column count is a
+setting on each device, not part of the wall.
 
 ## 4.3 Opening an Existing Document
 
