@@ -6,14 +6,6 @@ script PDF, a still on one of the cards, and everything saved.
 
 If you already have Scene Cards open on a document, skip to §2.3.
 
-> ✱ **Tip** — if you just want to see what a finished wall looks like before
-> starting your own project, click **Explore Sample Wall** on the Welcome
-> screen. This opens a bundled sample document (*The Big Lebowski*) with 49
-> scene cards, stills, full script text, a 45-day shooting schedule and
-> character colour assignments. Browse Script, Location and Schedule modes
-> to get a feel for the app, then close the sample and start your own
-> document when you're ready.
-
 **Before you start**
 
 - Scene Cards installed and launched (Chapter 1).

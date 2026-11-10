@@ -116,26 +116,20 @@ Recommended:
 
 ### 1.6.1 🍎 macOS
 
-On first launch, Scene Cards opens the **Welcome** window with four choices:
+On first launch, Scene Cards opens the **Welcome** window with three choices:
 
 - **New Wall** — create an empty wall, 8 cards wide by default.
 - **Open…** — pick a `.scenecards` package from disk or iCloud.
 - **Import Script PDF or FDX** — create a new document and import a script
   in one step.
-- **Explore Sample Wall** — open a bundled sample document (*The Big
-  Lebowski*) pre-populated with 49 scene cards, stills, full script text,
-  a 45-day shooting schedule and character colours. This is the fastest way
-  to see what a finished wall looks like.
 
 The Quick Start window also opens automatically on first launch.
 
 ### 1.6.2 📐 iPadOS
 
-On first launch, iPadOS shows a **Welcome** screen with three choices:
+On first launch, iPadOS shows a **Welcome** screen with two choices:
 
 - **Import Script PDF…** — create a new wall and import a script immediately.
-- **Explore Sample Wall** — open the bundled *Big Lebowski* sample document
-  so you can explore a fully populated wall before starting your own.
 - **Open or Create a Wall** — dismiss the welcome screen and proceed to the
   Files browser, where you can tap **Create Document** to start a new wall
   (6 cards wide by default) or open an existing `.scenecards` document.
@@ -146,9 +140,8 @@ On first launch, iPadOS shows a **Welcome** screen with three choices:
 ### 1.6.3 📱 iPhone
 
 On first launch, iPhone shows the same Welcome screen as iPadOS with the
-same three choices (Import, Explore Sample, Open/Create). Tap **Explore
-Sample Wall** to see a fully populated wall immediately, or **Import
-Script PDF…** to start your own project.
+same two choices (Import, Open/Create). Tap **Import Script PDF…** to start
+your own project.
 
 Because iPhone screens are narrower, Scene Cards uses a compact toolbar
 layout — the three wall-mode buttons are replaced by a single **mode
