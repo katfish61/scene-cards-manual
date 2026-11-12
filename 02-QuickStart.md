@@ -139,7 +139,8 @@ From top to bottom:
   if the parser got any of them wrong.
 - **Location** — the slugline (`INT. OFFICE`). Auto-uppercased.
 - **Action** — free-form notes on the scene. Populated from the script's
-  first action line on import; edit to taste.
+  first action line on import, then replaced by the schedule's one-liner
+  when you import a schedule (§9.2.4); edit to taste.
 - **References** — carousel of attached reference files (§8).
 - **Move Tile** — shortcut to reposition the card after another scene by
   number.
@@ -262,7 +263,8 @@ still. From here:
 - **Add reference material** — see §8 *Reference Files* for scouts,
   storyboards and research.
 - **Build a schedule** — see §9 *Scheduling* for importing a one-liner and
-  working in Schedule mode.
+  working in Schedule mode. Importing it also puts each scene's one-line
+  description from the schedule on its card (§9.2.4).
 - **Share with crew** — Scene Cards can sync the wall to cloud so crew
   members on any platform (macOS, iPhone, iPad, or Android) see the same
   cards in real time. See §14 *Collaborating*.

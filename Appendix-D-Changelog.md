@@ -24,6 +24,26 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.1.3 — November 2026
+
+### New
+- **One-liners from the schedule** — importing a shooting schedule replaces
+  each card's Action with the scene's one-line description from the
+  schedule, written by the AD. See §9.2.4.
+
+### Fixed
+- **Watermarked scripts** — scripts with a name stamped across every page
+  no longer import with duplicate scene numbers, missing scenes, or a
+  scene's text starting with the end of the scene before. Import affected
+  scripts again. See §5.1.4.
+- A long scene heading that wraps onto a second line ("… - DAY" / "10", or
+  "… - DAY 11 -" / "CONTINUOUS") no longer throws off scene numbering or
+  shows up as the card's first line.
+- The script's running page header no longer appears as a scene's first
+  line.
+
+---
+
 ## 2.1.0 — October 2026
 
 ### New

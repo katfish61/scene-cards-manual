@@ -90,7 +90,10 @@ What goes in Action is up to you — some productions put:
 - A reminder about character intent or continuity.
 
 On a fresh import from a PDF, the first action line of each scene is
-pre-filled here as a starting point — edit or clear it as you like.
+pre-filled here as a starting point — edit or clear it as you like. When
+you import a shooting schedule, each card's Action is replaced with the
+scene's one-liner from the schedule, which is usually a better summary
+(§9.2.4).
 Cards display up to four lines of action text; the field itself has no
 length limit.
 

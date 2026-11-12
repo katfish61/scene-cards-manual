@@ -76,6 +76,17 @@ no number, or a number the parser cannot detect, becomes a card numbered
 from its position in the script (1, 2, 3…). Fix these after import using
 **Renumber From Here** (§5.4.2) rather than re-importing.
 
+Scripts with a security watermark (a name stamped across every page) used
+to import badly in some cases: scene numbers duplicated, scenes missing, or
+a scene's text starting with the last lines of the scene before. Version
+2.1.3 reads watermarked pages by position instead, which fixes this. If a
+watermarked script imported before 2.1.3 shows these problems, import it
+again.
+
+If a script still imports wrongly, 🍎 **File → Export Script Import
+Diagnostic…** writes out exactly what the parser read from the PDF. Send
+that file with a description of what you expected.
+
 ## 5.2 Manually Inserting a Scene
 
 You will often need a new scene that is not in the script — a director's

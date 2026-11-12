@@ -94,6 +94,14 @@ Scene Cards looks for standard screenplay headings (`INT.`, `EXT.`,
 will be skipped. Check the source PDF and correct the headings if
 needed, then re-import (§5.1.2).
 
+**Duplicate scene numbers, or a card's text starts with the end of the
+previous scene**
+
+Usually a watermarked script (a name stamped across every page) imported
+before version 2.1.3, which reads those pages correctly. Import the script
+again. If it still happens, export **File → Export Script Import
+Diagnostic…** (🍎) and send it in (§5.1.4).
+
 ---
 
 ## Scheduling
@@ -114,6 +122,18 @@ match. Check:
 - Is the one-liner using TV-format numbers (`1-14`) while the script
   uses film-format (`14`)? If so, the card's episode field may need
   to be set to match (§13.3).
+
+**Cards still show the script's first action line after importing a
+schedule**
+
+The schedule's one-liners replace the cards' Action text on import
+(§9.2.4). If they didn't:
+- The schedule was imported before version 2.1.3 — import it again
+  (Replace is fine).
+- The card isn't matched to the schedule — check the **Unmatched**
+  section (§9.4.4).
+- The schedule leaves that scene's description blank, or the PDF is a
+  scanned image with no text layer.
 
 ---
 

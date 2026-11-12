@@ -125,6 +125,39 @@ that landed incorrectly.
 > PDF, since a blank cast column is normal and looks the same in the
 > report as a column it failed to read.
 
+### 9.2.4 One-liners on your cards
+
+Each scene on a one-liner carries a short description of what happens in
+it ("LENA checks her appearance before heading to the front door."). It's
+written by the AD, so it's usually a truer summary of the scene than the
+first action line taken from the script. When you import a schedule, Scene
+Cards copies each scene's one-liner onto its matching card, replacing the
+card's **Action** text (§6.4).
+
+- **Every way a schedule comes in** — a first import, Merge, Replace, and
+  importing a schedule from another project (§12) all update the cards. On
+  Merge, only the scenes in the newly imported PDF are updated.
+- **Blank one-liners are skipped** — a scene with no description on the
+  schedule keeps its current Action text.
+- **Split scenes** — a scene shot across several days (`1.31p1/2`,
+  `1.31p2/2`) takes the one-liner from its first appearance.
+- **Hand-typed Action text is replaced too** — the schedule's one-liner
+  wins. Undo straight after the import puts it back.
+- **Text cut off in the PDF stays cut off** — some schedules truncate long
+  descriptions in the printed column ("Maude descends …"). Scene Cards
+  copies them as printed.
+- **Re-importing a script doesn't undo it** — a script re-import only fills
+  Action text on cards where it's empty, so the schedule's one-liners stay.
+
+Scene Cards finds the description by its position on the page, so it works
+whether the schedule prints it in its own column on the scene's row or on
+the line beneath the set name. It needs the PDF's text layer: a schedule
+that is only a scanned image (§9.2.3) doesn't get one-liners, and its cards
+keep their existing Action text.
+
+> ⓘ **Note** — a schedule imported before version 2.1.3 was saved without
+> one-liners. Import it again (Replace is fine) to fill them in.
+
 ## 9.3 The Schedule Top Bar
 
 When a schedule is loaded, a persistent bar appears at the top of
