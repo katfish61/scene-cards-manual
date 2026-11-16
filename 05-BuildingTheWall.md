@@ -79,8 +79,8 @@ from its position in the script (1, 2, 3…). Fix these after import using
 Scripts with a security watermark (a name stamped across every page) used
 to import badly in some cases: scene numbers duplicated, scenes missing, or
 a scene's text starting with the last lines of the scene before. Version
-2.1.3 reads watermarked pages by position instead, which fixes this. If a
-watermarked script imported before 2.1.3 shows these problems, import it
+2.1.7 reads watermarked pages by position instead, which fixes this. If a
+watermarked script imported before 2.1.7 shows these problems, import it
 again.
 
 If a script still imports wrongly, 🍎 **File → Export Script Import

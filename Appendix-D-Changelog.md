@@ -24,7 +24,7 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
-## 2.1.3 — November 2026
+## 2.1.7 — November 2026
 
 ### New
 - **One-liners from the schedule** — importing a shooting schedule replaces

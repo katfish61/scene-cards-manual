@@ -158,7 +158,7 @@ the line beneath the set name. It needs the PDF's text layer: a schedule
 that is only a scanned image (§9.2.3) doesn't get one-liners, and its cards
 keep their existing Action text.
 
-> ⓘ **Note** — a schedule imported before version 2.1.3 was saved without
+> ⓘ **Note** — a schedule imported before version 2.1.7 was saved without
 > one-liners. Import it again (Replace is fine) to fill them in.
 
 ## 9.3 The Schedule Top Bar

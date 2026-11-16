@@ -98,7 +98,7 @@ needed, then re-import (§5.1.2).
 previous scene**
 
 Usually a watermarked script (a name stamped across every page) imported
-before version 2.1.3, which reads those pages correctly. Import the script
+before version 2.1.7, which reads those pages correctly. Import the script
 again. If it still happens, export **File → Export Script Import
 Diagnostic…** (🍎) and send it in (§5.1.4).
 
@@ -128,7 +128,7 @@ schedule**
 
 The schedule's one-liners replace the cards' Action text on import
 (§9.2.4). If they didn't:
-- The schedule was imported before version 2.1.3 — import it again
+- The schedule was imported before version 2.1.7 — import it again
   (Replace is fine).
 - The card isn't matched to the schedule — check the **Unmatched**
   section (§9.4.4).
