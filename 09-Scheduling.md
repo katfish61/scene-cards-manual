@@ -148,6 +148,9 @@ card's **Action** text (§6.4).
   copies them as printed.
 - **Re-importing a script doesn't undo it** — a script re-import only fills
   Action text on cards where it's empty, so the schedule's one-liners stay.
+- **Call sheets don't change Action text** — a call sheet's scene
+  descriptions are normally copied from the schedule, so importing one
+  (§10) leaves the cards as they are.
 
 Scene Cards finds the description by its position on the page, so it works
 whether the schedule prints it in its own column on the scene's row or on

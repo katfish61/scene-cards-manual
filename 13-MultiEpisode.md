@@ -50,7 +50,9 @@ is appended directly after the scene number, with no space.
 
 When you import a script PDF (§5.1), Scene Cards reads the episode
 number from the **filename first** — patterns like `Episode_2.pdf`,
-`Ep02_Script.pdf` or `E02.pdf` are all recognised. If no episode
+`Ep02_Script.pdf`, `E02.pdf` or a spelled-out `EP TWO` (one to twenty) are
+all recognised. A date in the filename (`31.03.25`) is never read as the
+episode. If no episode
 number is found in the filename, it falls back to the document text
 (searching the first page for "Episode N" or "Ep N").
 

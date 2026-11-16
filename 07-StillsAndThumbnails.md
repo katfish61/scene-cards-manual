@@ -66,12 +66,15 @@ to spin up a placeholder card around a reference photo.
 1. Select the card and open the inspector (§6.1).
 2. Tap or click the **Import Image** button (`photo` icon) in the
    inspector's toolbar strip (§6.7).
-3. Choose a file from the picker.
+3. 🍎 Choose a file from the picker. 📐📱 Choose **Choose from Photos**
+   (the camera roll, with albums) or **Choose from Files**, then pick the
+   image.
 
 ![The inspector toolbar strip on iPadOS with the Import Image button highlighted, ready to attach a still to the selected card.](images/C7.jpg)
 
-On **📐 iPadOS** the picker opens into Files by default. Use the
-**Photos** tab on the side to pull from the Camera Roll instead.
+On **Android**, **Set Card Image** (or **Change**) in the Inspector offers
+the same two choices: **Choose from Photos** opens the system photo picker,
+**Choose from Files** the document picker.
 
 ### 7.2.3 Replace an existing still
 

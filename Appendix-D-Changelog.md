@@ -41,6 +41,51 @@ shown here matches the number in **Scene Cards → About Scene Cards**
   shows up as the card's first line.
 - The script's running page header no longer appears as a scene's first
   line.
+- A script whose filename spells out the episode
+  ("SS EP ONE - BLUE AMENDS. 31.03.25.pdf") is read as episode 1, and a
+  date in the filename is no longer mistaken for the episode number. Final
+  Draft files also read "Ep 1" correctly — the "4" in "GKH4 Ep 1" was taken
+  as the episode. See §13.2.1.
+
+---
+
+## 2.1.2 — October 2026
+
+### Improved
+- **Dragging cards on the wall** works the same on every platform: the gap
+  a card leaves closes up and the cards in between slide over by one,
+  whether you drop on a card or an empty slot. A dragged selection stays
+  together in wall order and is one undo step.
+- **Mac** — the wall scrolls by itself when you drag a card or a Finder
+  image near its top or bottom edge.
+- **Android** — drag a card onto a location header (or another card) in
+  Location mode to change its location, or onto a shoot day in Schedule
+  mode. See §9.5.2.
+- **Android** — in multi-select, long-press a selected card to drag the
+  whole selection.
+- **Android** — files dropped from other apps (split screen, freeform
+  windows, Chromebooks): an image on a card becomes its picture, a PDF or
+  FDX on the wall imports as a script, and files on the References tab
+  attach to the scene.
+
+### Fixed
+- **Android** — dragging a card past an empty slot could leave another
+  card in two places.
+
+---
+
+## 2.1.1 — October 2026
+
+### Improved
+- **Card pictures from Photos** — on iPhone, iPad and Android, setting a
+  card's picture offers **Choose from Photos** (the camera roll, with
+  albums) as well as **Choose from Files**. See §7.
+- **Android** — card pictures are stored at the same size as on Apple
+  devices, and portrait photos are no longer sideways.
+
+### Fixed
+- **Android** — after changing a card's picture, the wall kept showing the
+  old one until the app restarted.
 
 ---
 
@@ -64,6 +109,11 @@ shown here matches the number in **Scene Cards → About Scene Cards**
   `⌘0`) and trackpad pinch. See §15.1.
 - **Manage Wall Access on the Mac** — in the cloud menu. See §15.5.
 - **Android** — one-tap New Wall; create productions and invite crew.
+- **Cast mode attachments** — each character header takes photos, files and
+  folders for costume, make-up and cast references, like location headers
+  do. See §8.10. (Android since 2.0.7.)
+- **Final Draft (`.fdx`) on Android** — import FDX scripts as on Apple
+  devices. (Android since 2.0.7.)
 
 ### Improved
 - **Cloud Walls on iPhone and iPad** open the chosen wall straight away.
@@ -78,6 +128,11 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 - **File previews** on iPhone and iPad have a Done button.
 
 ### Fixed
+- **Location and character attachments, and shoot-day files, sync across
+  platforms** — files added on Android open on Apple devices and the other
+  way round, instead of showing as placeholders. Android camera captures
+  are full resolution.
+- Files added to a shoot day on Android no longer rearrange its scenes.
 - Replacing a scene card's image now reaches every device (it could snap
   back to the old image).
 - A call sheet imported on the Mac now uploads, including into a cloud wall

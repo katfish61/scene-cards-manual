@@ -96,6 +96,10 @@ the other name — every scene from both folds into a single group from
 then on (not just the one card you were looking at). **Un-merge** in the
 same menu reverses it. This mapping is saved with the document.
 
+Location and Cast headers also hold attachments — scout photos for a
+location, costume and make-up references for a character — added with the
+header's camera and attach buttons. See §8.10.
+
 ### 3.2.1 Wall width
 
 - **🍎 macOS** — 8 cards wide by default.

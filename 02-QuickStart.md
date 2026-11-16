@@ -108,7 +108,8 @@ For each scene the parser extracts:
 | Raw script text    | Every line between this heading and the next           |
 
 Characters detected in dialogue are added to the document's colour palette
-— see §6.3 *Character Detection & Colour Assignment*.
+— see §6.3 *Character Detection & Colour Assignment* — and each one gets its
+own group in **Cast mode** (§3.2), which lists every scene a character is in.
 
 > ⚠ **Caution** — a script whose scene headings use non-standard formatting
 > (e.g. lower-case or unnumbered) may produce cards the parser couldn't
@@ -262,9 +263,17 @@ still. From here:
   omissions and revision colours.
 - **Add reference material** — see §8 *Reference Files* for scouts,
   storyboards and research.
+- **See the wall by location or character** — switch wall mode from the
+  toolbar (🍎 also `⇧⌘2` / `⇧⌘4`). **Location** groups the cards by set;
+  **Cast** groups them by character, so you can see at a glance which
+  scenes an actor is needed for. Each Location and Cast header also takes
+  photos and files — scouts for a location, costume and make-up references
+  for a character (§8.10). See §3.2.
 - **Build a schedule** — see §9 *Scheduling* for importing a one-liner and
-  working in Schedule mode. Importing it also puts each scene's one-line
-  description from the schedule on its card (§9.2.4).
+  working in Schedule mode. Importing it replaces each card's Action with
+  the AD's one-line description of the scene from the schedule (§9.2.4),
+  and its cast list puts names to the cast numbers in Schedule and Cast
+  mode (§9.4.1).
 - **Share with crew** — Scene Cards can sync the wall to cloud so crew
   members on any platform (macOS, iPhone, iPad, or Android) see the same
   cards in real time. See §14 *Collaborating*.

@@ -408,7 +408,40 @@ exists in the new draft) loses its reference folder along with
 everything else. Mark a scene **OMITTED** (§5.5) before re-importing
 if there is any chance it returns and you want to keep its references.
 
-## 8.10 Where to Go Next
+## 8.10 Location and Character Attachments
+
+References on a card belong to one scene. Material that belongs to a whole
+**location** or a whole **character** — scout photos, maps and tech-scout
+notes for a set; costume, make-up and wardrobe references for a character —
+goes on the group header in **Location mode** or **Cast mode** (§3.2)
+instead, so it's in one place however many scenes use it.
+
+Each header carries two buttons on the right:
+
+- **Camera** (📷) — take a photo or video for that location or character.
+  Captures collect in a single **Photos** badge on the header.
+- **Attach** (⤓) — pick files or whole folders. A folder appears as one
+  badge with a count of the files inside.
+
+On **Android** the header has a single **+** button that opens a sheet
+with **Camera**, **Files**, **Folder** and **Gallery**, and the
+attachments appear in a row beneath the header.
+
+Click or tap a badge to open the file, browse the folder, or flip through
+the Photos grid. To remove one, right-click (🍎) or long-press (📐📱) the
+badge and choose **Remove Attachment** or **Remove Folder**; in the Photos
+grid, right-click or long-press a single photo and choose **Delete**.
+
+- **Merging characters** (§3.2) moves the merged character's attachments
+  onto the group it was merged into.
+- **Cloud walls** — location and character attachments sync across every
+  platform, so a costume photo taken on an Android phone opens on the Mac
+  and on iPad.
+- **On disk** — files are copied into the document package under
+  `Media/locations/` and `Media/cast/`, one folder per location or
+  character.
+
+## 8.11 Where to Go Next
 
 - **Import shoot reports** (sound, camera, continuity, call sheets) —
   see §10 *Shoot Reports*.
