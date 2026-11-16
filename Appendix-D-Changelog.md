@@ -41,6 +41,9 @@ shown here matches the number in **Scene Cards → About Scene Cards**
   shows up as the card's first line.
 - The script's running page header no longer appears as a scene's first
   line.
+- **Android** — a watermark stamped diagonally across every page no longer
+  turns into made-up characters in Cast mode ("KE", "ITH", "TU", "NN",
+  "EY") or stray letters in the script text. Import affected scripts again.
 - A script whose filename spells out the episode
   ("SS EP ONE - BLUE AMENDS. 31.03.25.pdf") is read as episode 1, and a
   date in the filename is no longer mistaken for the episode number. Final
