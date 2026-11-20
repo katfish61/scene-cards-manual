@@ -24,6 +24,33 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.1.8 — November 2026
+
+### New
+- **Schedule picked as a script** — a PDF that reads like a shooting
+  schedule ("End of Shooting Day" markers) now asks before it is imported
+  as a script, so it can't silently turn every schedule row into a card.
+
+### Fixed
+- **Schedules with "Sc:" rows** — single-digit scenes are no longer dropped,
+  and stray cast numbers no longer appear as scenes. Some schedules of this
+  kind imported no scenes at all; they now import in full.
+- **Schedule one-liners** — the last scene of each day no longer picks up
+  the "End of Shooting Day …" banner, and a story day printed under the
+  scene number no longer leaves the scene above it without a one-liner.
+  Importing the schedule again also clears banner text an earlier import
+  left on a card's Action.
+- **Scene headings run together** — when several headings share one line
+  in the PDF, each scene keeps its own number and its own text (previously
+  a scene could take the wrong number, lose its text, or vanish on Android).
+- **Running page headers** — a TV script's title line printed on every page
+  ("Show - Writer - EPISODE 5 - SHOOTING SCRIPT 2.") no longer appears inside
+  scene text. Import affected scripts again.
+- **Dialogue and action** — in the Script panel, action written straight
+  after a speech is no longer shown as part of the dialogue.
+
+---
+
 ## 2.1.7 — November 2026
 
 ### New
