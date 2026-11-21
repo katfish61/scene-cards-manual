@@ -24,6 +24,19 @@ shown here matches the number in **Scene Cards → About Scene Cards**
 
 ---
 
+## 2.1.9 — November 2026
+
+### Fixed
+- **Scenes imported with no text** — in some scripts the scene headings on a
+  page were read before the text, so several scenes in a row came in with
+  no one-liner and the next scene took their text (🍎). Each scene now
+  gets its own text. Import affected scripts again.
+- **Heading run into its action** — a scene heading printed on the same
+  line as the start of its action no longer loses the scene (📐) or keeps
+  the action in the heading (🍎).
+
+---
+
 ## 2.1.8 — November 2026
 
 ### New
